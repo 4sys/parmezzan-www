@@ -1,5 +1,38 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-  const lenis = new Lenis({ lerp: 0, duration: 2, wheelMultiplier: 1.2 });
+  console.log("DOM fully loaded and parsed");
+  const lazyBackgrounds = document.querySelectorAll(".lazy-bg");
+
+  const lazyLoad = () => {
+    lazyBackgrounds.forEach((element) => {
+      let bgUrl;
+
+      // Determine the correct image based on screen size
+      if (window.innerWidth >= 1024) {
+        bgUrl = element.getAttribute("data-bg-xl"); // lg: screens
+      } else if (window.innerWidth >= 768) {
+        bgUrl = element.getAttribute("data-bg-md"); // md: screens
+      } else {
+        bgUrl = element.getAttribute("data-bg-sm"); // sm: screens
+      }
+
+      if (bgUrl) {
+        element.style.backgroundImage = bgUrl;
+        element.classList.remove("lazy-bg"); // Optional: Remove the class after loading
+      }
+    });
+  };
+
+  // Initial load check
+  lazyLoad();
+
+  // Check on scroll
+  window.addEventListener("scroll", lazyLoad);
+
+  // Check on resize (to handle responsive changes)
+  window.addEventListener("resize", lazyLoad);
+
+
+  const lenis = new Lenis({ lerp: 0.1, duration: 1.5, wheelMultiplier: 1.2 });
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.config({ ignoreMobileResize: true });
   gsap.ticker.lagSmoothing(0);
@@ -39,3 +72,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
     );
   });
 });
+

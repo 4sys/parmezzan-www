@@ -7,8 +7,7 @@ module.exports = {
         primary: "#b06a40",
       },
       fontFamily: {
-        merienda: ["Merienda", "serif"],
-        inter: ["Inter", "serif"],
+        lato: ["Lato", "serif"],
       },
       backgroundImage: {
         "landing-1-xl": "linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('../assets/images/xl/landing-1.webp')",
