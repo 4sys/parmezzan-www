@@ -578,6 +578,10 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -639,10 +643,6 @@ video {
   height: 2rem;
 }
 
-.h-\[15px\] {
-  height: 15px;
-}
-
 .h-\[18px\] {
   height: 18px;
 }
@@ -653,6 +653,10 @@ video {
 
 .h-\[25px\] {
   height: 25px;
+}
+
+.h-\[45px\] {
+  height: 45px;
 }
 
 .h-\[70px\] {
@@ -667,12 +671,8 @@ video {
   height: 100%;
 }
 
-.h-\[35px\] {
-  height: 35px;
-}
-
-.h-\[45px\] {
-  height: 45px;
+.h-lvh {
+  height: 100lvh;
 }
 
 .w-8 {
@@ -705,6 +705,19 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-lvw {
+  width: 100lvw;
+}
+
+.-translate-x-\[10px\] {
+  --tw-translate-x: -10px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -771,28 +784,28 @@ video {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
+.bg-landing-1-sm {
+  background-image: linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('../assets/images/min/sm/landing-1.webp');
+}
+
 .bg-landing-2-sm {
-  background-image: url('../assets/images/sm/landing-2.webp');
+  background-image: url('../assets/images/min/sm/landing-2.webp');
 }
 
 .bg-landing-3-sm {
-  background-image: url('../assets/images/sm/landing-3.webp');
+  background-image: url('../assets/images/min/sm/landing-3.webp');
 }
 
 .bg-landing-4-sm {
-  background-image: url('../assets/images/sm/landing-4.webp');
+  background-image: url('../assets/images/min/sm/landing-4.webp');
 }
 
 .bg-landing-5-sm {
-  background-image: url('../assets/images/sm/landing-5.webp');
+  background-image: url('../assets/images/min/sm/landing-5.webp');
 }
 
 .bg-landing-6-sm {
-  background-image: url('../assets/images/sm/landing-6.webp');
-}
-
-.bg-landing-7-sm {
-  background-image: url('../assets/images/sm/landing-7.webp');
+  background-image: url('../assets/images/min/sm/landing-6.webp');
 }
 
 .from-black\/80 {
@@ -894,6 +907,10 @@ video {
   color: rgb(255 255 255 / 0.9);
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -952,57 +969,33 @@ video {
     width: 600px;
   }
 
-  .md\:bg-landing-2-lg {
-    background-image: url('../assets/images/lg/landing-2.webp');
-  }
-
-  .md\:bg-landing-3-lg {
-    background-image: url('../assets/images/lg/landing-3.webp');
-  }
-
-  .md\:bg-landing-4-lg {
-    background-image: url('../assets/images/lg/landing-4.webp');
-  }
-
-  .md\:bg-landing-5-lg {
-    background-image: url('../assets/images/lg/landing-5.webp');
-  }
-
-  .md\:bg-landing-6-lg {
-    background-image: url('../assets/images/lg/landing-6.webp');
-  }
-
-  .md\:bg-landing-7-lg {
-    background-image: url('../assets/images/lg/landing-7.webp');
-  }
-
   .md\:bg-center {
     background-position: center;
   }
 }
 
-@media (min-width: 1280px) {
-  .xl\:bg-landing-2-xl {
-    background-image: url('../assets/images/xl/landing-2.webp');
+@media (min-width: 1024px) {
+  .lg\:bg-landing-1-xl {
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('../assets/images/min/xl/landing-1.webp');
   }
 
-  .xl\:bg-landing-3-xl {
-    background-image: url('../assets/images/xl/landing-3.webp');
+  .lg\:bg-landing-2-xl {
+    background-image: url('../assets/images/min/xl/landing-2.webp');
   }
 
-  .xl\:bg-landing-4-xl {
-    background-image: url('../assets/images/xl/landing-4.webp');
+  .lg\:bg-landing-3-xl {
+    background-image: url('../assets/images/min/xl/landing-3.webp');
   }
 
-  .xl\:bg-landing-5-xl {
-    background-image: url('../assets/images/xl/landing-5.webp');
+  .lg\:bg-landing-4-xl {
+    background-image: url('../assets/images/min/xl/landing-4.webp');
   }
 
-  .xl\:bg-landing-6-xl {
-    background-image: url('../assets/images/xl/landing-6.webp');
+  .lg\:bg-landing-5-xl {
+    background-image: url('../assets/images/min/xl/landing-5.webp');
   }
 
-  .xl\:bg-landing-7-xl {
-    background-image: url('../assets/images/xl/landing-7.webp');
+  .lg\:bg-landing-6-xl {
+    background-image: url('../assets/images/min/xl/landing-6.webp');
   }
 }

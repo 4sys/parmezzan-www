@@ -1,14 +1,22 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-  console.log("DOM fully loaded and parsed");
+  gsap.to(".preloader-logo", {
+    delay: 0.3,
+    opacity: "1",
+    transform: "translateX(0px)",
+    ease: "power4.inOut",
+    duration: 1,
+  });
+});
+
+window.onload = function () {
   const lazyBackgrounds = document.querySelectorAll(".lazy-bg");
 
   const lazyLoad = () => {
     lazyBackgrounds.forEach((element) => {
       let bgUrl;
 
-      // Determine the correct image based on screen size
-      if (window.innerWidth >= 1024) {
-        bgUrl = element.getAttribute("data-bg-xl"); // lg: screens
+      if (window.innerWidth >= 1280) {
+        bgUrl = element.getAttribute("data-bg-xl"); // xl: screens
       } else if (window.innerWidth >= 768) {
         bgUrl = element.getAttribute("data-bg-md"); // md: screens
       } else {
@@ -17,20 +25,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       if (bgUrl) {
         element.style.backgroundImage = bgUrl;
-        element.classList.remove("lazy-bg"); // Optional: Remove the class after loading
+        element.classList.remove("lazy-bg");
       }
     });
   };
 
-  // Initial load check
   lazyLoad();
-
-  // Check on scroll
   window.addEventListener("scroll", lazyLoad);
-
-  // Check on resize (to handle responsive changes)
   window.addEventListener("resize", lazyLoad);
-
 
   const lenis = new Lenis({ lerp: 0.1, duration: 1.5, wheelMultiplier: 1.2 });
   gsap.registerPlugin(ScrollTrigger);
@@ -71,5 +73,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     );
   });
-});
 
+  gsap.to(".preloader-logo", {
+    delay: 1.3,
+    opacity: "0",
+    transform: "translateX(10px)",
+    ease: "power4.inOut",
+    duration: 1,
+  });
+  gsap.to(".preloader", {
+    delay: 1.8,
+    transform: "translateX(100%)",
+    ease: "power4.inOut",
+    duration: 1,
+  });
+  setTimeout(() => {
+    document.getElementsByClassName("preloader")[0]?.remove();
+  }, 3000);
+};
