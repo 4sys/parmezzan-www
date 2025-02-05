@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     ease: "power4.inOut",
     duration: 1,
   });
+
+
 });
 
 window.onload = function () {
@@ -31,8 +33,8 @@ window.onload = function () {
   };
 
   lazyLoad();
-  window.addEventListener("scroll", lazyLoad);
-  window.addEventListener("resize", lazyLoad);
+  // window.addEventListener("scroll", lazyLoad);
+  // window.addEventListener("resize", lazyLoad);
 
   const lenis = new Lenis({ lerp: 0.1, duration: 1.5, wheelMultiplier: 1.2 });
   gsap.registerPlugin(ScrollTrigger);
@@ -44,9 +46,8 @@ window.onload = function () {
   });
   ScrollTrigger.normalizeScroll(true);
 
-  let container = document.querySelector(".slides"),
-    slides = gsap.utils.toArray(".slide"),
-    getRatio = (el) => window.innerHeight / (window.innerHeight + el.offsetHeight);
+  slides = gsap.utils.toArray(".slide");
+  getRatio = (el) => window.innerHeight / (window.innerHeight + el.offsetHeight);
 
   slides.forEach((slide, i) => {
     let bg = slide.querySelector(".background"),
@@ -60,7 +61,7 @@ window.onload = function () {
         },
       });
 
-    const dampingFactor = 0.1;
+    const dampingFactor = 0.05;
 
     tl.fromTo(
       bg,
