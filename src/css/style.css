@@ -588,6 +588,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -629,6 +633,10 @@ video {
   height: 70px;
 }
 
+.h-dvh {
+  height: 100dvh;
+}
+
 .h-full {
   height: 100%;
 }
@@ -641,8 +649,20 @@ video {
   height: 100svh;
 }
 
-.h-dvh {
-  height: 100dvh;
+.h-\[\] {
+  height: ;
+}
+
+.h-\[12\] {
+  height: 12;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-\[50px\] {
+  height: 50px;
 }
 
 .w-8 {
@@ -706,6 +726,10 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -716,6 +740,10 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .space-x-5 > :not([hidden]) ~ :not([hidden]) {
@@ -832,6 +860,14 @@ video {
   padding-top: 1.25rem;
 }
 
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -860,12 +896,28 @@ video {
   font-size: 20px;
 }
 
+.text-\[18px\] {
+  font-size: 18px;
+}
+
+.text-\[78px\] {
+  font-size: 78px;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
+}
+
 .font-semibold {
   font-weight: 600;
 }
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.leading-tight {
+  line-height: 1.25;
 }
 
 .text-white {
@@ -879,6 +931,10 @@ video {
 
 .text-white\/90 {
   color: rgb(255 255 255 / 0.9);
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .opacity-0 {
@@ -913,12 +969,28 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .sm\:h-24 {
+    height: 6rem;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
 
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
   .sm\:gap-0 {
     gap: 0px;
+  }
+
+  .sm\:gap-12 {
+    gap: 3rem;
   }
 
   .sm\:px-0 {
@@ -930,12 +1002,24 @@ video {
     padding-top: 3rem;
   }
 
+  .sm\:pb-12 {
+    padding-bottom: 3rem;
+  }
+
+  .sm\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
 
   .sm\:text-\[15px\] {
     font-size: 15px;
+  }
+
+  .sm\:text-\[17px\] {
+    font-size: 17px;
   }
 }
 
