@@ -580,6 +580,14 @@ video {
   top: 1px;
 }
 
+.z-\[99\] {
+  z-index: 99;
+}
+
+.z-\[1\] {
+  z-index: 1;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
