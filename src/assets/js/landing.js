@@ -14,7 +14,6 @@ window.onload = function () {
   const lazyLoad = () => {
     lazyBackgrounds.forEach((element) => {
       let bgUrl;
-
       if (window.innerWidth >= 1280) {
         bgUrl = element.getAttribute("data-bg-xl"); // xl: screens
       } else if (window.innerWidth >= 768) {
@@ -22,10 +21,19 @@ window.onload = function () {
       } else {
         bgUrl = element.getAttribute("data-bg-sm"); // sm: screens
       }
-
+     
       if (bgUrl) {
-        element.style.backgroundImage = bgUrl;
-        element.classList.remove("lazy-bg");
+        var img = new Image();
+        img.src = bgUrl;
+        img.onload = () => {
+          if (element.getAttribute("data-style") == "dimmed") {
+            element.style.background = 'linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(' + img.src + ')';
+          }
+          else {
+            element.style.backgroundImage = 'url(' + img.src + ')';
+          }
+          element.classList.remove("lazy-bg");
+        };
       }
     });
   };

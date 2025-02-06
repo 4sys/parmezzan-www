@@ -22,7 +22,6 @@ module.exports = {
         "landing-5-sm": "url('../assets/images/min/sm/landing-5.webp')",
         "landing-6-xl": "url('../assets/images/min/xl/landing-6.webp')",
         "landing-6-sm": "url('../assets/images/min/sm/landing-6.webp')",
-
       },
     },
   },
