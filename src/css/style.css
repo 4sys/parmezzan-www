@@ -645,14 +645,6 @@ video {
   min-height: 30px;
 }
 
-.min-h-\[680px\] {
-  min-height: 680px;
-}
-
-.\!min-h-\[680px\] {
-  min-height: 680px !important;
-}
-
 .w-8 {
   width: 2rem;
 }
@@ -722,16 +714,16 @@ video {
   justify-content: center;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .space-x-5 > :not([hidden]) ~ :not([hidden]) {
@@ -943,10 +935,6 @@ video {
 @media (min-width: 640px) {
   .sm\:h-24 {
     height: 6rem;
-  }
-
-  .sm\:h-svh {
-    height: 100svh;
   }
 
   .sm\:flex-row {

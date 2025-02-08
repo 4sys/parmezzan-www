@@ -21,25 +21,26 @@ window.onload = function () {
       } else {
         bgUrl = element.getAttribute("data-bg-sm"); // sm: screens
       }
-     
+
       if (bgUrl) {
-        var img = new Image();
-        img.src = bgUrl;
-        img.onload = () => {
-          if (element.getAttribute("data-style") == "dimmed") {
-            element.style.background = 'linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(' + img.src + ')';
-          }
-          else {
-            element.style.backgroundImage = 'url(' + img.src + ')';
-          }
-          element.classList.remove("lazy-bg");
-        };
+        setTimeout(() => {
+          var img = new Image();
+          img.src = bgUrl;
+          img.onload = () => {
+            if (element.getAttribute("data-style") == "dimmed") {
+              element.style.backgroundImage = "linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(" + img.src + ")";
+            } else {
+              element.style.backgroundImage = "url(" + img.src + ")";
+            }
+            element.classList.remove("lazy-bg");
+          };
+        }, 2000);
       }
     });
   };
 
   lazyLoad();
-  
+
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.config({ ignoreMobileResize: true });
   gsap.ticker.lagSmoothing(0);
