@@ -23,18 +23,16 @@ window.onload = function () {
       }
 
       if (bgUrl) {
-        setTimeout(() => {
-          var img = new Image();
-          img.src = bgUrl;
-          img.onload = () => {
-            if (element.getAttribute("data-style") == "dimmed") {
-              element.style.backgroundImage = "linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(" + img.src + ")";
-            } else {
-              element.style.backgroundImage = "url(" + img.src + ")";
-            }
-            element.classList.remove("lazy-bg");
-          };
-        }, 2000);
+        var img = new Image();
+        img.src = bgUrl;
+        img.onload = () => {
+          if (element.getAttribute("data-style") == "dimmed") {
+            element.style.backgroundImage = "linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(" + img.src + ")";
+          } else {
+            element.style.backgroundImage = "url(" + img.src + ")";
+          }
+          element.classList.remove("lazy-bg");
+        };
       }
     });
   };
