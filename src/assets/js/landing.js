@@ -66,7 +66,7 @@ window.onload = function () {
         },
       });
 
-    const dampingFactor = 0.05;
+    const dampingFactor = 0.08;
 
     tl.fromTo(
       bg,

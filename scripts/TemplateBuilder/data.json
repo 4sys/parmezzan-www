@@ -1,0 +1,427 @@
+{
+  "sections": [
+    {
+      "title": "PIZZA AL TAGLIO / PIZZA NA KAWAŁKI NA WAGĘ",
+      "titleDescription": "/ NASZA SPECJALNOŚĆ /",
+      "items": [
+        {
+          "name": "FOCACCIA",
+          "ingredients": "włoskie pieczywo z dodatkiem oliwy",
+          "price": "9,- | 100g",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "MARGHERITA",
+          "ingredients": "pulpa pomidorowa - mozzarella - Grana Padano D.O.P. - bazylia",
+          "price": "9,- | 100g",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "FARCITA",
+          "ingredients": "pulpa pomidorowa - mozzarella - bazylia - Grana Padano D.O.P. oraz własna kompozycja dodatków",
+          "price": "10,- | 100g",
+          "icons": [""]
+        },
+        {
+          "name": "SPECIALE",
+          "ingredients": "własna kompozycja dodatków premium typu: burrata - bresaola - salsiccia - friarelli",
+          "price": "13,- | 100g",
+          "icons": [""]
+        },
+        {
+          "name": "CALZONE",
+          "ingredients": "własna kompozycja dodatków",
+          "price": "13,- | 100g",
+          "icons": [""]
+        }
+      ]
+    },
+    {
+      "title": "PRZYSTAWKI",
+      "titleDescription": "",
+      "items": [
+        {
+          "name": "BRIOCHE CON AVOCADO & GAMBERI",
+          "ingredients": "maślana brioszka - mus z ricotty i awokado - opiekane krewetki - sałata / propozycja: porcja do podziału dla dwóch osób",
+          "price": "45,-",
+          "icons": ["new"]
+        },
+        {
+          "name": "BRUSCHETTA CLASSICA",
+          "ingredients": "chrupiąca focaccia - pomidorki - czosnek - oregano - bazylia - oliwa EVO",
+          "price": "25,-",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "BRUSCHETTA BELLA",
+          "ingredients": "chrupiąca focaccia - straciatella lub burrata - pesto bazyliowe - konfitowane pomidorki",
+          "price": "37,-",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "SAN DANIELE CON MOZZARELLA DI BUFALA DOP",
+          "ingredients": "San Daniele - bufala D.O.P. - pomidorki",
+          "price": "42,-",
+          "icons": [""]
+        },
+        {
+          "name": "CARPACCIO DI BRESAOLA",
+          "ingredients": "bresaola - rukola - Grana Padano D.O.P. - zest z cytryny - pieprz - oliwa EVO",
+          "price": "45,-",
+          "icons": [""]
+        }
+      ]
+    },
+    {
+      "title": "SAŁATKI",
+      "titleDescription": "",
+      "items": [
+        {
+          "name": "INSALATA BRESAOLA",
+          "ingredients": "sałata - rukola - bresaola - burrata lub bufala D.O.P. - oliwki Riviera - pomidorki - zest z cytryny",
+          "price": "49,-",
+          "icons": [""]
+        },
+        {
+          "name": "INSALATA GORGONZOLA NOCI E PERE",
+          "ingredients": "rukola - gorgonzola - prażone orzechy włoskie - gruszka - miód",
+          "price": "42,-",
+          "icons": ["vegetarian", "new"]
+        },
+        {
+          "name": "INSALATA CAPRESE",
+          "ingredients": "pomidory - mozzarella Fior di Latte lub bufala D.O.P. - oregano - bazylia",
+          "price": "35,-",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "INSALATA CON TONNO",
+          "ingredients": "sałata - tuńczyk - jajko - mozzarella Fior di Latte - kukurydza - pomidor - czerwona cebula",
+          "price": "37,-",
+          "icons": [""]
+        },
+        {
+          "name": "INSALATA GRECA",
+          "ingredients": "pomidor - ogórek - czerwona cebula - ser feta - oliwki Riviera - oliwki zielone - oregano - oliwa EVO",
+          "price": "37,-",
+          "icons": ["vegetarian"]
+        }
+      ]
+    },
+    {
+      "title": "TAGLIERE / DESKA WĘDLIN, SERÓW",
+      "titleDescription": "",
+      "items": [
+        {
+          "name": "TAGLIERE DI SALUMI E FORMAGGI",
+          "ingredients": "deska wyselekcjonowanych włoskich wędlin oraz serów - oliwki - konfitura - focaccia",
+          "price": " ",
+          "icons": [""]
+        },
+        {
+          "name": "",
+          "ingredients": "deska dla 1 osoby",
+          "price": "65,-",
+          "icons": [""]
+        },
+        {
+          "name": "",
+          "ingredients": "deska dla 2 osób",
+          "price": "90,-",
+          "icons": [""]
+        },
+        {
+          "name": "",
+          "ingredients": "deska dla 4 osób",
+          "price": "170,-",
+          "icons": [""]
+        },
+        {
+          "name": "TAGLIERE DI FORMAGGI",
+          "ingredients": "deska wyselekcjonowanych włoskich serów - oliwki - konfitura - focaccia",
+          "price": " ",
+          "icons": [""]
+        },
+        {
+          "name": "",
+          "ingredients": "deska dla 1 osoby",
+          "price": "65,-",
+          "icons": [""]
+        },
+        {
+          "name": "",
+          "ingredients": "deska dla 2 osób",
+          "price": "90,-",
+          "icons": [""]
+        },
+        {
+          "name": "",
+          "ingredients": "deska dla 4 osób",
+          "price": "170,-",
+          "icons": [""]
+        }
+      ]
+    },
+    {
+      "title": "PANINO / POLECANE PROPOZYCJE KANAPEK / NA WAGĘ",
+      "titleDescription": "/ dostępne od wtorku do soboty /",
+      "items": [
+        {
+          "name": "PANINO VESUVIO",
+          "ingredients": "focaccia - mozzarella - lekko pikantne salami mascarpone - pomidorki - rukola - oliwki Riviera - czerwona cebula",
+          "price": "10,- | 100g",
+          "icons": ["spicy"]
+        },
+        {
+          "name": "PANINO PARMA",
+          "ingredients": "focaccia - mozzarella - szynka parmeńska - pomidorki - rukola - Grana Padano D.O.P",
+          "price": "10,- | 100g",
+          "icons": [""]
+        },
+        {
+          "name": "PANINO CAPRESE",
+          "ingredients": "focaccia - mozzarella Fior di Latte - pomidorki - oregano - bazylia",
+          "price": "10,- | 100g",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "PANINO VEGETARIANO",
+          "ingredients": "focaccia - mozzarella - grilowane warzywa - oregano",
+          "price": "10,- | 100g",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "PANINO SPECK E BRIE",
+          "ingredients": "focaccia - brie - speck - grilowana cukinia - oregano",
+          "price": "13,- | 100g",
+          "icons": [""]
+        },
+        {
+          "name": "PANINO MORTADELLA",
+          "ingredients": "focaccia - pesto pistacjowe - mortadella - burrata / straciatella",
+          "price": "13,- | 100g",
+          "icons": [""]
+        },
+        {
+          "name": "PANINO BRESAOLA",
+          "ingredients": "focaccia - bresaola - karczoch - pomidorki - oliwki Riviera - Grana Padano D.O.P",
+          "price": "13,- | 100g",
+          "icons": [""]
+        },
+        {
+          "name": "PANINO ALSICCIA E FRIARIELLI",
+          "ingredients": "focaccia - scamorza affumicata - friarielli - salsiccia",
+          "price": "13,- | 100g",
+          "icons": [""]
+        }
+      ]
+    },
+    {
+      "title": "FRUTTI DI MARE FRESCHI / ŚWIEŻE OWOCE MORZA",
+      "titleDescription": "/ dostępne tylko od czwartku do wyczerpania zapasów /",
+      "items": [
+        {
+          "name": "COZZE AL VINO",
+          "ingredients": "świeże mule - czosnek - białe wino - masło - pietruszka - oliwa EVO - focaccia",
+          "price": "65,-",
+          "icons": [""]
+        },
+        {
+          "name": "GAMBERI FRESCHI AL VINO",
+          "ingredients": "świeże krewetki - czosnek - białe wino - masło - pietruszka - zest z cytryny - oliwa EVO - mix sałat - focaccia",
+          "price": "65,-",
+          "icons": [""]
+        },
+        {
+          "name": "ZUPPETA DI GAMBERI E COZZE",
+          "ingredients": "świeże krewetki - świeże mule - sos pomidorowy - czosnek - białe wino - pietruszka - oliwa EVO - focaccia",
+          "price": "75,-",
+          "icons": [""]
+        },
+        {
+          "name": "LINGUINE MISTO MARE",
+          "ingredients": "świeże krewetki - świeże mule - pomidorki koktajlowe - czosnek - białe wino - pietruszka - zest z cytryny - oliwa EVO",
+          "price": "79,-",
+          "icons": [""]
+        },
+        {
+          "name": "SPAGHETTI CON GAMBERI",
+          "ingredients": "świeże krewetki - pomidorki koktajlowe - czosnek - białe wino - pietruszka - zest z cytryny",
+          "price": "69,-",
+          "icons": [""]
+        },
+        {
+          "name": "BRANZINO CON PATATE AL FORNO E ZUCCHINE GRIGLIATE",
+          "ingredients": "filet z okonia morskiego - ziemniaki z pieca - grilowana cukinia - sałata",
+          "price": "119,-",
+          "icons": [""]
+        }
+
+      ]
+    },
+    {
+      "title": "PIATTI PRINCIPALI / DANIA GŁÓWNE",
+      "titleDescription": "",
+      "items": [
+        {
+          "name": "LASAGNA BOLOGNESE",
+          "ingredients": "domowy sos boloński - mozzarella Fior di latte - beszamel - Grana Padano D.O.P.",
+          "price": "42,-",
+          "icons": [""]
+        },
+        {
+          "name": "LASAGNA SPINACI E GORGONZOLA",
+          "ingredients": "szpinak - pleśniowy ser Gorgonzola - beszamel - mozzarella Fior di Latte - Grana Padano D.O.P.",
+          "price": "42,-",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "CRESPELLA / NALEŚNIKI",
+          "ingredients": "",
+          "price": " 37,-",
+          "icons": [""]
+        },
+        {
+          "name": "RAGÙ E PISELLI",
+          "ingredients": "beszamel - sos boloński - zielony groszek - Grana Padano D.O.P. - mix sałat",
+          "price": "",
+          "icons": [""]
+        },
+        {
+          "name": "RICOTTA E SPINACI",
+          "ingredients": "naleśnik szpinakowy - beszamel - ricotta - szpinak - Grana Padano D.O.P. - mix sałat",
+          "price": "",
+          "icons": [""]
+        },
+        {
+          "name": "COTTO & FUNGHI",
+          "ingredients": "szynka gotowana - grzyby - beszamel - mozzarella - Grana Padano D.O.P. - mix sałat",
+          "price": "",
+          "icons": [""]
+        },
+        {
+          "name": "",
+          "ingredients": "zapytaj obsługę o dostępność / opcjonalnie bez sałatki",
+          "price": "28,-",
+          "icons": [""]
+        }
+
+
+      ]
+    },
+    {
+      "title": "ZUPPE / ZUPY",
+      "titleDescription": "",
+      "items": [
+        {
+          "name": "TORTELLINI IN BRODO",
+          "ingredients": "wywar mięsno-warzywny - ręcznie wyrabiane tortellini - Grana Padano D.O.P.",
+          "price": "38,-",
+          "icons": [""]
+        },
+        {
+          "name": "ZUPPA DEL GIORNO",
+          "ingredients": "codziennie inna propozycja / zapytaj obsługę",
+          "price": "cena dnia",
+          "icons": [""]
+        }
+      ]
+    },
+    {
+      "title": "PASTA / MAKARONY",
+      "titleDescription": "",
+      "items": [
+        {
+          "name": "PASTA PARMEZZAN",
+          "ingredients": "borowiki - salsiccia - czosnek - pomidory Pelatti - mascarpone - Grana Padano D.O.P. - rozmaryn",
+          "price": "40,-",
+          "icons": [""]
+        },
+        {
+          "name": "SPAGHETTI ALLA CARBONARA",
+          "ingredients": "guanciale - żółtko - czarny pieprz - Pecorino Romano D.O.P. - Grana Padano D.O.P.",
+          "price": "42,-",
+          "icons": [""]
+        },
+        {
+          "name": "SPAGHETTI ALL’AMATRICIANA",
+          "ingredients": "guanciale - cebula - pomidory Pelatti - peperoncino - Pecorino - Romano D.O.P. - Grana Padano D.O.P.",
+          "price": "42,-",
+          "icons": ["spicy"]
+        },
+        {
+          "name": "TAGLIATELLE / TORTELLINI AL RAGÙ",
+          "ingredients": "ręcznie robione tagliatelle lub tortellini - domowy sos boloński - Grana Padano D.O.P.",
+          "price": "40,-",
+          "icons": ["recommended"]
+        },
+        {
+          "name": "SPAGHETTI AGLIO OLIO E PEPERONCINO",
+          "ingredients": "czosnek - oliwa EVO - peperoncino - pietruszka",
+          "price": "35,-",
+          "icons": ["vegetarian", "spicy"]
+        },
+        {
+          "name": "LINGUINE CON GAMBERI E PESTO DI PISTACCHIO DOP",
+          "ingredients": "krewetki - pesto pistacjowe - czosnek - pietruszka - zest z cytryny",
+          "price": "75,-",
+          "icons": [""]
+        },
+        {
+          "name": "PACCHERI AL SALMONE",
+          "ingredients": "wędzony łosoś - szalotka - pomidorki - śmietana - pietruszka",
+          "price": "48,-",
+          "icons": [""]
+        },
+        {
+          "name": "PACCHERI CON POMODORINI E BURRATA",
+          "ingredients": "burrata lub straciatella - pomidorki - czosnek - bazylia - Grana Padano D.O.P",
+          "price": "45,-",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "GNOCCHI ALLA SORRENTINA",
+          "ingredients": "pomidory Pelati - czosnek - bazylia - mozzarella - Grana Padano D.O.P",
+          "price": "38,-",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "GNOCCHI CON PORCINI",
+          "ingredients": "borowiki - czosnek - śmietana - szafran - pietruszka - Grana Padano D.O.P.",
+          "price": "45,-",
+          "icons": ["vegetarian"]
+        }
+      ]
+    },
+    {
+      "title": "PER BAMBINI / DLA DZIECI",
+      "titleDescription": "",
+      "items": [
+        {
+          "name": "SPAGHETTI ROSSI",
+          "ingredients": "spaghetti - sos - pomidorowy - ser Grana Padano D.O.P",
+          "price": "20,-",
+          "icons": ["vegetarian"]
+        },
+        {
+          "name": "TORTELLINI AL RAGÙ",
+          "ingredients": "ręcznie robione tortellini - domowy sos boloński - Grana Padano D.O.P.",
+          "price": "22,-",
+          "icons": [""]
+        },
+        {
+          "name": "TAGLIATELLE AL RAGÙ",
+          "ingredients": "tagliatelle - domowy sos boloński - Grana Padano D.O.P.",
+          "price": "22,-",
+          "icons": [""]
+        },
+        {
+          "name": "GNOCCHI / PASTA IN BIANCO",
+          "ingredients": "ziemniaczane kluseczki lub makaron - masło - Grana Padano D.O.P.",
+          "price": "20,-",
+          "icons": ["vegetarian"]
+        }
+      ]
+    }
+  ]
+}
