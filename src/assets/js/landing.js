@@ -15,22 +15,21 @@ window.onload = function () {
     lazyBackgrounds.forEach((element) => {
       let bgUrl;
       if (window.innerWidth >= 1280) {
-        bgUrl = element.getAttribute("data-bg-xl"); // xl: screens
+        bgUrl = element.getAttribute("data-bg-xl");
       } else if (window.innerWidth >= 768) {
-        bgUrl = element.getAttribute("data-bg-md"); // md: screens
+        bgUrl = element.getAttribute("data-bg-md");
       } else {
-        bgUrl = element.getAttribute("data-bg-sm"); // sm: screens
+        bgUrl = element.getAttribute("data-bg-sm");
       }
-     
+
       if (bgUrl) {
         var img = new Image();
         img.src = bgUrl;
         img.onload = () => {
           if (element.getAttribute("data-style") == "dimmed") {
-            element.style.background = 'linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(' + img.src + ')';
-          }
-          else {
-            element.style.backgroundImage = 'url(' + img.src + ')';
+            element.style.backgroundImage = "linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(" + img.src + ")";
+          } else {
+            element.style.backgroundImage = "url(" + img.src + ")";
           }
           element.classList.remove("lazy-bg");
         };
@@ -39,16 +38,44 @@ window.onload = function () {
   };
 
   lazyLoad();
-  
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      lazyLoad();
+    }, 300);
+  });
+
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.config({ ignoreMobileResize: true });
   gsap.ticker.lagSmoothing(0);
-  if (!mobileCheck()) {
-    const lenis = new Lenis({ lerp: 0.1, duration: 1.5, wheelMultiplier: 1.2 });
-    lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+  const lenis = new Lenis({ lerp: 0.1, duration: 1.5, wheelMultiplier: 1.2 });
+  lenis.on("scroll", ScrollTrigger.update);
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+
+  let backToTop = document.getElementById("scroll-to-top");
+
+  backToTop.addEventListener("click", function () {
+    lenis.scrollTo(0, 0);
+  });
+
+  window.onscroll = function () {
+    checkScroll();
+  };
+
+  function checkScroll() {
+    let isScrolled = document.documentElement.scrollTop > 200;
+    let isVisible = backToTop.classList.contains("show");
+
+    if (isScrolled !== isVisible) {
+      console.log(isScrolled ? "triggered show" : "triggered hide");
+      backToTop.classList.toggle("show", isScrolled);
+      backToTop.classList.toggle("hide", !isScrolled);
+      backToTop.style.display = isScrolled ? "block" : "none";
+    }
   }
 
   slides = gsap.utils.toArray(".slide");
@@ -111,3 +138,4 @@ window.mobileCheck = function () {
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
 };
+
