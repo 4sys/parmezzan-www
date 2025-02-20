@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html class="!overflow-x-hidden" lang="pl">
   <head>
-    <title>Parmezzan Ristorante | Nowy Targ</title>
+    <title>Menu | Parmezzan Ristorante | Nowy Targ</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Przytulny lokal w sercu Podhala z autentyczną włoską kuchnią. Spróbuj pizzy al taglio, makaronów, sałatek i deserów – gotujemy z pasją!" />
+    <meta name="description" content="Scopri il nostro menu pieno di autentici sapori italiani. Pizze al taglio, pasta fresca, insalate aromatiche e deliziosi dessert - provali oggi!" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon-precomposed" href="assets/images/favicons/favicon-256x256.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/favicon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/images/favicons/favicon-256x256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/favicons/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicons/favicon-16x16.png" />
+    <link href="../css/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
-    <script type="text/javascript" src="assets/js/menu.js"></script>
-    <script type="text/javascript" src="assets/js/preline.js"></script>
+    <script type="text/javascript" src="../assets/js/menu.js"></script>
+    <script type="text/javascript" src="../assets/js/preline.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
@@ -65,6 +65,41 @@
               </g>
             </svg>
           </a>
+          <div class="hs-dropdown relative md:hidden inline-flex ml-auto">
+            <button id="hs-dropdown-default" type="button" class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-gray-800 shadow-sm disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+              <svg class="size-8" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <g fill-rule="nonzero">
+                  <path fill="#fff" d="M255.888 39.63c59.714 0 113.814 24.22 152.944 63.355l.997 1.079c38.535 39.062 62.348 92.713 62.348 151.878 0 59.732-24.224 113.83-63.354 152.966l-1.088.997c-39.075 38.56-92.727 62.366-151.847 62.366-59.714 0-113.805-24.228-152.935-63.363-39.13-39.136-63.363-93.243-63.363-152.966 0-59.66 24.242-113.758 63.409-152.902 39.084-39.182 93.175-63.41 152.889-63.41Z" style="stroke-width: 0.914529" />
+                  <path fill="#009246" d="M174.15 456.37V55.63C95.2 87.91 39.59 165.44 39.59 255.99c0 90.56 55.61 168.11 134.56 200.38z" />
+                  <path fill="#CE2B37" d="M337.88 55.63v400.74c78.93-32.29 134.53-109.84 134.53-200.38 0-90.53-55.6-168.07-134.53-200.36z" />
+                </g>
+              </svg>
+              <svg class="hs-dropdown-open:rotate-180 size-4 stroke-white/70" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+            </button>
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden bg-dark shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-[1001]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+              <div class="p-1 space-y-0.5">
+                <a class="flex items-center gap-x-3.5 py-2 px-3 text-white/70 hover:text-white ease-in-out duration-300" href="../menu.html">
+                  <svg class="size-8" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512">
+                    <g fill-rule="nonzero">
+                      <path fill="#fff" d="M243.37 472.03h25.27c113.64-6.54 203.77-100.76 203.77-216.04 0-114.41-88.83-208.09-201.27-215.86h-30.28C128.43 47.9 39.6 141.58 39.6 255.99c0 115.28 90.13 209.5 203.77 216.04z" />
+                      <path fill="#dc143c" d="M243.37 472.03h25.27c113.61-6.54 203.72-100.72 203.77-215.94H39.6c.05 115.22 90.16 209.4 203.77 215.94z" />
+                    </g>
+                  </svg>
+                  Polski
+                </a>
+                <a class="flex items-center gap-x-3.5 py-2 px-3 text-white/70 hover:text-white ease-in-out duration-300" href="../en/menu.html">
+                  <svg class="size-8" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512">
+                    <g fill-rule="nonzero">
+                      <path fill="#FEFEFE" d="M256 39.59c119.52 0 216.41 96.89 216.41 216.4 0 119.52-96.89 216.42-216.41 216.42-119.51 0-216.4-96.9-216.4-216.42 0-119.51 96.89-216.4 216.4-216.4z" />
+                      <path fill="#012169" d="M183.49 179.55V52.05c-41.32 14.7-76.85 41.61-102.27 76.35l102.27 51.15zm0 152.9v127.5c-41.3-14.7-76.82-41.59-102.26-76.35l102.26-51.15zm144.55 0v127.67c41.45-14.63 77.09-41.54 102.61-76.34l-102.61-51.33zm0-152.9V51.88c41.45 14.63 77.11 41.54 102.62 76.35l-102.62 51.32z" />
+                      <path fill="#C8102E" d="M448.3 328.16h-48.11l49.35 24.72c3.21-6.41 6.11-13 8.69-19.75l-9.93-4.97zm-9.34-187.76-86.42 43.33h48.11l48.95-24.5c-3.23-6.46-6.79-12.75-10.64-18.83zM212.41 299.26v168.75c14.08 2.87 28.66 4.4 43.59 4.4 14.76 0 29.19-1.49 43.13-4.3V299.26h168.94c2.83-13.98 4.34-28.44 4.34-43.27 0-14.88-1.51-29.42-4.37-43.47H299.13V43.9A217.404 217.404 0 0 0 256 39.59c-14.93 0-29.51 1.54-43.59 4.4v168.53H43.97a217.777 217.777 0 0 0-4.37 43.47c0 14.83 1.51 29.29 4.34 43.27h168.47zM63.12 183.84h48.11l-48.89-24.48c-3.2 6.41-6.11 13.02-8.68 19.76l9.46 4.72zm95.87 144.43h-48.11l-48.57 24.31A216.76 216.76 0 0 0 73 371.52l86.43-43.25h-.44z" />
+                    </g>
+                  </svg>
+                  English
+                </a>
+              </div>
+            </div>
+          </div>
           <button type="button" class="hs-collapse-toggle md:hidden relative size-9 flex justify-center items-center font-medium text-[12px] rounded-lg border border-gray-200 text-gray-200 focus:outline-none focus:bg-gray-100/10 disabled:opacity-50 disabled:pointer-events-none" id="hs-header-base-collapse" aria-expanded="false" aria-controls="hs-header-base" aria-label="Toggle navigation" data-hs-collapse="#hs-header-base">
             <svg class="hs-collapse-open:hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="3" x2="21" y1="6" y2="6" />
@@ -84,12 +119,12 @@
             <div class="py-5 md:py-0 flex flex-col md:flex-row md:items-center gap-4 md:gap-1">
               <div class="grow">
                 <div class="flex flex-col md:flex-row md:justify-end md:items-center gap-4 md:gap-8">
-                  <a class="group text-white/70 hover:text-white transition-all duration-300 ease-in-out flex" href="index.html"> Strona główna </a>
-                  <a class="group text-white transition-all duration-300 ease-in-out flex" href="#"> Menu </a>
+                  <a class="group text-white/70 hover:text-white transition-all duration-300 ease-in-out flex" href="index.html"> Home </a>
+                  <a class="group text-white transition-all duration-300 ease-in-out flex cursor-pointer" href="#"> Menu </a>
                 </div>
               </div>
 
-              <div class="my-2 md:my-0 md:mx-8">
+              <div class="my-2 md:my-0 md:mx-3">
                 <div class="w-full h-px md:w-px md:h-4 bg-white/70"></div>
               </div>
 
@@ -101,11 +136,51 @@
                   +48 729 882 977
                 </a>
               </div>
+              <div class="my-2 md:my-0 md:mx-3">
+                <div class="w-full h-px md:w-px md:h-4 bg-white/70"></div>
+              </div>
+              <div class="my-2 md:my-0 md:mx-3">
+                <div class="hs-dropdown relative hidden md:inline-flex">
+                  <button id="hs-dropdown-default" type="button" class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-gray-800 shadow-sm disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                    <svg class="size-8" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                      <g fill-rule="nonzero">
+                        <path fill="#fff" d="M255.888 39.63c59.714 0 113.814 24.22 152.944 63.355l.997 1.079c38.535 39.062 62.348 92.713 62.348 151.878 0 59.732-24.224 113.83-63.354 152.966l-1.088.997c-39.075 38.56-92.727 62.366-151.847 62.366-59.714 0-113.805-24.228-152.935-63.363-39.13-39.136-63.363-93.243-63.363-152.966 0-59.66 24.242-113.758 63.409-152.902 39.084-39.182 93.175-63.41 152.889-63.41Z" style="stroke-width: 0.914529" />
+                        <path fill="#009246" d="M174.15 456.37V55.63C95.2 87.91 39.59 165.44 39.59 255.99c0 90.56 55.61 168.11 134.56 200.38z" />
+                        <path fill="#CE2B37" d="M337.88 55.63v400.74c78.93-32.29 134.53-109.84 134.53-200.38 0-90.53-55.6-168.07-134.53-200.36z" />
+                      </g>
+                    </svg>
+                    <svg class="hs-dropdown-open:rotate-180 size-4 stroke-white/70" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                  </button>
+                  <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden bg-dark shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-[1001]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                    <div class="p-1 space-y-0.5">
+                      <a class="flex items-center gap-x-3.5 py-2 px-3 text-white/70 hover:text-white ease-in-out duration-300" href="../menu.html">
+                        <svg class="size-8" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512">
+                          <g fill-rule="nonzero">
+                            <path fill="#fff" d="M243.37 472.03h25.27c113.64-6.54 203.77-100.76 203.77-216.04 0-114.41-88.83-208.09-201.27-215.86h-30.28C128.43 47.9 39.6 141.58 39.6 255.99c0 115.28 90.13 209.5 203.77 216.04z" />
+                            <path fill="#dc143c" d="M243.37 472.03h25.27c113.61-6.54 203.72-100.72 203.77-215.94H39.6c.05 115.22 90.16 209.4 203.77 215.94z" />
+                          </g>
+                        </svg>
+                        Polski
+                      </a>
+                      <a class="flex items-center gap-x-3.5 py-2 px-3 text-white/70 hover:text-white ease-in-out duration-300" href="../en/menu.html">
+                        <svg class="size-8" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512">
+                          <g fill-rule="nonzero">
+                            <path fill="#FEFEFE" d="M256 39.59c119.52 0 216.41 96.89 216.41 216.4 0 119.52-96.89 216.42-216.41 216.42-119.51 0-216.4-96.9-216.4-216.42 0-119.51 96.89-216.4 216.4-216.4z" />
+                            <path fill="#012169" d="M183.49 179.55V52.05c-41.32 14.7-76.85 41.61-102.27 76.35l102.27 51.15zm0 152.9v127.5c-41.3-14.7-76.82-41.59-102.26-76.35l102.26-51.15zm144.55 0v127.67c41.45-14.63 77.09-41.54 102.61-76.34l-102.61-51.33zm0-152.9V51.88c41.45 14.63 77.11 41.54 102.62 76.35l-102.62 51.32z" />
+                            <path fill="#C8102E" d="M448.3 328.16h-48.11l49.35 24.72c3.21-6.41 6.11-13 8.69-19.75l-9.93-4.97zm-9.34-187.76-86.42 43.33h48.11l48.95-24.5c-3.23-6.46-6.79-12.75-10.64-18.83zM212.41 299.26v168.75c14.08 2.87 28.66 4.4 43.59 4.4 14.76 0 29.19-1.49 43.13-4.3V299.26h168.94c2.83-13.98 4.34-28.44 4.34-43.27 0-14.88-1.51-29.42-4.37-43.47H299.13V43.9A217.404 217.404 0 0 0 256 39.59c-14.93 0-29.51 1.54-43.59 4.4v168.53H43.97a217.777 217.777 0 0 0-4.37 43.47c0 14.83 1.51 29.29 4.34 43.27h168.47zM63.12 183.84h48.11l-48.89-24.48c-3.2 6.41-6.11 13.02-8.68 19.76l9.46 4.72zm95.87 144.43h-48.11l-48.57 24.31A216.76 216.76 0 0 0 73 371.52l86.43-43.25h-.44z" />
+                          </g>
+                        </svg>
+                        English
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </nav>
-      <div class="absolute top-full left-0 bg-wave bg-repeat-x h-[100px] w-full rotate-180 [background-size:1440px_136px] [background-position-y:top] [background-position-x:20%] sm:[background-position-x:center] pointer-events-none"></div>
+      <div class="absolute top-full left-0 bg-wave bg-repeat-x h-[100px] w-full rotate-180 [background-size:1440px_136px] [background-position-y:top] [background-position-x:20%] z-[1] sm:[background-position-x:center] pointer-events-none"></div>
     </header>
     <section class="flex items-center justify-center pt-48">
       <svg width="49.5mm" height="79.937" viewBox="0 0 49.5 21.15" xmlns="http://www.w3.org/2000/svg">
@@ -119,7 +194,7 @@
       </svg>
     </section>
     <section id="menu text-light-gray flex items-center justify-center">
-      <div class="max-w-[700px] w-full mx-auto mt-24 md:my-24 px-4 md:px-10 md:py-6 md:pb-20 md:bg-white/20 rounded-[30px]">{{menu}}</div>
+      <div class="max-w-[700px] w-full mx-auto mt-24 md:my-24 px-4 rounded-[30px]">{{menu}}</div>
     </section>
     <div class="bg-wave bg-repeat-x h-[100px] w-full [background-size:1440px_136px] [background-position-y:top] [background-position-x:20%] sm:[background-position-x:center] pointer-events-none mt-12"></div>
     <footer class="w-full bg-black pb-12 relative pt-12 md:pt-24">
@@ -170,29 +245,29 @@
             </a>
           </div>
           <div class="md:ml-auto">
-            <h4 class="font-semibold text-white">Lokalizacja i kontakt</h4>
+            <h4 class="font-semibold text-white">Località e contatti</h4>
             <div class="mt-3 grid space-y-3">
-              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="https://maps.app.goo.gl/RMBo1w9opps74tUg7" target="_blank" aria-label="Zobacz nas na mapach Google">ul. Świętej Katarzyny 4, 34-400 Nowy Targ</a></p>
-              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="tel:+48729882977" aria-label="Zadzwoń">+48 729 882 977</a></p>
-              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="email:parmezzan19@gmail.com" aria-label="Napisz email">parmezzan19@gmail.com</a></p>
+              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="https://maps.app.goo.gl/RMBo1w9opps74tUg7" target="_blank" aria-label="Guardaci su Google Maps">ul. Świętej Katarzyny 4, 34-400 Nowy Targ</a></p>
+              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="tel:+48729882977" aria-label="Chiamaci">+48 729 882 977</a></p>
+              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="email:parmezzan19@gmail.com" aria-label="Mandaci una email">parmezzan19@gmail.com</a></p>
             </div>
-          </div>
+            </div>
 
-          <div>
-            <h4 class="font-semibold text-white">Media społecznościowe</h4>
+            <div>
+            <h4 class="font-semibold text-white">Social media</h4>
             <div class="mt-3 grid space-y-3">
-              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="https://www.facebook.com/Parmezzan.Italian.Street.Food/" target="_blank" aria-label="Zobacz nas na Facebooku">Facebook</a></p>
-              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="https://www.instagram.com/parmezzan.ristorante/" target="_blank" aria-label="Zobacz nas na Instagramie">Instagram</a></p>
+              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="https://www.facebook.com/Parmezzan.Italian.Street.Food/" target="_blank" aria-label="Guardaci su Facebook">Facebook</a></p>
+              <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out" href="https://www.instagram.com/parmezzan.ristorante/" target="_blank" aria-label="Guardaci su Instagram">Instagram</a></p>
+            </div>
             </div>
           </div>
-        </div>
 
         <div class="mt-8">
-          <p class="text-white/70">© 2025 parmezzan.pl - Wszelkie prawa zastrzeżone. Stworzone przez <a href="https://4sys.pl" target="_blank" class="text-white">4sys.pl</a></p>
+          <p class="text-white/70">© 2025 parmezzan.pl - Tutti i diritti riservati. Creato da <a href="https://4sys.pl" target="_blank" class="text-white">4sys.pl</a></p>
         </div>
       </div>
     </footer>
-    <button class="size-14 border-white border rounded-full fixed bottom-4 right-4 hidden z-[1000] mix-blend-difference" id="scroll-to-top" title="Wróć na górę">
+    <button class="size-14 border-white border rounded-full fixed bottom-4 right-4 hidden z-[1000] mix-blend-difference" id="scroll-to-top" title="Scorri su">
       <div class="flex items-center justify-center">
         <svg class="size-8 rotate-180 stroke-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
       </div>

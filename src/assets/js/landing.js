@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-  gsap.to(".preloader-logo", {
-    delay: 0.3,
-    opacity: "1",
-    transform: "translateX(0px)",
-    ease: "power4.inOut",
-    duration: 1,
-  });
+  if (getCookie("loaded") != "true") {
+    gsap.to(".preloader-logo", {
+      delay: 0.3,
+      opacity: "1",
+      transform: "translateX(0px)",
+      ease: "power4.inOut",
+      duration: 1,
+    });
+  }
+  else {
+    document.getElementsByClassName("preloader")[0]?.remove();
+  }
 });
 
 window.onload = function () {
@@ -40,13 +45,17 @@ window.onload = function () {
   lazyLoad();
 
   let resizeTimer;
+  let lastWidth = window.innerWidth;
+
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-      lazyLoad();
+      if (window.innerWidth !== lastWidth) {
+        lazyLoad();
+      }
+      lastWidth = window.innerWidth;
     }, 300);
   });
-
   let backToTop = document.getElementById("scroll-to-top");
 
   gsap.registerPlugin(ScrollTrigger);
@@ -111,23 +120,28 @@ window.onload = function () {
       }
     );
   });
-
-  gsap.to(".preloader-logo", {
-    delay: 1.3,
-    opacity: "0",
-    transform: "translateX(10px)",
-    ease: "power4.inOut",
-    duration: 1,
-  });
-  gsap.to(".preloader", {
-    delay: 1.8,
-    transform: "translateX(100%)",
-    ease: "power4.inOut",
-    duration: 1,
-  });
-  setTimeout(() => {
-    document.getElementsByClassName("preloader")[0]?.remove();
-  }, 3000);
+  if (getCookie("loaded") != "true") {
+    gsap.to(".preloader-logo", {
+      delay: 1.3,
+      opacity: "0",
+      transform: "translateX(10px)",
+      ease: "power4.inOut",
+      duration: 1,
+    });
+    gsap.to(".preloader", {
+      delay: 1.8,
+      transform: "translateX(100%)",
+      ease: "power4.inOut",
+      duration: 1,
+    });
+    setTimeout(() => {
+      document.getElementsByClassName("preloader")[0]?.remove();
+      const expires = new Date();
+      expires.setDate(expires.getDate() + 1);
+      document.cookie = `loaded=true; expires=${expires.toUTCString()}; path=/`;
+      console.log(getCookie("loaded"));
+    }, 3000);
+  }
 };
 
 window.mobileCheck = function () {
@@ -143,3 +157,10 @@ window.mobileCheck = function () {
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
 };
+
+function getCookie(name) {
+  return document.cookie
+    .split("; ")
+    .find((row) => row.startsWith(name + "="))
+    ?.split("=")[1];
+}
