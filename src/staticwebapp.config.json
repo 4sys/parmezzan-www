@@ -1,11 +1,6 @@
 {
     "trailingSlash": "auto",
-    "responseOverrides": {
-      "404": {
-        "rewrite": "/index.html",
-        "statusCode": 404
-      }
-    },
+
     "routes": [
       {
         "route": "/index.html",
