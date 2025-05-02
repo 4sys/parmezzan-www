@@ -13,7 +13,10 @@
   "sections": [
     {
       "title": [{ "PL": "PIZZA AL TAGLIO / PIZZA NA KAWAŁKI NA WAGĘ" }, { "EN": "PIZZA AL TAGLIO / PIZZA BY WEIGHT" }, { "IT": "PIZZA AL TAGLIO / PIZZA AL PESO" }],
-      "titleDescription": [{ "PL": "NASZA SPECJALNOŚĆ" }, { "EN": "OUR SPECIALTY" }, { "IT": "LA NOSTRA SPECIALITÀ" }],
+      "titleDescription": [
+        { "PL": "NASZA SPECJALNOŚĆ" },
+        { "EN": "OUR SPECIALTY" }, 
+        { "IT": "LA NOSTRA SPECIALITÀ" }],
       "dishes": [
         {
           "name": "FOCACCIA",

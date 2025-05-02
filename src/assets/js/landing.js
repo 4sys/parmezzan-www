@@ -32,7 +32,7 @@ window.onload = function () {
         img.src = bgUrl;
         img.onload = () => {
           if (element.getAttribute("data-style") == "dimmed") {
-            element.style.backgroundImage = "linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(" + img.src + ")";
+            element.style.backgroundImage = "linear-gradient(-90deg,rgba(0,0,0,0.4), rgba(0,0,0,0)), url(" + img.src + ")";
           } else {
             element.style.backgroundImage = "url(" + img.src + ")";
           }
@@ -107,7 +107,7 @@ window.onload = function () {
         },
       });
 
-    const dampingFactor = 0.08;
+    const dampingFactor = 0.12;
 
     tl.fromTo(
       bg,
