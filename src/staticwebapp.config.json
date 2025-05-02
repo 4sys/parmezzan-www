@@ -11,11 +11,6 @@
         "route": "/index.html",
         "redirect": "/",
         "statusCode": 301
-      },
-      {
-        "route": "/menu.pdf",
-        "redirect": "/menu.html",
-        "statusCode": 301
       }
     ]
   }
