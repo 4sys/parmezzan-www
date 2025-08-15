@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         lato: ["Lato", "serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       backgroundImage: {
         "spicy": "url('../assets/images/icons/spicy.webp')",
