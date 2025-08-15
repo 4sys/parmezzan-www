@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require("fs");
 
 const jsonData = JSON.parse(fs.readFileSync("data.json", "utf8"));
@@ -14,11 +16,13 @@ const getIconHtml = (icon, language) => {
 };
 
 const generateDishHtml = (dish, language, isSubDish = false) => {
-  const ingredients = dish.ingredients.find((ing) => ing[language]);
-  let icons = Array.isArray(dish.icons) ? dish.icons : [dish.icons];
+  const ingredients = dish.ingredients && Array.isArray(dish.ingredients) 
+    ? dish.ingredients.find((ing) => ing[language]) 
+    : null;
+  let icons = Array.isArray(dish.icons) ? dish.icons : (dish.icons ? [dish.icons] : []);
   let iconHtml = icons.map((icon) => getIconHtml(icon, language)).join("");
-  let tags = Array.isArray(dish.tags) ? dish.tags : [dish.tags];
-  let tagsHtml = tags.filter(tag => tag && tag[language]).map((tag) => `<span class="text-primary">${tag[language]}</span>`).join("");
+  let tags = Array.isArray(dish.tags) ? dish.tags : (dish.tags ? [dish.tags] : []);
+  let tagsHtml = tags.filter(tag => tag && tag[language]).map((tag) => `<span class="text-primary whitespace-nowrap">${tag[language]}</span>`).join("");
   if (dish.name == "") {
     return `
     <div class="flex flex-col gap-8 mt-${isSubDish ? "6" : "10"}">
@@ -52,13 +56,17 @@ const generateDishHtml = (dish, language, isSubDish = false) => {
 };
 
 const generateSectionHtml = (section, language, sectionCount) => {
-  const title = section.title.find((t) => t[language]);
-  const titleDescription = section.titleDescription.find((td) => td[language]);
+  const title = section.title && Array.isArray(section.title) 
+    ? section.title.find((t) => t[language]) 
+    : null;
+  const titleDescription = section.titleDescription && Array.isArray(section.titleDescription) 
+    ? section.titleDescription.find((td) => td[language]) 
+    : null;
 
   return `
     <div class="hs-accordion ${sectionCount === 1 ? "active" : "active"} mt-12" id="hs-heading-${sectionCount}">
       <button class="hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-${sectionCount}">
-        <p class="text-primary/90 hs-accordion-active:text-primary hover:text-primary text-[20px] text-left transition-colors ease-in-out duration-500 font-semibold flex items-center gap-2">${title[language]}</p>
+        <p class="text-primary/90 hs-accordion-active:text-primary hover:text-primary text-[20px] text-left transition-colors ease-in-out duration-500 font-semibold flex items-center gap-2">${title ? title[language] : ''}</p>
         ${titleDescription ? `<p class="text-primary/90 text-left">${titleDescription[language]}</p>` : ""}
         <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
         <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>

@@ -658,6 +658,10 @@ video {
   top: 0px;
 }
 
+.top-1 {
+  top: 0.25rem;
+}
+
 .top-1\/2 {
   top: 50%;
 }
@@ -988,6 +992,10 @@ video {
 
 .w-lvw {
   width: 100lvw;
+}
+
+.max-w-\[1200px\] {
+  max-width: 1200px;
 }
 
 .max-w-\[300px\] {
@@ -1353,10 +1361,6 @@ video {
 
 .bg-left {
   background-position: left;
-}
-
-.bg-right {
-  background-position: right;
 }
 
 .bg-no-repeat {
