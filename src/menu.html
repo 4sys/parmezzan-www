@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html class="!overflow-x-hidden" lang="pl">
+
+<head>
+  <title>Menu | Parmezzan Ristorante | Nowy Targ</title>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Odkryj nasze menu pełne autentycznych włoskich smaków. Pizze al taglio, świeże makarony, aromatyczne sałatki i wyśmienite desery – spróbuj już dziś!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon-precomposed" href="assets/images/favicons/favicon-256x256.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script type="text/javascript" src="assets/js/menu.js"></script>
+  <script type="text/javascript" src="assets/js/preline.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
+</head>
+
+<body class="overflow-x-hidden text-[17px] font-lato bg-light text-black">
+  <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-black sm:h-16 fixed top-0 left-0 header">
+    <nav
+      class="relative max-w-[100rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 pt-6 px-6 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center gap-x-1">
+        <a class="flex-none font-semibold text-xl text-black focus:outline-none focus:opacity-80" href="#"
+          aria-label="Parmezzan Ristorante">
+          <svg class="h-[30px]" viewBox="0 0 2991 596" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+            style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
+            <g>
+              <path
+                d="M94.471,196.819c15.994,0 30.353,-2.236 43.079,-6.707c12.725,-4.471 23.517,-10.662 32.373,-18.572c8.856,-7.911 15.649,-17.24 20.378,-27.989c4.729,-10.748 7.094,-22.485 7.094,-35.21c0,-28.031 -8.598,-49.613 -25.795,-64.747c-17.197,-15.133 -42.907,-22.7 -77.129,-22.7l-67.842,0l0,175.925l67.842,0Zm0,-196.819c42.821,0 75.108,9.372 96.862,28.117c21.754,18.745 32.631,45.486 32.631,80.224c0,15.993 -3.009,30.696 -9.028,44.11c-6.019,13.414 -14.617,24.978 -25.795,34.695c-11.178,9.716 -24.764,17.283 -40.757,22.7c-15.993,5.417 -33.964,8.125 -53.913,8.125l-67.842,0l0,147.034l-26.569,0l0,-365.005l94.411,0Z"
+                style="fill: #fff" />
+              <path
+                d="M477.533,232.417l-74.291,-184.438c-2.579,-6.018 -5.073,-13.241 -7.48,-21.668c-1.032,4.128 -2.15,8.04 -3.354,11.737c-1.203,3.698 -2.493,7.094 -3.869,10.189l-74.291,184.18l163.285,-0Zm80.74,132.588l-20.378,0c-2.408,0 -4.386,-0.645 -5.933,-1.935c-1.548,-1.289 -2.752,-2.966 -3.612,-5.03l-42.82,-106.019l-179.278,0l-42.821,106.019c-0.688,1.892 -1.891,3.526 -3.611,4.902c-1.72,1.375 -3.783,2.063 -6.191,2.063l-20.12,0l149.355,-365.005l26.053,0l149.356,365.005Z"
+                style="fill: #fff" />
+              <path
+                d="M716.399,180.31c16.165,-0 30.653,-1.935 43.465,-5.804c12.812,-3.869 23.646,-9.415 32.502,-16.638c8.857,-7.223 15.607,-15.907 20.25,-26.053c4.643,-10.147 6.965,-21.583 6.965,-34.308c-0,-25.968 -8.47,-45.228 -25.409,-57.782c-16.939,-12.554 -41.66,-18.831 -74.162,-18.831l-66.81,0l0,159.416l63.199,-0Zm161.995,184.695l-22.7,0c-2.923,0 -5.374,-0.473 -7.352,-1.419c-1.977,-0.945 -3.826,-2.708 -5.546,-5.288l-117.111,-148.065c-1.376,-1.892 -2.794,-3.526 -4.256,-4.901c-1.462,-1.376 -3.096,-2.451 -4.901,-3.225c-1.806,-0.774 -3.955,-1.333 -6.449,-1.677c-2.494,-0.344 -5.546,-0.516 -9.157,-0.516l-47.722,0l0,165.091l-26.569,0l-0,-365.005l93.379,0c41.961,0 73.388,8.126 94.282,24.377c20.895,16.251 31.342,40.112 31.342,71.582c-0,13.929 -2.408,26.655 -7.223,38.177c-4.815,11.522 -11.737,21.625 -20.765,30.31c-9.029,8.684 -19.949,15.778 -32.76,21.281c-12.812,5.503 -27.214,9.2 -43.208,11.092c4.128,2.58 7.825,6.019 11.092,10.318l125.624,157.868Z"
+                style="fill: #fff" />
+              <path
+                d="M1308.15,0l-0,365.005l-22.958,0l-0,-311.093c-0,-4.471 0.258,-9.2 0.774,-14.187l-143.681,255.117c-2.407,4.471 -5.847,6.706 -10.318,6.706l-4.127,0c-4.471,0 -7.911,-2.235 -10.318,-6.706l-147.55,-255.633c0.516,5.159 0.774,10.06 0.774,14.703l-0,311.093l-23.216,0l-0,-365.005l18.315,0c2.407,0 4.299,0.258 5.675,0.774c1.375,0.516 2.751,1.892 4.127,4.127l147.292,253.827c2.579,4.815 4.815,9.974 6.706,15.477c1.032,-2.751 2.15,-5.46 3.354,-8.125c1.204,-2.666 2.493,-5.202 3.869,-7.61l143.165,-253.569c1.375,-2.235 2.794,-3.611 4.256,-4.127c1.462,-0.516 3.396,-0.774 5.804,-0.774l18.057,0Z"
+                style="fill: #fff" />
+              <path
+                d="M1642.97,343.079l-0.516,21.926l-218.745,0l0,-365.005l218.745,0l0,21.926l-192.176,0l0,147.55l159.932,-0l0,21.41l-159.932,0l0,152.193l192.692,0Z"
+                style="fill: #fff" />
+              <path
+                d="M1965.15,9.028c-0,3.268 -1.204,6.793 -3.611,10.577l-231.643,323.474l233.448,0l0,21.926l-268.788,0l0,-9.544c0,-1.892 0.301,-3.569 0.903,-5.03c0.602,-1.462 1.333,-2.881 2.192,-4.257l232.159,-324.248l-228.547,0l-0,-21.926l263.887,0l-0,9.028Z"
+                style="fill: #fff" />
+              <path
+                d="M2281.15,9.028c-0,3.268 -1.204,6.793 -3.612,10.577l-231.642,323.474l233.448,0l0,21.926l-268.788,0l-0,-9.544c-0,-1.892 0.301,-3.569 0.903,-5.03c0.602,-1.462 1.332,-2.881 2.192,-4.257l232.159,-324.248l-228.547,0l-0,-21.926l263.887,0l-0,9.028Z"
+                style="fill: #fff" />
+              <path
+                d="M2559.48,232.417l-74.29,-184.438c-2.58,-6.018 -5.074,-13.241 -7.481,-21.668c-1.032,4.128 -2.15,8.04 -3.354,11.737c-1.203,3.698 -2.493,7.094 -3.869,10.189l-74.291,184.18l163.285,-0Zm80.74,132.588l-20.378,0c-2.408,0 -4.386,-0.645 -5.933,-1.935c-1.548,-1.289 -2.752,-2.966 -3.612,-5.03l-42.82,-106.019l-179.278,0l-42.821,106.019c-0.688,1.892 -1.891,3.526 -3.611,4.902c-1.72,1.375 -3.783,2.063 -6.191,2.063l-20.12,0l149.355,-365.005l26.054,0l149.355,365.005Z"
+                style="fill: #fff" />
+              <path
+                d="M2990.26,0l-0,365.005l-12.382,0c-2.236,0 -4.084,-0.387 -5.546,-1.161c-1.462,-0.774 -2.881,-2.106 -4.256,-3.998l-237.06,-316.768c0.516,5.159 0.774,10.061 0.774,14.704l-0,307.223l-23.216,0l-0,-365.005l13.155,0c2.408,0 4.257,0.301 5.547,0.903c1.289,0.602 2.708,1.934 4.256,3.998l236.544,315.994c-0.516,-5.159 -0.774,-10.06 -0.774,-14.703l-0,-306.192l22.958,0Z"
+                style="fill: #fff" />
+            </g>
+            <g>
+              <path
+                d="M43.424,503.868c7.82,-0 14.829,-0.936 21.026,-2.808c6.198,-1.872 11.439,-4.554 15.723,-8.048c4.284,-3.494 7.549,-7.695 9.795,-12.603c2.246,-4.909 3.37,-10.441 3.37,-16.597c-0,-12.561 -4.098,-21.878 -12.292,-27.951c-8.194,-6.073 -20.152,-9.109 -35.875,-9.109l-32.318,-0l-0,77.116l30.571,-0Zm78.364,89.344l-10.981,0c-1.414,0 -2.6,-0.229 -3.556,-0.686c-0.957,-0.458 -1.851,-1.31 -2.683,-2.558l-56.651,-71.625c-0.666,-0.916 -1.352,-1.706 -2.059,-2.371c-0.707,-0.666 -1.498,-1.186 -2.371,-1.56c-0.874,-0.374 -1.914,-0.645 -3.12,-0.811c-1.206,-0.167 -2.683,-0.25 -4.43,-0.25l-23.084,0l-0,79.861l-12.853,0l0,-176.567l45.171,-0c20.298,-0 35.501,3.93 45.608,11.792c10.108,7.861 15.162,19.403 15.162,34.627c-0,6.738 -1.165,12.894 -3.494,18.468c-2.33,5.573 -5.678,10.461 -10.045,14.662c-4.368,4.201 -9.65,7.632 -15.848,10.294c-6.197,2.662 -13.164,4.451 -20.901,5.366c1.997,1.248 3.785,2.911 5.366,4.991l60.769,76.367Z"
+                style="fill: #fff" />
+              <rect x="324.186" y="416.645" width="12.853" height="176.568" style="fill: #fff" />
+              <path
+                d="M647.623,438.107c-0.749,1.414 -1.831,2.121 -3.245,2.121c-1.081,0 -2.475,-0.769 -4.18,-2.308c-1.705,-1.539 -4.014,-3.244 -6.925,-5.116c-2.912,-1.872 -6.552,-3.598 -10.919,-5.179c-4.367,-1.58 -9.754,-2.37 -16.159,-2.37c-6.406,-0 -12.042,0.915 -16.908,2.745c-4.867,1.83 -8.943,4.326 -12.229,7.487c-3.286,3.161 -5.782,6.821 -7.487,10.981c-1.705,4.159 -2.558,8.526 -2.558,13.102c-0,5.989 1.269,10.939 3.806,14.849c2.537,3.91 5.885,7.237 10.045,9.983c4.159,2.745 8.88,5.053 14.163,6.925c5.282,1.872 10.71,3.723 16.284,5.553c5.573,1.83 11.001,3.847 16.284,6.052c5.282,2.204 10.003,4.97 14.163,8.298c4.159,3.327 7.508,7.424 10.045,12.291c2.537,4.867 3.806,10.918 3.806,18.156c-0,7.404 -1.269,14.371 -3.806,20.901c-2.537,6.53 -6.219,12.208 -11.044,17.033c-4.824,4.825 -10.731,8.631 -17.719,11.417c-6.987,2.787 -14.974,4.181 -23.958,4.181c-11.646,-0 -21.671,-2.059 -30.073,-6.177c-8.402,-4.118 -15.764,-9.754 -22.086,-16.908l3.494,-5.491c0.998,-1.247 2.163,-1.871 3.494,-1.871c0.748,-0 1.705,0.499 2.87,1.497c1.164,0.998 2.579,2.225 4.242,3.681c1.664,1.456 3.661,3.037 5.99,4.742c2.329,1.705 5.033,3.286 8.111,4.742c3.078,1.455 6.613,2.682 10.606,3.681c3.993,0.998 8.527,1.497 13.602,1.497c6.987,0 13.227,-1.06 18.717,-3.182c5.49,-2.121 10.128,-5.012 13.913,-8.672c3.785,-3.661 6.676,-8.007 8.673,-13.04c1.996,-5.033 2.994,-10.419 2.994,-16.159c0,-6.24 -1.268,-11.376 -3.805,-15.411c-2.538,-4.035 -5.886,-7.404 -10.045,-10.107c-4.16,-2.704 -8.881,-4.971 -14.163,-6.801c-5.283,-1.83 -10.711,-3.619 -16.284,-5.366c-5.574,-1.747 -11.002,-3.702 -16.285,-5.865c-5.282,-2.162 -10.003,-4.928 -14.162,-8.298c-4.16,-3.369 -7.508,-7.57 -10.045,-12.603c-2.538,-5.033 -3.806,-11.334 -3.806,-18.904c-0,-5.907 1.123,-11.605 3.369,-17.095c2.246,-5.491 5.532,-10.337 9.858,-14.538c4.326,-4.201 9.67,-7.57 16.034,-10.107c6.364,-2.537 13.622,-3.806 21.775,-3.806c9.151,0 17.365,1.456 24.644,4.367c7.279,2.912 13.914,7.363 19.903,13.352l-2.994,5.74Z"
+                style="fill: #fff" />
+              <path
+                d="M982.914,427.501l-62.017,-0l-0,165.711l-12.853,0l0,-165.711l-62.391,-0l-0,-10.856l137.261,-0l-0,10.856Z"
+                style="fill: #fff" />
+              <path
+                d="M1331.81,504.866c0,13.643 -2.038,26.017 -6.114,37.123c-4.076,11.106 -9.816,20.589 -17.22,28.45c-7.404,7.862 -16.284,13.934 -26.641,18.219c-10.357,4.284 -21.775,6.426 -34.253,6.426c-12.478,-0 -23.875,-2.142 -34.19,-6.426c-10.316,-4.285 -19.175,-10.357 -26.579,-18.219c-7.404,-7.861 -13.144,-17.344 -17.22,-28.45c-4.076,-11.106 -6.115,-23.48 -6.115,-37.123c0,-13.56 2.039,-25.892 6.115,-36.998c4.076,-11.106 9.816,-20.589 17.22,-28.451c7.404,-7.861 16.263,-13.954 26.579,-18.28c10.315,-4.326 21.712,-6.489 34.19,-6.489c12.478,0 23.896,2.142 34.253,6.426c10.357,4.285 19.237,10.378 26.641,18.281c7.404,7.903 13.144,17.407 17.22,28.513c4.076,11.106 6.114,23.438 6.114,36.998Zm-13.227,-0c0,-12.312 -1.705,-23.376 -5.116,-33.192c-3.41,-9.816 -8.235,-18.135 -14.474,-24.957c-6.24,-6.821 -13.727,-12.041 -22.461,-15.66c-8.735,-3.619 -18.385,-5.428 -28.95,-5.428c-10.482,-0 -20.09,1.809 -28.825,5.428c-8.735,3.619 -16.242,8.839 -22.523,15.66c-6.281,6.822 -11.147,15.141 -14.6,24.957c-3.452,9.816 -5.178,20.88 -5.178,33.192c-0,12.395 1.726,23.48 5.178,33.255c3.453,9.774 8.319,18.072 14.6,24.894c6.281,6.821 13.788,12.02 22.523,15.598c8.735,3.577 18.343,5.365 28.825,5.365c10.565,0 20.215,-1.788 28.95,-5.365c8.734,-3.578 16.221,-8.777 22.461,-15.598c6.239,-6.822 11.064,-15.12 14.474,-24.894c3.411,-9.775 5.116,-20.86 5.116,-33.255Z"
+                style="fill: #fff" />
+              <path
+                d="M1588.61,503.868c7.82,-0 14.829,-0.936 21.026,-2.808c6.198,-1.872 11.439,-4.554 15.723,-8.048c4.284,-3.494 7.549,-7.695 9.795,-12.603c2.246,-4.909 3.369,-10.441 3.369,-16.597c0,-12.561 -4.097,-21.878 -12.291,-27.951c-8.194,-6.073 -20.152,-9.109 -35.875,-9.109l-32.318,-0l-0,77.116l30.571,-0Zm78.364,89.344l-10.981,0c-1.414,0 -2.6,-0.229 -3.556,-0.686c-0.957,-0.458 -1.851,-1.31 -2.683,-2.558l-56.651,-71.625c-0.666,-0.916 -1.352,-1.706 -2.059,-2.371c-0.707,-0.666 -1.498,-1.186 -2.371,-1.56c-0.874,-0.374 -1.914,-0.645 -3.12,-0.811c-1.206,-0.167 -2.683,-0.25 -4.43,-0.25l-23.084,0l-0,79.861l-12.853,0l-0,-176.567l45.171,-0c20.298,-0 35.501,3.93 45.608,11.792c10.108,7.861 15.162,19.403 15.162,34.627c-0,6.738 -1.165,12.894 -3.494,18.468c-2.33,5.573 -5.678,10.461 -10.045,14.662c-4.368,4.201 -9.65,7.632 -15.848,10.294c-6.197,2.662 -13.164,4.451 -20.901,5.366c1.997,1.248 3.785,2.911 5.366,4.991l60.769,76.367Z"
+                style="fill: #fff" />
+              <path
+                d="M1964.58,529.074l-35.938,-89.22c-1.247,-2.911 -2.454,-6.405 -3.618,-10.482c-0.499,1.997 -1.04,3.889 -1.622,5.678c-0.583,1.789 -1.207,3.432 -1.872,4.929l-35.938,89.095l78.988,-0Zm39.057,64.138l-9.858,0c-1.165,0 -2.121,-0.312 -2.87,-0.936c-0.749,-0.624 -1.331,-1.435 -1.747,-2.433l-20.714,-51.286l-86.724,0l-20.714,51.286c-0.333,0.915 -0.915,1.705 -1.747,2.371c-0.832,0.665 -1.83,0.998 -2.995,0.998l-9.733,0l72.25,-176.567l12.603,-0l72.249,176.567Z"
+                style="fill: #fff" />
+              <path
+                d="M2341.92,416.645l-0,176.567l-5.99,0c-1.081,0 -1.975,-0.187 -2.683,-0.561c-0.707,-0.375 -1.393,-1.019 -2.058,-1.934l-114.676,-153.234c0.25,2.496 0.375,4.867 0.375,7.113l-0,148.616l-11.231,0l0,-176.567l6.364,-0c1.165,-0 2.059,0.145 2.683,0.436c0.624,0.291 1.31,0.936 2.059,1.934l114.426,152.859c-0.25,-2.495 -0.375,-4.866 -0.375,-7.112l0,-148.117l11.106,-0Z"
+                style="fill: #fff" />
+              <path
+                d="M2681.58,427.501l-62.017,-0l-0,165.711l-12.853,0l-0,-165.711l-62.391,-0l-0,-10.856l137.261,-0l-0,10.856Z"
+                style="fill: #fff" />
+              <path
+                d="M2990.05,582.606l-0.25,10.606l-105.816,0l0,-176.567l105.816,-0l0,10.606l-92.963,0l-0,71.376l77.365,-0l0,10.357l-77.365,-0l-0,73.622l93.213,-0Z"
+                style="fill: #fff" />
+            </g>
+          </svg>
+        </a>
+        <div class="hs-dropdown relative inline-flex md:hidden ml-auto">
+          <button id="hs-dropdown-default" type="button"
+            class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-gray-800 shadow-sm disabled:opacity-50 disabled:pointer-events-none"
+            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+          
+            <svg class="size-8" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                  clip-rule="evenodd" viewBox="0 0 512 512">
+                  <g fill-rule="nonzero">
+                    <path fill="#fff"
+                      d="M243.37 472.03h25.27c113.64-6.54 203.77-100.76 203.77-216.04 0-114.41-88.83-208.09-201.27-215.86h-30.28C128.43 47.9 39.6 141.58 39.6 255.99c0 115.28 90.13 209.5 203.77 216.04z" />
+                    <path fill="#dc143c"
+                      d="M243.37 472.03h25.27c113.61-6.54 203.72-100.72 203.77-215.94H39.6c.05 115.22 90.16 209.4 203.77 215.94z" />
+                  </g>
+                </svg>
+            <svg class="hs-dropdown-open:rotate-180 size-4 stroke-white/70" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div
+            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden bg-dark shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-[1001]"
+            role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+            <div class="p-1 space-y-0.5">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 text-white/70 hover:text-white ease-in-out duration-300"
+                href="en/menu.html">
+                <svg class="size-8" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                  clip-rule="evenodd" viewBox="0 0 512 512">
+                  <g fill-rule="nonzero">
+                    <path fill="#FEFEFE"
+                      d="M256 39.59c119.52 0 216.41 96.89 216.41 216.4 0 119.52-96.89 216.42-216.41 216.42-119.51 0-216.4-96.9-216.4-216.42 0-119.51 96.89-216.4 216.4-216.4z" />
+                    <path fill="#012169"
+                      d="M183.49 179.55V52.05c-41.32 14.7-76.85 41.61-102.27 76.35l102.27 51.15zm0 152.9v127.5c-41.3-14.7-76.82-41.59-102.26-76.35l102.26-51.15zm144.55 0v127.67c41.45-14.63 77.09-41.54 102.61-76.34l-102.61-51.33zm0-152.9V51.88c41.45 14.63 77.11 41.54 102.62 76.35l-102.62 51.32z" />
+                    <path fill="#C8102E"
+                      d="M448.3 328.16h-48.11l49.35 24.72c3.21-6.41 6.11-13 8.69-19.75l-9.93-4.97zm-9.34-187.76-86.42 43.33h48.11l48.95-24.5c-3.23-6.46-6.79-12.75-10.64-18.83zM212.41 299.26v168.75c14.08 2.87 28.66 4.4 43.59 4.4 14.76 0 29.19-1.49 43.13-4.3V299.26h168.94c2.83-13.98 4.34-28.44 4.34-43.27 0-14.88-1.51-29.42-4.37-43.47H299.13V43.9A217.404 217.404 0 0 0 256 39.59c-14.93 0-29.51 1.54-43.59 4.4v168.53H43.97a217.777 217.777 0 0 0-4.37 43.47c0 14.83 1.51 29.29 4.34 43.27h168.47zM63.12 183.84h48.11l-48.89-24.48c-3.2 6.41-6.11 13.02-8.68 19.76l9.46 4.72zm95.87 144.43h-48.11l-48.57 24.31A216.76 216.76 0 0 0 73 371.52l86.43-43.25h-.44z" />
+                  </g>
+                </svg>
+                English
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 text-white/70 hover:text-white ease-in-out duration-300"
+                href="it/menu.html">
+                <svg class="size-8" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                  image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g fill-rule="nonzero">
+                    <path fill="#fff"
+                      d="M255.888 39.63c59.714 0 113.814 24.22 152.944 63.355l.997 1.079c38.535 39.062 62.348 92.713 62.348 151.878 0 59.732-24.224 113.83-63.354 152.966l-1.088.997c-39.075 38.56-92.727 62.366-151.847 62.366-59.714 0-113.805-24.228-152.935-63.363-39.13-39.136-63.363-93.243-63.363-152.966 0-59.66 24.242-113.758 63.409-152.902 39.084-39.182 93.175-63.41 152.889-63.41Z"
+                      style="stroke-width: 0.914529" />
+                    <path fill="#009246"
+                      d="M174.15 456.37V55.63C95.2 87.91 39.59 165.44 39.59 255.99c0 90.56 55.61 168.11 134.56 200.38z" />
+                    <path fill="#CE2B37"
+                      d="M337.88 55.63v400.74c78.93-32.29 134.53-109.84 134.53-200.38 0-90.53-55.6-168.07-134.53-200.36z" />
+                  </g>
+                </svg>
+                Italiano
+              </a>
+            </div>
+          </div>
+        </div>
+        <button type="button"
+          class="hs-collapse-toggle md:hidden relative size-9 flex justify-center items-center font-medium text-[12px] rounded-lg border border-gray-200 text-gray-200 focus:outline-none focus:bg-gray-100/10 disabled:opacity-50 disabled:pointer-events-none"
+          id="hs-header-base-collapse" aria-expanded="false" aria-controls="hs-header-base"
+          aria-label="Toggle navigation" data-hs-collapse="#hs-header-base">
+          <svg class="hs-collapse-open:hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="3" x2="21" y1="6" y2="6" />
+            <line x1="3" x2="21" y1="12" y2="12" />
+            <line x1="3" x2="21" y1="18" y2="18" />
+          </svg>
+          <svg class="hs-collapse-open:block shrink-0 hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+      </div>
+
+      <div id="hs-header-base"
+        class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
+        aria-labelledby="hs-header-base-collapse">
+        <div class="overflow-hidden overflow-y-auto max-h-[75vh]">
+          <div class="py-5 md:py-0 flex flex-col md:flex-row md:items-center gap-4 md:gap-1">
+            <div class="grow">
+              <div class="flex flex-col md:flex-row md:justify-end md:items-center gap-4 md:gap-8">
+                <a class="group text-white/70 hover:text-white transition-all duration-300 ease-in-out flex"
+                  href="index.html">Strona główna</a>
+                <a class="group text-white transition-all duration-300 ease-in-out flex cursor-pointer"
+                  href="#">Menu</a>
+              </div>
+            </div>
+            <div class="my-2 md:my-0 md:mx-3">
+              <div class="w-full h-px md:w-px md:h-4 bg-white/70"></div>
+            </div>
+            <div
+              class="flex flex-wrap items-center gap-x-1.5 text-white/70 hover:text-white group transition-all duration-300 ease-in-out">
+              <a class="flex items-center justify-center gap-2 md:px-3" href="tel:+48729882977">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="size-[20px] relative top-[1px] group-hover:fill-white fill-white/70 transition-all duration-300 ease-in-out">
+                  <path
+                    d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z" />
+                </svg>
+                +48 729 882 977
+              </a>
+            </div>
+            <div class="my-2 md:my-0 md:mx-3">
+              <div class="w-full h-px md:w-px md:h-4 bg-white/70"></div>
+            </div>
+            <div class="my-2 md:my-0 md:mx-3">
+              <div class="hs-dropdown relative hidden md:inline-flex">
+                <button id="hs-dropdown-default" type="button"
+                  class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-gray-800 shadow-sm disabled:opacity-50 disabled:pointer-events-none"
+                  aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <svg class="size-8" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                    text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                    clip-rule="evenodd" viewBox="0 0 512 512">
+                    <g fill-rule="nonzero">
+                      <path fill="#fff"
+                        d="M243.37 472.03h25.27c113.64-6.54 203.77-100.76 203.77-216.04 0-114.41-88.83-208.09-201.27-215.86h-30.28C128.43 47.9 39.6 141.58 39.6 255.99c0 115.28 90.13 209.5 203.77 216.04z" />
+                      <path fill="#dc143c"
+                        d="M243.37 472.03h25.27c113.61-6.54 203.72-100.72 203.77-215.94H39.6c.05 115.22 90.16 209.4 203.77 215.94z" />
+                    </g>
+                  </svg>
+                  <svg class="hs-dropdown-open:rotate-180 size-4 stroke-white/70" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                 <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden bg-dark shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-[1001]"
+                  role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                  <div class="p-1 space-y-0.5">
+                    <a class="flex items-center gap-x-3.5 py-2 px-3 text-white/70 hover:text-white ease-in-out duration-300"
+                      href="en/menu.html">
+                      <svg class="size-8" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                        text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                        clip-rule="evenodd" viewBox="0 0 512 512">
+                        <g fill-rule="nonzero">
+                          <path fill="#FEFEFE"
+                            d="M256 39.59c119.52 0 216.41 96.89 216.41 216.4 0 119.52-96.89 216.42-216.41 216.42-119.51 0-216.4-96.9-216.4-216.42 0-119.51 96.89-216.4 216.4-216.4z" />
+                          <path fill="#012169"
+                            d="M183.49 179.55V52.05c-41.32 14.7-76.85 41.61-102.27 76.35l102.27 51.15zm0 152.9v127.5c-41.3-14.7-76.82-41.59-102.26-76.35l102.26-51.15zm144.55 0v127.67c41.45-14.63 77.09-41.54 102.61-76.34l-102.61-51.33zm0-152.9V51.88c41.45 14.63 77.11 41.54 102.62 76.35l-102.62 51.32z" />
+                          <path fill="#C8102E"
+                            d="M448.3 328.16h-48.11l49.35 24.72c3.21-6.41 6.11-13 8.69-19.75l-9.93-4.97zm-9.34-187.76-86.42 43.33h48.11l48.95-24.5c-3.23-6.46-6.79-12.75-10.64-18.83zM212.41 299.26v168.75c14.08 2.87 28.66 4.4 43.59 4.4 14.76 0 29.19-1.49 43.13-4.3V299.26h168.94c2.83-13.98 4.34-28.44 4.34-43.27 0-14.88-1.51-29.42-4.37-43.47H299.13V43.9A217.404 217.404 0 0 0 256 39.59c-14.93 0-29.51 1.54-43.59 4.4v168.53H43.97a217.777 217.777 0 0 0-4.37 43.47c0 14.83 1.51 29.29 4.34 43.27h168.47zM63.12 183.84h48.11l-48.89-24.48c-3.2 6.41-6.11 13.02-8.68 19.76l9.46 4.72zm95.87 144.43h-48.11l-48.57 24.31A216.76 216.76 0 0 0 73 371.52l86.43-43.25h-.44z" />
+                        </g>
+                      </svg>
+                      English
+                    </a>
+                    <a class="flex items-center gap-x-3.5 py-2 px-3 text-white/70 hover:text-white ease-in-out duration-300"
+                      href="it/menu.html">
+                      <svg class="size-8" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                        image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g fill-rule="nonzero">
+                          <path fill="#fff"
+                            d="M255.888 39.63c59.714 0 113.814 24.22 152.944 63.355l.997 1.079c38.535 39.062 62.348 92.713 62.348 151.878 0 59.732-24.224 113.83-63.354 152.966l-1.088.997c-39.075 38.56-92.727 62.366-151.847 62.366-59.714 0-113.805-24.228-152.935-63.363-39.13-39.136-63.363-93.243-63.363-152.966 0-59.66 24.242-113.758 63.409-152.902 39.084-39.182 93.175-63.41 152.889-63.41Z"
+                            style="stroke-width: 0.914529" />
+                          <path fill="#009246"
+                            d="M174.15 456.37V55.63C95.2 87.91 39.59 165.44 39.59 255.99c0 90.56 55.61 168.11 134.56 200.38z" />
+                          <path fill="#CE2B37"
+                            d="M337.88 55.63v400.74c78.93-32.29 134.53-109.84 134.53-200.38 0-90.53-55.6-168.07-134.53-200.36z" />
+                        </g>
+                      </svg>
+                      Italiano
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="absolute top-full left-0 bg-wave bg-repeat-x h-[105px] w-full [background-size:1440px_105px] [background-position-y:top] [background-position-x:28%] z-[1] sm:[background-position-x:center] pointer-events-none">
+    </div>
+  </header>
+
+  <section class="flex items-center justify-center pt-48">
+    <p class="font-sansita text-black font-normal text-4xl italic">Menu</p>
+  </section>
+  <section id="menu text-light-gray flex items-center justify-center">
+    <div class="max-w-[1200px] w-full mx-auto mt-24 md:my-24 px-4 rounded-[30px]">
+    <div class="hs-accordion active mt-12" id="hs-heading-1">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-1" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">PIZZA AL TAGLIO / PIZZA NA KAWAŁKI NA WAGĘ</p>
+        <p class="text-primary/70 text-left">NASZA SPECJALNOŚĆ</p>
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-1" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-1">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">MARGHERITA</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">Pomidory San Marzano D.O.P - mozzarella - Grana Padano D.O.P. - bazylia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">11,- | 100g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">FARCITA</p>
+          </div>
+          <p class="font-light">pomidory San Marzano D.O.P - mozzarella - oraz wybrane dodatki z naszej gabloty</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">12,- | 100g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">FOCACCIA</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">włoskie pieczywo z dodatkiem oliwy</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">9,- | 100g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">SPECIALE</p>
+          </div>
+          <p class="font-light">wybrane dodatki premium</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">13,- | 100g</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-2">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-2" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">PANINO / POLECANE PROPOZYCJE KANAPEK / NA WAGĘ</p>
+        <p class="text-primary/70 text-left">dostępne poniedziałek - sobota do godziny 17:00</p>
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-2" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-2">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PANINO VESUVIO</p><span class="block size-6 bg-spicy bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">focaccia - mozzarella Fior di Latee - lekko pikantne salami - mascarpone - pomidorki - rukola - oliwki Riviera - czerwona cebula</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">12,- | 100g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PANINO VEGETARIANO</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">focaccia - mozzarella Fior di Latte- grilowane warzywa - pomidorki - rukola - oregano</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">12,- | 100g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PANINO CAPRESE</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">focaccia - mozzarella Fior di Latte - pomidorki - oregano -bazylia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">12,- | 100g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PANINO PARMA</p>
+          </div>
+          <p class="font-light">focaccia - mozzarella Fior di Latte - szynka parmeńska - pomidorki - rukola - Grana Padano D.O.P</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">13,- | 100g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PANINO MORTADELLA</p>
+          </div>
+          <p class="font-light">focaccia - pesto bazyliowe - mortadella z pistacją - pomidorki - burrata / straciatella</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">14,- | 100g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PANINO BRESAOLA</p>
+          </div>
+          <p class="font-light">focaccia - bresaola - karczoch - pomidorki - rukola - oliwki Riviera - Grana Padano D.O.P</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">14,- | 100g</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-3">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-3" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">SAŁATKI</p>
+        
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-3" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-3">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">INSALATA BRESAOLA</p>
+          </div>
+          <p class="font-light">sałata - rukola - bresaola - burrata lub bufala D.O.P. - oliwki Riviera - pomidorki - zest z cytryny - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">49,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">INSALATA CAPRESE</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">pomidory - mozzarella Fior di Latte lub bufala D.O.P. - oregano - bazylia - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">38,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">INSALATA CON TONNO</p>
+          </div>
+          <p class="font-light">sałata - tuńczyk - jajko - mozzarella Fior di Latte - kukurydza - pomidor - czerwona cebula - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">42,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">INSALATA GORGONZOLA NOCI E PERE</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span><span class="text-primary whitespace-nowrap">-NOWOŚĆ-</span>
+          </div>
+          <p class="font-light">rukola - gorgonzola - karmelizowane orzechy włoskie - gruszka - miód - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">42,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">INSALATA GRECA</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">pomidor - ogórek - czerwona cebula - ser feta - oliwki Riviera - oliwki zielone - oregano - oliwa EVO - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">40,-</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-4">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-4" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">PRZYSTAWKI</p>
+        
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-4" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-4">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">BRUSCHETTA CLASSICA</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">chrupiąca focaccia - pomidorki - czosnek - oregano - bazylia - oliwa EVO</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">27,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">BRUSCHETTA BELLA</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">chrupiąca focaccia - straciatella lub burrata - pesto bazyliowe - karmelizowane pomidorki</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">37,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">BRUSCHETTA CON ASPARAGI VERDI E BURRATA</p><span class="text-primary whitespace-nowrap">-NOWOŚĆ-</span>
+          </div>
+          <p class="font-light">chrupiąca focaccia - straciatella/burrata - zielone szparagi - pomidorki - oliwa cytrynowa</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">45,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">TATAR WOŁOWY</p>
+          </div>
+          <p class="font-light"></p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">49,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CARPACCIO DI BRESAOLA</p>
+          </div>
+          <p class="font-light">bresaola - rukola - Grana Padano D.O.P. - zest z cytryny - pieprz - oliwa EVO - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">45,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CAMEMBERT CON TARTUFO</p>
+          </div>
+          <p class="font-light">camembert zapieczony w piecu - miód - peperoncino - trufla - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">37,-</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-5">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-5" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">DESKA WĘDLIN, SERÓW</p>
+        
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-5" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-5">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">TAGLIERE DI SALUMI E FORMAGGI</p>
+          </div>
+          <p class="font-light">deska wyselekcjonowanych włoskich wędlin oraz serów - oliwki - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap"></p>
+      </div>
+    </div>
+    
+    <div class="flex flex-col gap-8 menu-item mt-6" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 pl-6">
+        <div class="flex flex-col text-base gap-0 leading-tight">
+          <div class="font-medium flex gap-1">
+            <p class="font-light">deska dla 1 osoby</p>
+          </div>
+        </div>
+        <p class="font-semibold whitespace-nowrap">55,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-6" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 pl-6">
+        <div class="flex flex-col text-base gap-0 leading-tight">
+          <div class="font-medium flex gap-1">
+            <p class="font-light">deska dla 2 osób</p>
+          </div>
+        </div>
+        <p class="font-semibold whitespace-nowrap">80,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-6" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 pl-6">
+        <div class="flex flex-col text-base gap-0 leading-tight">
+          <div class="font-medium flex gap-1">
+            <p class="font-light">deska dla 4 osób</p>
+          </div>
+        </div>
+        <p class="font-semibold whitespace-nowrap">160,-</p>
+      </div>
+    </div>
+    
+  
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-6">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-6" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">WŁOSKIE SPECJAŁY</p>
+        
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-6" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-6">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PARMIGIANA DI MELANZANE</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">grillowany bakłażan - pomidory San Marzano D.O.P. - mozzarella Fior di latte - Grana Padano D.O.P. - bazylia - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">48,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CRESPELLA RAGÙ E PISELLI</p>
+          </div>
+          <p class="font-light">beszamel - sos boloński - zielony groszek - Grana Padano D.O.P. - mix sałat</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">38,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CRESPELLA RICOTTA E SPINACI</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">naleśnik szpinakowy - beszamel - ricotta - szpinak - Grana Padano D.O.P. - mix sałat</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">38,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CRESPELLA COTTO & FUNGHI</p>
+          </div>
+          <p class="font-light">szynka gotowana - grzyby - beszamel - mozzarella - Grana Padano D.O.P. - mix sałat</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">38,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">GNOCCHI CON PORCINI</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">borowiki - czosnek - śmietana - szafran - pietruszka - Grana Padano D.O.P - zest z cytryny</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">48,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">GNOCCHI ALLA SORRENTINA</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">pomdory Pelati - czosnek - bazylia - mozzarella - Grana Padano D.O.P</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">40,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">GNOCCHI CON PESTO VERDE</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">pesto bazyliowe - burrata / straciatella - pomidorki karmelizowane - Grana Padano D.O.P.</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">47,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col text-base gap-0 leading-tight">
+          <div class="font-medium flex gap-1">
+            <p class="font-light">zapytaj obsługę o dostępność / opcjonalnie bez sałatki</p>
+          </div>
+        </div>
+        <p class="font-semibold whitespace-nowrap">28,-</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-7">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-7" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">ZUPY</p>
+        
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-7" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-7">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">ZUPPA DEL GIORNO</p>
+          </div>
+          <p class="font-light">codziennie inna propozycja / zapytaj obsługę</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">cena dnia</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-8">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-8" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">MAKARONY</p>
+        <p class="text-primary/70 text-left">makarony jajeczne - dostępne od wtorku do niedzieli</p>
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-8" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-8">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">SPAGHETTI ALL’AMATRICIANA</p>
+          </div>
+          <p class="font-light">guanciale - Nduja - cebula - pomidory Pelati - peperoncino - Pecorino Romano D.O.P. - Grana Padano D.O.P.</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">45,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PASTA PARMEZZAN</p>
+          </div>
+          <p class="font-light">borowiki - salsiccia - czosnek - pomidory Pelati - mascarpone - Grana Padano D.O.P. - rozmaryn</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">45,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">SPAGHETTI ALLA CARBONARA</p>
+          </div>
+          <p class="font-light">guanciale - żółtko - czarny pieprz - Pecorino Romano D.O.P. - Grana Padano D.O.P. - rozmaryn</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">45,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">ORECCHIETTE CON POMODORINI E RUCOLA</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">makaron muszelki - pomidorki - Pecorino Romano D.O.P - Grana Padano D.O.P - czosnek - rukola</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">47,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PACCHERI AL SALMONE</p>
+          </div>
+          <p class="font-light">wędzony łosoś - szalotka - pomidorki - śmietana - pietruszka</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">50,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">TAGLIATELLE AL RAGÙ</p>
+          </div>
+          <p class="font-light">tagliatelle - domowy sos boloński - Grana Padano D.O.P.</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">45,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">SPAGHETTI AGLIO OLIO E PEPERONCINO</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span><span class="block size-6 bg-spicy bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">czosnek - oliwa EVO - peperoncino - pietruszka</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">35,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">LASAGNA SPINACI E GORGONZOLA</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">szpinak - gorgonzola - beszamel - mozzarella Fior di Latte - Grana Padano D.O.P</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">45,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">LASAGNA BOLOGNESE</p>
+          </div>
+          <p class="font-light">domowy sos boloński - mozzarella Fior di Latte - beszamel - Grana Padano D.O.P</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">45,-</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-9">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-9" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">ŚWIEŻE OWOCE MORZA</p>
+        <p class="text-primary/70 text-left">dostępne tylko od czwartku do wyczerpania zapasów</p>
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-9" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-9">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">COZZE AL VINO</p>
+          </div>
+          <p class="font-light">świeże mule - czosnek - białe wino - masło - pietruszka - oliwa EVO - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">65,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">ZUPPETA DI GAMBERI E COZZE</p>
+          </div>
+          <p class="font-light">świeże krewetki - świeże mule - pomidory San Marzano D.O.P - czosnek - białe wino - pietruszka - oliwa EVO - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">75,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">GAMBERI FRESCHI AL VINO</p>
+          </div>
+          <p class="font-light">świeże krewetki - czosnek - białe wino - masło - pietruszka - zest z cytryny - oliwa EVO - mix sałat - focaccia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">65,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">SPAGHETTI CON GAMBERI</p>
+          </div>
+          <p class="font-light">świeże krewetki - pomidorki koktajlowe - czosnek - białe wino - pietruszka - zest z cytryny</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">69,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">LINGUINE MISTO MARE</p>
+          </div>
+          <p class="font-light">świeże krewetki - świeże mule - pomidorki koktajlowe - czosnek - białe wino - pietruszka - zest z cytryny - oliwa EVO</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">85,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">SPAGHETTI ALLE VONGOLE VERACI</p><span class="block size-6 bg-spicy bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">vongole - czosnek - pietruszka - peperoncino - zest z cytryny - / zapytaj obsługę o dostępność /</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">79,-</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-10">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-10" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">DESERY</p>
+        <p class="text-primary/70 text-left">więcej deserów w naszej gablotce</p>
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-10" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-10">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CANNOLO SICILIANO</p>
+          </div>
+          <p class="font-light">chrupiąca rurka - owcza słodka ricotta z Sycyli - pistację di Bronte</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">18,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">TIRAMISU DELLA CASA</p>
+          </div>
+          <p class="font-light">domowe tiramisu</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">22,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">TIRAMISU AL PISTACCHIO DI BRONTE</p>
+          </div>
+          <p class="font-light">domowe tiramisu - krem pistacjowy - pistacje di Bronte - kakao</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">30,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PANNA COTTA</p>
+          </div>
+          <p class="font-light">deser śmietankowy - mus malinowy - wanilia</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">18,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CHEESECAKE CON CIOCCIOLATO BIANCO E PISTACCHIO</p>
+          </div>
+          <p class="font-light">kremowy sernik z białą czekoladą - polewa pistacjowa</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">27,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CROISSANT CON CREMA AL PISTACCHIO</p>
+          </div>
+          <p class="font-light">maślany croissant - krem pistacjowy</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">17,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CROISSANT Z NADZIENIEM</p>
+          </div>
+          <p class="font-light">malina/ orzech - czekolada/ krem cytrynowy</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">8.5-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">CROISSANT</p>
+          </div>
+          <p class="font-light">maślany croissant</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">7.5-</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-11">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-11" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">DLA DZIECI</p>
+        
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-11" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-11">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">SPAGHETTI ROSSI</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">spaghetti - pomidory San Marzano D.O.P - ser Grana Padano D.O.P</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">20,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">TORTELLINI AL RAGÙ</p>
+          </div>
+          <p class="font-light">ręcznie robione tortellini - domowy sos boloński - Grana Padano D.O.P.</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">25,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">GNOCCHI IN BIANCO</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">ziemniaczane kluseczki - masło - Grana Padano D.O.P</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">20,-</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">PASTA IN BIANCO</p><span class="block size-6 bg-vegetarian bg-contain bg-no-repeat"></span>
+          </div>
+          <p class="font-light">makaron - oliwa EVO - Grana Padano D.O.P.</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">20,-</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  
+    <div class="hs-accordion active mt-12" id="hs-heading-12">
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-12" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-2xl italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">LODY RZEMIEŚLNICZE</p>
+        <p class="text-primary/70 text-left">zapytaj obsługę o dostępne smaki</p>
+        <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+      </button>
+      <div id="hs-collapse-12" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out " role="region" aria-labelledby="hs-heading-12">
+        
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col gap-0 leading-tight">
+          <div class="flex gap-1">
+            <p class="font-medium">KLASYCZNE</p>
+          </div>
+          <p class="font-light">jeden smak</p>
+        </div>
+        <p class="font-semibold whitespace-nowrap">6,- | 100g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col text-base gap-0 leading-tight">
+          <div class="font-medium flex gap-1">
+            <p class="font-light">dwa smaki</p>
+          </div>
+        </div>
+        <p class="font-semibold whitespace-nowrap">12,- | 185g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col text-base gap-0 leading-tight">
+          <div class="font-medium flex gap-1">
+            <p class="font-light">trzy smaki</p>
+          </div>
+        </div>
+        <p class="font-semibold whitespace-nowrap">18,- | 265g</p>
+      </div>
+    </div>
+    
+  
+    <div class="flex flex-col gap-8 menu-item mt-10" style="opacity: 0;">
+      <div class="flex justify-between w-full gap-10 ">
+        <div class="flex flex-col text-base gap-0 leading-tight">
+          <div class="font-medium flex gap-1">
+            <p class="font-light">SMAK PREMIUM</p>
+          </div>
+        </div>
+        <p class="font-semibold whitespace-nowrap">+2,-</p>
+      </div>
+    </div>
+    
+  
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="flex items-center justify-center mt-24 text-center px-4 max-w-[1200px] mx-auto flex-col">
+    <p class="menu-section opacity-0">Wszystkie nasze potrawy przygotowujemy na bieżąco z najwyższej jakości włoskich produktów. Przy dużej ilości
+      zamówień czas oczekiwania na dania moze wynosić 30-45 minut.</p>
+    <div class="mt-12 menu-section opacity-0">
+      <span class="inline-block size-6 relative top-1 bg-vegetarian bg-contain bg-no-repeat"></span> <span
+        class="text-primary">danie wegetariańskie </span>
+      <span class="inline-block size-6 relative top-1 bg-spicy bg-contain bg-no-repeat"></span> <span
+        class="text-primary">danie pikantne </span> |
+      <span class="text-primary">San Daniele</span> - długodojrzewająca szynka wieprzowa min. 16 miesięcy |
+      <span class="text-primary">bresaola</span> - długodojrzewająca polędwica wołowa |
+      <span class="text-primary">burrata</span> - świeża mozarella z rozpływającym się środkiem |
+      <span class="text-primary">bufala</span> - świeża mozarella z mleka bawolego |
+      <span class="text-primary">friarielli</span> - marynowany brokuł neapolitański |
+      <span class="text-primary">gorgonzola</span> - pleśniowy, miękki, kremowy ser |
+      <span class="text-primary">guanciale</span> - dojrzewający policzek wieprzowy |
+      <span class="text-primary">montasio</span> - łagodny, kremowy ser z mleka krowiego |
+      <span class="text-primary">salsiccia</span> - świeża włoska kiełbaska z wieprzowiny |
+      <span class="text-primary">scamorza affumicata</span> - wędzony ser z mleka krowiego
+    </div>
+    <p class="menu-section mt-12 opacity-0">- Lista alergenów dostępna u obsługi -</p>
+  </section>
+  <section class="fixed bg-black w-lvw h-dvh left-0 top-0 z-100 preloader flex items-center justify-center z-[1001]">
+    <svg class="w-[300px] h-[70px] px-3 opacity-0 -translate-x-[10px] preloader-logo" viewBox="0 0 2991 596"
+      version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+      xmlns:serif="http://www.serif.com/"
+      style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
+      <g>
+        <path
+          d="M94.471,196.819c15.994,0 30.353,-2.236 43.079,-6.707c12.725,-4.471 23.517,-10.662 32.373,-18.572c8.856,-7.911 15.649,-17.24 20.378,-27.989c4.729,-10.748 7.094,-22.485 7.094,-35.21c0,-28.031 -8.598,-49.613 -25.795,-64.747c-17.197,-15.133 -42.907,-22.7 -77.129,-22.7l-67.842,0l0,175.925l67.842,0Zm0,-196.819c42.821,0 75.108,9.372 96.862,28.117c21.754,18.745 32.631,45.486 32.631,80.224c0,15.993 -3.009,30.696 -9.028,44.11c-6.019,13.414 -14.617,24.978 -25.795,34.695c-11.178,9.716 -24.764,17.283 -40.757,22.7c-15.993,5.417 -33.964,8.125 -53.913,8.125l-67.842,0l0,147.034l-26.569,0l0,-365.005l94.411,0Z"
+          style="fill: #fff" />
+        <path
+          d="M477.533,232.417l-74.291,-184.438c-2.579,-6.018 -5.073,-13.241 -7.48,-21.668c-1.032,4.128 -2.15,8.04 -3.354,11.737c-1.203,3.698 -2.493,7.094 -3.869,10.189l-74.291,184.18l163.285,-0Zm80.74,132.588l-20.378,0c-2.408,0 -4.386,-0.645 -5.933,-1.935c-1.548,-1.289 -2.752,-2.966 -3.612,-5.03l-42.82,-106.019l-179.278,0l-42.821,106.019c-0.688,1.892 -1.891,3.526 -3.611,4.902c-1.72,1.375 -3.783,2.063 -6.191,2.063l-20.12,0l149.355,-365.005l26.053,0l149.356,365.005Z"
+          style="fill: #fff" />
+        <path
+          d="M716.399,180.31c16.165,-0 30.653,-1.935 43.465,-5.804c12.812,-3.869 23.646,-9.415 32.502,-16.638c8.857,-7.223 15.607,-15.907 20.25,-26.053c4.643,-10.147 6.965,-21.583 6.965,-34.308c-0,-25.968 -8.47,-45.228 -25.409,-57.782c-16.939,-12.554 -41.66,-18.831 -74.162,-18.831l-66.81,0l0,159.416l63.199,-0Zm161.995,184.695l-22.7,0c-2.923,0 -5.374,-0.473 -7.352,-1.419c-1.977,-0.945 -3.826,-2.708 -5.546,-5.288l-117.111,-148.065c-1.376,-1.892 -2.794,-3.526 -4.256,-4.901c-1.462,-1.376 -3.096,-2.451 -4.901,-3.225c-1.806,-0.774 -3.955,-1.333 -6.449,-1.677c-2.494,-0.344 -5.546,-0.516 -9.157,-0.516l-47.722,0l0,165.091l-26.569,0l-0,-365.005l93.379,0c41.961,0 73.388,8.126 94.282,24.377c20.895,16.251 31.342,40.112 31.342,71.582c-0,13.929 -2.408,26.655 -7.223,38.177c-4.815,11.522 -11.737,21.625 -20.765,30.31c-9.029,8.684 -19.949,15.778 -32.76,21.281c-12.812,5.503 -27.214,9.2 -43.208,11.092c4.128,2.58 7.825,6.019 11.092,10.318l125.624,157.868Z"
+          style="fill: #fff" />
+        <path
+          d="M1308.15,0l-0,365.005l-22.958,0l-0,-311.093c-0,-4.471 0.258,-9.2 0.774,-14.187l-143.681,255.117c-2.407,4.471 -5.847,6.706 -10.318,6.706l-4.127,0c-4.471,0 -7.911,-2.235 -10.318,-6.706l-147.55,-255.633c0.516,5.159 0.774,10.06 0.774,14.703l-0,311.093l-23.216,0l-0,-365.005l18.315,0c2.407,0 4.299,0.258 5.675,0.774c1.375,0.516 2.751,1.892 4.127,4.127l147.292,253.827c2.579,4.815 4.815,9.974 6.706,15.477c1.032,-2.751 2.15,-5.46 3.354,-8.125c1.204,-2.666 2.493,-5.202 3.869,-7.61l143.165,-253.569c1.375,-2.235 2.794,-3.611 4.256,-4.127c1.462,-0.516 3.396,-0.774 5.804,-0.774l18.057,0Z"
+          style="fill: #fff" />
+        <path
+          d="M1642.97,343.079l-0.516,21.926l-218.745,0l0,-365.005l218.745,0l0,21.926l-192.176,0l0,147.55l159.932,-0l0,21.41l-159.932,0l0,152.193l192.692,0Z"
+          style="fill: #fff" />
+        <path
+          d="M1965.15,9.028c-0,3.268 -1.204,6.793 -3.611,10.577l-231.643,323.474l233.448,0l0,21.926l-268.788,0l0,-9.544c0,-1.892 0.301,-3.569 0.903,-5.03c0.602,-1.462 1.333,-2.881 2.192,-4.257l232.159,-324.248l-228.547,0l-0,-21.926l263.887,0l-0,9.028Z"
+          style="fill: #fff" />
+        <path
+          d="M2281.15,9.028c-0,3.268 -1.204,6.793 -3.612,10.577l-231.642,323.474l233.448,0l0,21.926l-268.788,0l-0,-9.544c-0,-1.892 0.301,-3.569 0.903,-5.03c0.602,-1.462 1.332,-2.881 2.192,-4.257l232.159,-324.248l-228.547,0l-0,-21.926l263.887,0l-0,9.028Z"
+          style="fill: #fff" />
+        <path
+          d="M2559.48,232.417l-74.29,-184.438c-2.58,-6.018 -5.074,-13.241 -7.481,-21.668c-1.032,4.128 -2.15,8.04 -3.354,11.737c-1.203,3.698 -2.493,7.094 -3.869,10.189l-74.291,184.18l163.285,-0Zm80.74,132.588l-20.378,0c-2.408,0 -4.386,-0.645 -5.933,-1.935c-1.548,-1.289 -2.752,-2.966 -3.612,-5.03l-42.82,-106.019l-179.278,0l-42.821,106.019c-0.688,1.892 -1.891,3.526 -3.611,4.902c-1.72,1.375 -3.783,2.063 -6.191,2.063l-20.12,0l149.355,-365.005l26.054,0l149.355,365.005Z"
+          style="fill: #fff" />
+        <path
+          d="M2990.26,0l-0,365.005l-12.382,0c-2.236,0 -4.084,-0.387 -5.546,-1.161c-1.462,-0.774 -2.881,-2.106 -4.256,-3.998l-237.06,-316.768c0.516,5.159 0.774,10.061 0.774,14.704l-0,307.223l-23.216,0l-0,-365.005l13.155,0c2.408,0 4.257,0.301 5.547,0.903c1.289,0.602 2.708,1.934 4.256,3.998l236.544,315.994c-0.516,-5.159 -0.774,-10.06 -0.774,-14.703l-0,-306.192l22.958,0Z"
+          style="fill: #fff" />
+      </g>
+      <g>
+        <path
+          d="M43.424,503.868c7.82,-0 14.829,-0.936 21.026,-2.808c6.198,-1.872 11.439,-4.554 15.723,-8.048c4.284,-3.494 7.549,-7.695 9.795,-12.603c2.246,-4.909 3.37,-10.441 3.37,-16.597c-0,-12.561 -4.098,-21.878 -12.292,-27.951c-8.194,-6.073 -20.152,-9.109 -35.875,-9.109l-32.318,-0l-0,77.116l30.571,-0Zm78.364,89.344l-10.981,0c-1.414,0 -2.6,-0.229 -3.556,-0.686c-0.957,-0.458 -1.851,-1.31 -2.683,-2.558l-56.651,-71.625c-0.666,-0.916 -1.352,-1.706 -2.059,-2.371c-0.707,-0.666 -1.498,-1.186 -2.371,-1.56c-0.874,-0.374 -1.914,-0.645 -3.12,-0.811c-1.206,-0.167 -2.683,-0.25 -4.43,-0.25l-23.084,0l-0,79.861l-12.853,0l0,-176.567l45.171,-0c20.298,-0 35.501,3.93 45.608,11.792c10.108,7.861 15.162,19.403 15.162,34.627c-0,6.738 -1.165,12.894 -3.494,18.468c-2.33,5.573 -5.678,10.461 -10.045,14.662c-4.368,4.201 -9.65,7.632 -15.848,10.294c-6.197,2.662 -13.164,4.451 -20.901,5.366c1.997,1.248 3.785,2.911 5.366,4.991l60.769,76.367Z"
+          style="fill: #fff" />
+        <rect x="324.186" y="416.645" width="12.853" height="176.568" style="fill: #fff" />
+        <path
+          d="M647.623,438.107c-0.749,1.414 -1.831,2.121 -3.245,2.121c-1.081,0 -2.475,-0.769 -4.18,-2.308c-1.705,-1.539 -4.014,-3.244 -6.925,-5.116c-2.912,-1.872 -6.552,-3.598 -10.919,-5.179c-4.367,-1.58 -9.754,-2.37 -16.159,-2.37c-6.406,-0 -12.042,0.915 -16.908,2.745c-4.867,1.83 -8.943,4.326 -12.229,7.487c-3.286,3.161 -5.782,6.821 -7.487,10.981c-1.705,4.159 -2.558,8.526 -2.558,13.102c-0,5.989 1.269,10.939 3.806,14.849c2.537,3.91 5.885,7.237 10.045,9.983c4.159,2.745 8.88,5.053 14.163,6.925c5.282,1.872 10.71,3.723 16.284,5.553c5.573,1.83 11.001,3.847 16.284,6.052c5.282,2.204 10.003,4.97 14.163,8.298c4.159,3.327 7.508,7.424 10.045,12.291c2.537,4.867 3.806,10.918 3.806,18.156c-0,7.404 -1.269,14.371 -3.806,20.901c-2.537,6.53 -6.219,12.208 -11.044,17.033c-4.824,4.825 -10.731,8.631 -17.719,11.417c-6.987,2.787 -14.974,4.181 -23.958,4.181c-11.646,-0 -21.671,-2.059 -30.073,-6.177c-8.402,-4.118 -15.764,-9.754 -22.086,-16.908l3.494,-5.491c0.998,-1.247 2.163,-1.871 3.494,-1.871c0.748,-0 1.705,0.499 2.87,1.497c1.164,0.998 2.579,2.225 4.242,3.681c1.664,1.456 3.661,3.037 5.99,4.742c2.329,1.705 5.033,3.286 8.111,4.742c3.078,1.455 6.613,2.682 10.606,3.681c3.993,0.998 8.527,1.497 13.602,1.497c6.987,0 13.227,-1.06 18.717,-3.182c5.49,-2.121 10.128,-5.012 13.913,-8.672c3.785,-3.661 6.676,-8.007 8.673,-13.04c1.996,-5.033 2.994,-10.419 2.994,-16.159c0,-6.24 -1.268,-11.376 -3.805,-15.411c-2.538,-4.035 -5.886,-7.404 -10.045,-10.107c-4.16,-2.704 -8.881,-4.971 -14.163,-6.801c-5.283,-1.83 -10.711,-3.619 -16.284,-5.366c-5.574,-1.747 -11.002,-3.702 -16.285,-5.865c-5.282,-2.162 -10.003,-4.928 -14.162,-8.298c-4.16,-3.369 -7.508,-7.57 -10.045,-12.603c-2.538,-5.033 -3.806,-11.334 -3.806,-18.904c-0,-5.907 1.123,-11.605 3.369,-17.095c2.246,-5.491 5.532,-10.337 9.858,-14.538c4.326,-4.201 9.67,-7.57 16.034,-10.107c6.364,-2.537 13.622,-3.806 21.775,-3.806c9.151,0 17.365,1.456 24.644,4.367c7.279,2.912 13.914,7.363 19.903,13.352l-2.994,5.74Z"
+          style="fill: #fff" />
+        <path
+          d="M982.914,427.501l-62.017,-0l-0,165.711l-12.853,0l0,-165.711l-62.391,-0l-0,-10.856l137.261,-0l-0,10.856Z"
+          style="fill: #fff" />
+        <path
+          d="M1331.81,504.866c0,13.643 -2.038,26.017 -6.114,37.123c-4.076,11.106 -9.816,20.589 -17.22,28.45c-7.404,7.862 -16.284,13.934 -26.641,18.219c-10.357,4.284 -21.775,6.426 -34.253,6.426c-12.478,-0 -23.875,-2.142 -34.19,-6.426c-10.316,-4.285 -19.175,-10.357 -26.579,-18.219c-7.404,-7.861 -13.144,-17.344 -17.22,-28.45c-4.076,-11.106 -6.115,-23.48 -6.115,-37.123c0,-13.56 2.039,-25.892 6.115,-36.998c4.076,-11.106 9.816,-20.589 17.22,-28.451c7.404,-7.861 16.263,-13.954 26.579,-18.28c10.315,-4.326 21.712,-6.489 34.19,-6.489c12.478,0 23.896,2.142 34.253,6.426c10.357,4.285 19.237,10.378 26.641,18.281c7.404,7.903 13.144,17.407 17.22,28.513c4.076,11.106 6.114,23.438 6.114,36.998Zm-13.227,-0c0,-12.312 -1.705,-23.376 -5.116,-33.192c-3.41,-9.816 -8.235,-18.135 -14.474,-24.957c-6.24,-6.821 -13.727,-12.041 -22.461,-15.66c-8.735,-3.619 -18.385,-5.428 -28.95,-5.428c-10.482,-0 -20.09,1.809 -28.825,5.428c-8.735,3.619 -16.242,8.839 -22.523,15.66c-6.281,6.822 -11.147,15.141 -14.6,24.957c-3.452,9.816 -5.178,20.88 -5.178,33.192c-0,12.395 1.726,23.48 5.178,33.255c3.453,9.774 8.319,18.072 14.6,24.894c6.281,6.821 13.788,12.02 22.523,15.598c8.735,3.577 18.343,5.365 28.825,5.365c10.565,0 20.215,-1.788 28.95,-5.365c8.734,-3.578 16.221,-8.777 22.461,-15.598c6.239,-6.822 11.064,-15.12 14.474,-24.894c3.411,-9.775 5.116,-20.86 5.116,-33.255Z"
+          style="fill: #fff" />
+        <path
+          d="M1588.61,503.868c7.82,-0 14.829,-0.936 21.026,-2.808c6.198,-1.872 11.439,-4.554 15.723,-8.048c4.284,-3.494 7.549,-7.695 9.795,-12.603c2.246,-4.909 3.369,-10.441 3.369,-16.597c0,-12.561 -4.097,-21.878 -12.291,-27.951c-8.194,-6.073 -20.152,-9.109 -35.875,-9.109l-32.318,-0l-0,77.116l30.571,-0Zm78.364,89.344l-10.981,0c-1.414,0 -2.6,-0.229 -3.556,-0.686c-0.957,-0.458 -1.851,-1.31 -2.683,-2.558l-56.651,-71.625c-0.666,-0.916 -1.352,-1.706 -2.059,-2.371c-0.707,-0.666 -1.498,-1.186 -2.371,-1.56c-0.874,-0.374 -1.914,-0.645 -3.12,-0.811c-1.206,-0.167 -2.683,-0.25 -4.43,-0.25l-23.084,0l-0,79.861l-12.853,0l-0,-176.567l45.171,-0c20.298,-0 35.501,3.93 45.608,11.792c10.108,7.861 15.162,19.403 15.162,34.627c-0,6.738 -1.165,12.894 -3.494,18.468c-2.33,5.573 -5.678,10.461 -10.045,14.662c-4.368,4.201 -9.65,7.632 -15.848,10.294c-6.197,2.662 -13.164,4.451 -20.901,5.366c1.997,1.248 3.785,2.911 5.366,4.991l60.769,76.367Z"
+          style="fill: #fff" />
+        <path
+          d="M1964.58,529.074l-35.938,-89.22c-1.247,-2.911 -2.454,-6.405 -3.618,-10.482c-0.499,1.997 -1.04,3.889 -1.622,5.678c-0.583,1.789 -1.207,3.432 -1.872,4.929l-35.938,89.095l78.988,-0Zm39.057,64.138l-9.858,0c-1.165,0 -2.121,-0.312 -2.87,-0.936c-0.749,-0.624 -1.331,-1.435 -1.747,-2.433l-20.714,-51.286l-86.724,0l-20.714,51.286c-0.333,0.915 -0.915,1.705 -1.747,2.371c-0.832,0.665 -1.83,0.998 -2.995,0.998l-9.733,0l72.25,-176.567l12.603,-0l72.249,176.567Z"
+          style="fill: #fff" />
+        <path
+          d="M2341.92,416.645l-0,176.567l-5.99,0c-1.081,0 -1.975,-0.187 -2.683,-0.561c-0.707,-0.375 -1.393,-1.019 -2.058,-1.934l-114.676,-153.234c0.25,2.496 0.375,4.867 0.375,7.113l-0,148.616l-11.231,0l0,-176.567l6.364,-0c1.165,-0 2.059,0.145 2.683,0.436c0.624,0.291 1.31,0.936 2.059,1.934l114.426,152.859c-0.25,-2.495 -0.375,-4.866 -0.375,-7.112l0,-148.117l11.106,-0Z"
+          style="fill: #fff" />
+        <path
+          d="M2681.58,427.501l-62.017,-0l-0,165.711l-12.853,0l-0,-165.711l-62.391,-0l-0,-10.856l137.261,-0l-0,10.856Z"
+          style="fill: #fff" />
+        <path
+          d="M2990.05,582.606l-0.25,10.606l-105.816,0l0,-176.567l105.816,-0l0,10.606l-92.963,0l-0,71.376l77.365,-0l0,10.357l-77.365,-0l-0,73.622l93.213,-0Z"
+          style="fill: #fff" />
+      </g>
+    </svg>
+  </section>
+  <div
+    class="bg-wave bg-repeat-x h-[105px] w-full rotate-180 [background-size:1440px_105px] [background-position-y:top] z-[1] [background-position-x:28%] sm:[background-position-x:center] pointer-events-none mt-12">
+  </div>
+  <footer class="w-full bg-black pb-12 relative pt-12 md:pt-24">
+    <div class="w-full max-w-[100rem] mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row gap-12 md:gap-24 lg:gap-24 items-start pb-6 md:pb-24">
+        <div>
+          <a href="#" aria-label="Wróć na górę stronę">
+            <svg class="h-[40px]" viewBox="0 0 2991 596" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+              style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
+              <g>
+                <path
+                  d="M94.471,196.819c15.994,0 30.353,-2.236 43.079,-6.707c12.725,-4.471 23.517,-10.662 32.373,-18.572c8.856,-7.911 15.649,-17.24 20.378,-27.989c4.729,-10.748 7.094,-22.485 7.094,-35.21c0,-28.031 -8.598,-49.613 -25.795,-64.747c-17.197,-15.133 -42.907,-22.7 -77.129,-22.7l-67.842,0l0,175.925l67.842,0Zm0,-196.819c42.821,0 75.108,9.372 96.862,28.117c21.754,18.745 32.631,45.486 32.631,80.224c0,15.993 -3.009,30.696 -9.028,44.11c-6.019,13.414 -14.617,24.978 -25.795,34.695c-11.178,9.716 -24.764,17.283 -40.757,22.7c-15.993,5.417 -33.964,8.125 -53.913,8.125l-67.842,0l0,147.034l-26.569,0l0,-365.005l94.411,0Z"
+                  style="fill: #fff" />
+                <path
+                  d="M477.533,232.417l-74.291,-184.438c-2.579,-6.018 -5.073,-13.241 -7.48,-21.668c-1.032,4.128 -2.15,8.04 -3.354,11.737c-1.203,3.698 -2.493,7.094 -3.869,10.189l-74.291,184.18l163.285,-0Zm80.74,132.588l-20.378,0c-2.408,0 -4.386,-0.645 -5.933,-1.935c-1.548,-1.289 -2.752,-2.966 -3.612,-5.03l-42.82,-106.019l-179.278,0l-42.821,106.019c-0.688,1.892 -1.891,3.526 -3.611,4.902c-1.72,1.375 -3.783,2.063 -6.191,2.063l-20.12,0l149.355,-365.005l26.053,0l149.356,365.005Z"
+                  style="fill: #fff" />
+                <path
+                  d="M716.399,180.31c16.165,-0 30.653,-1.935 43.465,-5.804c12.812,-3.869 23.646,-9.415 32.502,-16.638c8.857,-7.223 15.607,-15.907 20.25,-26.053c4.643,-10.147 6.965,-21.583 6.965,-34.308c-0,-25.968 -8.47,-45.228 -25.409,-57.782c-16.939,-12.554 -41.66,-18.831 -74.162,-18.831l-66.81,0l0,159.416l63.199,-0Zm161.995,184.695l-22.7,0c-2.923,0 -5.374,-0.473 -7.352,-1.419c-1.977,-0.945 -3.826,-2.708 -5.546,-5.288l-117.111,-148.065c-1.376,-1.892 -2.794,-3.526 -4.256,-4.901c-1.462,-1.376 -3.096,-2.451 -4.901,-3.225c-1.806,-0.774 -3.955,-1.333 -6.449,-1.677c-2.494,-0.344 -5.546,-0.516 -9.157,-0.516l-47.722,0l0,165.091l-26.569,0l-0,-365.005l93.379,0c41.961,0 73.388,8.126 94.282,24.377c20.895,16.251 31.342,40.112 31.342,71.582c-0,13.929 -2.408,26.655 -7.223,38.177c-4.815,11.522 -11.737,21.625 -20.765,30.31c-9.029,8.684 -19.949,15.778 -32.76,21.281c-12.812,5.503 -27.214,9.2 -43.208,11.092c4.128,2.58 7.825,6.019 11.092,10.318l125.624,157.868Z"
+                  style="fill: #fff" />
+                <path
+                  d="M1308.15,0l-0,365.005l-22.958,0l-0,-311.093c-0,-4.471 0.258,-9.2 0.774,-14.187l-143.681,255.117c-2.407,4.471 -5.847,6.706 -10.318,6.706l-4.127,0c-4.471,0 -7.911,-2.235 -10.318,-6.706l-147.55,-255.633c0.516,5.159 0.774,10.06 0.774,14.703l-0,311.093l-23.216,0l-0,-365.005l18.315,0c2.407,0 4.299,0.258 5.675,0.774c1.375,0.516 2.751,1.892 4.127,4.127l147.292,253.827c2.579,4.815 4.815,9.974 6.706,15.477c1.032,-2.751 2.15,-5.46 3.354,-8.125c1.204,-2.666 2.493,-5.202 3.869,-7.61l143.165,-253.569c1.375,-2.235 2.794,-3.611 4.256,-4.127c1.462,-0.516 3.396,-0.774 5.804,-0.774l18.057,0Z"
+                  style="fill: #fff" />
+                <path
+                  d="M1642.97,343.079l-0.516,21.926l-218.745,0l0,-365.005l218.745,0l0,21.926l-192.176,0l0,147.55l159.932,-0l0,21.41l-159.932,0l0,152.193l192.692,0Z"
+                  style="fill: #fff" />
+                <path
+                  d="M1965.15,9.028c-0,3.268 -1.204,6.793 -3.611,10.577l-231.643,323.474l233.448,0l0,21.926l-268.788,0l0,-9.544c0,-1.892 0.301,-3.569 0.903,-5.03c0.602,-1.462 1.333,-2.881 2.192,-4.257l232.159,-324.248l-228.547,0l-0,-21.926l263.887,0l-0,9.028Z"
+                  style="fill: #fff" />
+                <path
+                  d="M2281.15,9.028c-0,3.268 -1.204,6.793 -3.612,10.577l-231.642,323.474l233.448,0l0,21.926l-268.788,0l-0,-9.544c-0,-1.892 0.301,-3.569 0.903,-5.03c0.602,-1.462 1.332,-2.881 2.192,-4.257l232.159,-324.248l-228.547,0l-0,-21.926l263.887,0l-0,9.028Z"
+                  style="fill: #fff" />
+                <path
+                  d="M2559.48,232.417l-74.29,-184.438c-2.58,-6.018 -5.074,-13.241 -7.481,-21.668c-1.032,4.128 -2.15,8.04 -3.354,11.737c-1.203,3.698 -2.493,7.094 -3.869,10.189l-74.291,184.18l163.285,-0Zm80.74,132.588l-20.378,0c-2.408,0 -4.386,-0.645 -5.933,-1.935c-1.548,-1.289 -2.752,-2.966 -3.612,-5.03l-42.82,-106.019l-179.278,0l-42.821,106.019c-0.688,1.892 -1.891,3.526 -3.611,4.902c-1.72,1.375 -3.783,2.063 -6.191,2.063l-20.12,0l149.355,-365.005l26.054,0l149.355,365.005Z"
+                  style="fill: #fff" />
+                <path
+                  d="M2990.26,0l-0,365.005l-12.382,0c-2.236,0 -4.084,-0.387 -5.546,-1.161c-1.462,-0.774 -2.881,-2.106 -4.256,-3.998l-237.06,-316.768c0.516,5.159 0.774,10.061 0.774,14.704l-0,307.223l-23.216,0l-0,-365.005l13.155,0c2.408,0 4.257,0.301 5.547,0.903c1.289,0.602 2.708,1.934 4.256,3.998l236.544,315.994c-0.516,-5.159 -0.774,-10.06 -0.774,-14.703l-0,-306.192l22.958,0Z"
+                  style="fill: #fff" />
+              </g>
+              <g>
+                <path
+                  d="M43.424,503.868c7.82,-0 14.829,-0.936 21.026,-2.808c6.198,-1.872 11.439,-4.554 15.723,-8.048c4.284,-3.494 7.549,-7.695 9.795,-12.603c2.246,-4.909 3.37,-10.441 3.37,-16.597c-0,-12.561 -4.098,-21.878 -12.292,-27.951c-8.194,-6.073 -20.152,-9.109 -35.875,-9.109l-32.318,-0l-0,77.116l30.571,-0Zm78.364,89.344l-10.981,0c-1.414,0 -2.6,-0.229 -3.556,-0.686c-0.957,-0.458 -1.851,-1.31 -2.683,-2.558l-56.651,-71.625c-0.666,-0.916 -1.352,-1.706 -2.059,-2.371c-0.707,-0.666 -1.498,-1.186 -2.371,-1.56c-0.874,-0.374 -1.914,-0.645 -3.12,-0.811c-1.206,-0.167 -2.683,-0.25 -4.43,-0.25l-23.084,0l-0,79.861l-12.853,0l0,-176.567l45.171,-0c20.298,-0 35.501,3.93 45.608,11.792c10.108,7.861 15.162,19.403 15.162,34.627c-0,6.738 -1.165,12.894 -3.494,18.468c-2.33,5.573 -5.678,10.461 -10.045,14.662c-4.368,4.201 -9.65,7.632 -15.848,10.294c-6.197,2.662 -13.164,4.451 -20.901,5.366c1.997,1.248 3.785,2.911 5.366,4.991l60.769,76.367Z"
+                  style="fill: #fff" />
+                <rect x="324.186" y="416.645" width="12.853" height="176.568" style="fill: #fff" />
+                <path
+                  d="M647.623,438.107c-0.749,1.414 -1.831,2.121 -3.245,2.121c-1.081,0 -2.475,-0.769 -4.18,-2.308c-1.705,-1.539 -4.014,-3.244 -6.925,-5.116c-2.912,-1.872 -6.552,-3.598 -10.919,-5.179c-4.367,-1.58 -9.754,-2.37 -16.159,-2.37c-6.406,-0 -12.042,0.915 -16.908,2.745c-4.867,1.83 -8.943,4.326 -12.229,7.487c-3.286,3.161 -5.782,6.821 -7.487,10.981c-1.705,4.159 -2.558,8.526 -2.558,13.102c-0,5.989 1.269,10.939 3.806,14.849c2.537,3.91 5.885,7.237 10.045,9.983c4.159,2.745 8.88,5.053 14.163,6.925c5.282,1.872 10.71,3.723 16.284,5.553c5.573,1.83 11.001,3.847 16.284,6.052c5.282,2.204 10.003,4.97 14.163,8.298c4.159,3.327 7.508,7.424 10.045,12.291c2.537,4.867 3.806,10.918 3.806,18.156c-0,7.404 -1.269,14.371 -3.806,20.901c-2.537,6.53 -6.219,12.208 -11.044,17.033c-4.824,4.825 -10.731,8.631 -17.719,11.417c-6.987,2.787 -14.974,4.181 -23.958,4.181c-11.646,-0 -21.671,-2.059 -30.073,-6.177c-8.402,-4.118 -15.764,-9.754 -22.086,-16.908l3.494,-5.491c0.998,-1.247 2.163,-1.871 3.494,-1.871c0.748,-0 1.705,0.499 2.87,1.497c1.164,0.998 2.579,2.225 4.242,3.681c1.664,1.456 3.661,3.037 5.99,4.742c2.329,1.705 5.033,3.286 8.111,4.742c3.078,1.455 6.613,2.682 10.606,3.681c3.993,0.998 8.527,1.497 13.602,1.497c6.987,0 13.227,-1.06 18.717,-3.182c5.49,-2.121 10.128,-5.012 13.913,-8.672c3.785,-3.661 6.676,-8.007 8.673,-13.04c1.996,-5.033 2.994,-10.419 2.994,-16.159c0,-6.24 -1.268,-11.376 -3.805,-15.411c-2.538,-4.035 -5.886,-7.404 -10.045,-10.107c-4.16,-2.704 -8.881,-4.971 -14.163,-6.801c-5.283,-1.83 -10.711,-3.619 -16.284,-5.366c-5.574,-1.747 -11.002,-3.702 -16.285,-5.865c-5.282,-2.162 -10.003,-4.928 -14.162,-8.298c-4.16,-3.369 -7.508,-7.57 -10.045,-12.603c-2.538,-5.033 -3.806,-11.334 -3.806,-18.904c-0,-5.907 1.123,-11.605 3.369,-17.095c2.246,-5.491 5.532,-10.337 9.858,-14.538c4.326,-4.201 9.67,-7.57 16.034,-10.107c6.364,-2.537 13.622,-3.806 21.775,-3.806c9.151,0 17.365,1.456 24.644,4.367c7.279,2.912 13.914,7.363 19.903,13.352l-2.994,5.74Z"
+                  style="fill: #fff" />
+                <path
+                  d="M982.914,427.501l-62.017,-0l-0,165.711l-12.853,0l0,-165.711l-62.391,-0l-0,-10.856l137.261,-0l-0,10.856Z"
+                  style="fill: #fff" />
+                <path
+                  d="M1331.81,504.866c0,13.643 -2.038,26.017 -6.114,37.123c-4.076,11.106 -9.816,20.589 -17.22,28.45c-7.404,7.862 -16.284,13.934 -26.641,18.219c-10.357,4.284 -21.775,6.426 -34.253,6.426c-12.478,-0 -23.875,-2.142 -34.19,-6.426c-10.316,-4.285 -19.175,-10.357 -26.579,-18.219c-7.404,-7.861 -13.144,-17.344 -17.22,-28.45c-4.076,-11.106 -6.115,-23.48 -6.115,-37.123c0,-13.56 2.039,-25.892 6.115,-36.998c4.076,-11.106 9.816,-20.589 17.22,-28.451c7.404,-7.861 16.263,-13.954 26.579,-18.28c10.315,-4.326 21.712,-6.489 34.19,-6.489c12.478,0 23.896,2.142 34.253,6.426c10.357,4.285 19.237,10.378 26.641,18.281c7.404,7.903 13.144,17.407 17.22,28.513c4.076,11.106 6.114,23.438 6.114,36.998Zm-13.227,-0c0,-12.312 -1.705,-23.376 -5.116,-33.192c-3.41,-9.816 -8.235,-18.135 -14.474,-24.957c-6.24,-6.821 -13.727,-12.041 -22.461,-15.66c-8.735,-3.619 -18.385,-5.428 -28.95,-5.428c-10.482,-0 -20.09,1.809 -28.825,5.428c-8.735,3.619 -16.242,8.839 -22.523,15.66c-6.281,6.822 -11.147,15.141 -14.6,24.957c-3.452,9.816 -5.178,20.88 -5.178,33.192c-0,12.395 1.726,23.48 5.178,33.255c3.453,9.774 8.319,18.072 14.6,24.894c6.281,6.821 13.788,12.02 22.523,15.598c8.735,3.577 18.343,5.365 28.825,5.365c10.565,0 20.215,-1.788 28.95,-5.365c8.734,-3.578 16.221,-8.777 22.461,-15.598c6.239,-6.822 11.064,-15.12 14.474,-24.894c3.411,-9.775 5.116,-20.86 5.116,-33.255Z"
+                  style="fill: #fff" />
+                <path
+                  d="M1588.61,503.868c7.82,-0 14.829,-0.936 21.026,-2.808c6.198,-1.872 11.439,-4.554 15.723,-8.048c4.284,-3.494 7.549,-7.695 9.795,-12.603c2.246,-4.909 3.369,-10.441 3.369,-16.597c0,-12.561 -4.097,-21.878 -12.291,-27.951c-8.194,-6.073 -20.152,-9.109 -35.875,-9.109l-32.318,-0l-0,77.116l30.571,-0Zm78.364,89.344l-10.981,0c-1.414,0 -2.6,-0.229 -3.556,-0.686c-0.957,-0.458 -1.851,-1.31 -2.683,-2.558l-56.651,-71.625c-0.666,-0.916 -1.352,-1.706 -2.059,-2.371c-0.707,-0.666 -1.498,-1.186 -2.371,-1.56c-0.874,-0.374 -1.914,-0.645 -3.12,-0.811c-1.206,-0.167 -2.683,-0.25 -4.43,-0.25l-23.084,0l-0,79.861l-12.853,0l-0,-176.567l45.171,-0c20.298,-0 35.501,3.93 45.608,11.792c10.108,7.861 15.162,19.403 15.162,34.627c-0,6.738 -1.165,12.894 -3.494,18.468c-2.33,5.573 -5.678,10.461 -10.045,14.662c-4.368,4.201 -9.65,7.632 -15.848,10.294c-6.197,2.662 -13.164,4.451 -20.901,5.366c1.997,1.248 3.785,2.911 5.366,4.991l60.769,76.367Z"
+                  style="fill: #fff" />
+                <path
+                  d="M1964.58,529.074l-35.938,-89.22c-1.247,-2.911 -2.454,-6.405 -3.618,-10.482c-0.499,1.997 -1.04,3.889 -1.622,5.678c-0.583,1.789 -1.207,3.432 -1.872,4.929l-35.938,89.095l78.988,-0Zm39.057,64.138l-9.858,0c-1.165,0 -2.121,-0.312 -2.87,-0.936c-0.749,-0.624 -1.331,-1.435 -1.747,-2.433l-20.714,-51.286l-86.724,0l-20.714,51.286c-0.333,0.915 -0.915,1.705 -1.747,2.371c-0.832,0.665 -1.83,0.998 -2.995,0.998l-9.733,0l72.25,-176.567l12.603,-0l72.249,176.567Z"
+                  style="fill: #fff" />
+                <path
+                  d="M2341.92,416.645l-0,176.567l-5.99,0c-1.081,0 -1.975,-0.187 -2.683,-0.561c-0.707,-0.375 -1.393,-1.019 -2.058,-1.934l-114.676,-153.234c0.25,2.496 0.375,4.867 0.375,7.113l-0,148.616l-11.231,0l0,-176.567l6.364,-0c1.165,-0 2.059,0.145 2.683,0.436c0.624,0.291 1.31,0.936 2.059,1.934l114.426,152.859c-0.25,-2.495 -0.375,-4.866 -0.375,-7.112l0,-148.117l11.106,-0Z"
+                  style="fill: #fff" />
+                <path
+                  d="M2681.58,427.501l-62.017,-0l-0,165.711l-12.853,0l-0,-165.711l-62.391,-0l-0,-10.856l137.261,-0l-0,10.856Z"
+                  style="fill: #fff" />
+                <path
+                  d="M2990.05,582.606l-0.25,10.606l-105.816,0l0,-176.567l105.816,-0l0,10.606l-92.963,0l-0,71.376l77.365,-0l0,10.357l-77.365,-0l-0,73.622l93.213,-0Z"
+                  style="fill: #fff" />
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="md:ml-auto">
+          <h4 class="font-semibold text-white text-2xl font-sansita">Lokalizacja i kontakt</h4>
+          <div class="mt-3 grid space-y-3">
+            <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out"
+                href="https://maps.app.goo.gl/RMBo1w9opps74tUg7" target="_blank"
+                aria-label="Zobacz nas na mapach Google">ul. Świętej Katarzyny 4, 34-400 Nowy Targ</a></p>
+            <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out"
+                href="tel:+48729882977" aria-label="Zadzwoń">+48 729 882 977</a></p>
+            <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out"
+                href="email:parmezzan19@gmail.com" aria-label="Napisz email">parmezzan19@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-2xl font-sansita">Godziny otwarcia</h4>
+          <div class="mt-3 grid space-y-3 text-white/70">
+            <div class="flex w-full justify-between gap-3">
+              <p>Poniedziałek - Wtorek</p>
+              <p>10:00 - 19:00</p>
+            </div>
+            <div class="flex w-full justify-between gap-3">
+              <p>Środa - Czwartek</p>
+              <p>10:00 - 21:30</p>
+            </div>
+            <div class="flex w-full justify-between gap-3">
+              <p>Piątek - Sobota</p>
+              <p>10:00 - 22:30</p>
+            </div>
+            <div class="flex w-full justify-between gap-3">
+              <p>Niedziela</p>
+              <p>12:00 - 21:30</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-2xl font-sansita">Media społecznościowe</h4>
+          <div class="mt-3 grid space-y-3">
+            <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out"
+                href="https://www.facebook.com/Parmezzan.Italian.Street.Food/" target="_blank"
+                aria-label="Zobacz nas na Facebooku">Facebook</a></p>
+            <p><a class="inline-flex gap-x-2 text-white/70 hover:text-white transition-all duration-300 ease-in-out"
+                href="https://www.instagram.com/parmezzan.ristorante/" target="_blank"
+                aria-label="Zobacz nas na Instagramie">Instagram</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <p class="text-white/70">© 2025 parmezzan.pl - Wszelkie prawa zastrzeżone. Stworzone przez <a
+            href="https://4sys.pl" target="_blank" class="text-white">4sys.pl</a></p>
+      </div>
+    </div>
+  </footer>
+  <button class="size-14 border-white border rounded-full fixed bottom-4 right-4 hidden z-[1000] mix-blend-difference"
+    id="scroll-to-top" title="Wróć na górę">
+    <div class="flex items-center justify-center">
+      <svg class="size-8 rotate-180 stroke-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </div>
+  </button>
+</body>
+
+</html>
