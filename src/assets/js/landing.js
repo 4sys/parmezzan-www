@@ -120,21 +120,22 @@ window.onload = function () {
     ".header",
     {
       opacity: 1,
+      transform: "translateY(-180px)",
     },
     {
       scrollTrigger: {
-        trigger: ".first-slide",
-        start: "center center",
-        end: "+=500",
+        trigger: ".header",
+        start: "top top-=180",
+        end: "+=150",
         scrub: true,
         onUpdate: (self) => {
-        const header = document.querySelector('.header');
-        const y = Math.round(-30 - (200-30) * (1-self.progress));
-        header.style.transform = `translateY(${y}px)`;
-      }
+          const header = document.querySelector('.header');
+          const y = Math.round(-180 + (self.progress * 180));
+          header.style.transform = `translateY(${y}px)`;
+        }
       },
       opacity: 1,
-      ease: "none"
+      ease: "linear"
     });
 
     gsap.fromTo(
@@ -203,7 +204,7 @@ window.onload = function () {
   );
   gsap.fromTo(".main-logo",
     {
-      opacity: 0,
+      opacity: 0, 
       transform: "scale(1.3) translateY(-50px)",
     },
     {

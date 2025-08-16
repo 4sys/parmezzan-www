@@ -25,10 +25,10 @@ const generateDishHtml = (dish, language, isSubDish = false) => {
   let tagsHtml = tags.filter(tag => tag && tag[language]).map((tag) => `<span class="text-primary whitespace-nowrap">${tag[language]}</span>`).join("");
   if (dish.name == "") {
     return `
-    <div class="flex flex-col gap-8 mt-${isSubDish ? "6" : "10"}">
+    <div class="flex flex-col gap-8 menu-item mt-${isSubDish ? "6" : "10"}" style="opacity: 0;">
       <div class="flex justify-between w-full gap-10 ${isSubDish ? "pl-6" : ""}">
-        <div class="flex flex-col gap-0 leading-tight">
-          <div class="font-semibold flex gap-1">
+        <div class="flex flex-col text-base gap-0 leading-tight">
+          <div class="font-medium flex gap-1">
             <p class="font-light">${ingredients ? ingredients[language] : ""}</p>${iconHtml}${tagsHtml}
           </div>
         </div>
@@ -39,11 +39,11 @@ const generateDishHtml = (dish, language, isSubDish = false) => {
   `;
   } else {
     return `
-    <div class="flex flex-col gap-8 mt-${isSubDish ? "6" : "10"}">
+    <div class="flex flex-col gap-8 menu-item mt-${isSubDish ? "6" : "10"}" style="opacity: 0;">
       <div class="flex justify-between w-full gap-10 ${isSubDish ? "pl-6" : ""}">
         <div class="flex flex-col gap-0 leading-tight">
-          <div class="font-semibold flex gap-1">
-            <p>${dish.name}</p>${iconHtml}${tagsHtml}
+          <div class="flex gap-1">
+            <p class="font-medium">${dish.name}</p>${iconHtml}${tagsHtml}
           </div>
           <p class="font-light">${ingredients ? ingredients[language] : ""}</p>
         </div>
@@ -65,13 +65,13 @@ const generateSectionHtml = (section, language, sectionCount) => {
 
   return `
     <div class="hs-accordion ${sectionCount === 1 ? "active" : "active"} mt-12" id="hs-heading-${sectionCount}">
-      <button class="hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-${sectionCount}">
-        <p class="text-primary/90 hs-accordion-active:text-primary hover:text-primary text-[20px] text-left transition-colors ease-in-out duration-500 font-semibold flex items-center gap-2">${title ? title[language] : ''}</p>
-        ${titleDescription ? `<p class="text-primary/90 text-left">${titleDescription[language]}</p>` : ""}
+      <button class="menu-section hs-accordion-toggle group w-full transition relative pr-8" aria-expanded="true" aria-controls="hs-collapse-${sectionCount}" style="opacity: 0;">
+        <p class="text-primary/90 font-normal text-[23px] italic text-left transition-colors ease-in-out duration-500 font-sansita flex items-center gap-2">${title ? title[language] : ''}</p>
+        ${titleDescription ? `<p class="text-primary/70 text-sm text-left">${titleDescription[language]}</p>` : ""}
         <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
         <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-primary absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
       </button>
-      <div id="hs-collapse-${sectionCount}" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out ${sectionCount != 1 ? "" : ""}" role="region" aria-labelledby="hs-heading-${sectionCount}">
+      <div id="hs-collapse-${sectionCount}" class="grid 2xl:grid-cols-2 grid-cols-1 gap-x-16 hs-accordion-content w-full overflow-hidden transition-[height] duration-500 ease-in-out ${sectionCount != 1 ? "" : ""}" role="region" aria-labelledby="hs-heading-${sectionCount}">
         ${section.dishes.map((dish) => generateDishHtml(dish, language)).join("")}
       </div>
     </div>

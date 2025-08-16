@@ -14,12 +14,21 @@ module.exports = {
       },
       fontFamily: {
         lato: ["Lato", "serif"],
-        playfair: ["Playfair Display", "serif"],
+        sansita: ["Sansita", "sans-serif"],
       },
       backgroundImage: {
         "spicy": "url('../assets/images/icons/spicy.webp')",
         "vegetarian": "url('../assets/images/icons/vegetarian.webp')",
         "wave": "url('../assets/bg-wave-min.svg')",
+      },
+      animation: {
+        'reveal-bottom': 'reveal-bottom 0.5s ease-out forwards',
+      },
+      keyframes: {
+        'reveal-bottom': {
+          '0%': { opacity: 0, transform: 'translateY(50px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
       },
     },
   },

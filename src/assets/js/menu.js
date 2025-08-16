@@ -5,11 +5,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
         button.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     });
+    gsap.to(".preloader-logo", {
+      delay: 0.3,
+      opacity: "1",
+      transform: "translateX(0px)",
+      ease: "power4.inOut",
+      duration: 1,
+    });
   });
-  
-  window.onload = function () {
-    document.getElementsByClassName("preloader")[0]?.remove();
-  };
+
   let backToTop = document.getElementById("scroll-to-top");
   if (!window.mobileCheck()) {
     const lenis = new Lenis({ lerp: 0.1, duration: 1.5, wheelMultiplier: 1.2, autoRaf: true });
@@ -21,6 +25,73 @@ document.addEventListener("DOMContentLoaded", function (event) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+
+  gsap.to(".preloader-logo", {
+    delay: 1.3,
+    opacity: "0",
+    transform: "translateX(10px)",
+    ease: "power4.inOut",
+    duration: 1,
+  });
+  gsap.to(".preloader", {
+    delay: 1.8,
+    transform: "translateX(100%)",
+    ease: "power4.inOut",
+    duration: 1,
+  });
+  gsap.to(".preloader", {
+    delay: 1.8,
+    transform: "translateX(100%)",
+    ease: "power4.inOut",
+    duration: 1,
+  });
+
+  setTimeout(() => {
+
+    document.querySelectorAll('.menu-item').forEach((item, index) => {
+      ScrollTrigger.create({
+        trigger: item,
+        start: "top bottom-=50",
+        onEnter: () => {
+          item.classList.add('animate-reveal-bottom');
+        },
+        id: `menu-item-${index}`
+      });
+    });
+
+    document.querySelectorAll('.menu-section').forEach((item, index) => {
+      ScrollTrigger.create({
+        trigger: item,
+        start: "top bottom-=50",
+        onEnter: () => {
+          item.classList.add('animate-reveal-bottom');
+        },
+        id: `menu-item-${index}`
+      });
+    });
+    
+  }, 2000);
+
+  gsap.fromTo(
+    ".header",
+    {
+      opacity: 1,
+    },
+    {
+      scrollTrigger: {
+        trigger: ".header",
+        start: "top top",
+        end: "+=350",
+        scrub: true,
+        onUpdate: (self) => {
+          const header = document.querySelector('.header');
+          const y = Math.round((-1 * self.progress * 180));
+          header.style.transform = `translateY(${y}px)`;
+        }
+      },
+      opacity: 1,
+      ease: "none"
+    });
 
   window.onscroll = function () {
     checkScroll();
