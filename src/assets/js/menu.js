@@ -54,17 +54,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
         start: "top bottom-=50",
         onEnter: () => {
           item.classList.add('animate-reveal-bottom');
+          item.classList.remove('menu-item');
+          item.style.opacity = "1";
         },
         id: `menu-item-${index}`
       });
     });
-
+    
     document.querySelectorAll('.menu-section').forEach((item, index) => {
       ScrollTrigger.create({
         trigger: item,
         start: "top bottom-=50",
         onEnter: () => {
           item.classList.add('animate-reveal-bottom');
+          item.classList.remove('menu-section');
         },
         id: `menu-item-${index}`
       });
