@@ -116,26 +116,25 @@ window.onload = function () {
     );
   });
 
-  gsap.fromTo(
+   gsap.fromTo(
     ".header",
     {
       opacity: 1,
-      transform: "translateY(-180px)",
     },
     {
       scrollTrigger: {
         trigger: ".header",
-        start: "top top-=180",
-        end: "+=150",
+        start: "top top",
+        end: "+=350",
         scrub: true,
         onUpdate: (self) => {
           const header = document.querySelector('.header');
-          const y = Math.round(-180 + (self.progress * 180));
+          const y = Math.round((-1 * self.progress * 180));
           header.style.transform = `translateY(${y}px)`;
         }
       },
       opacity: 1,
-      ease: "linear"
+      ease: "none"
     });
 
     gsap.fromTo(
