@@ -48,7 +48,7 @@
     },
     {
       "title": [{ "PL": "PANINO / POLECANE PROPOZYCJE KANAPEK / NA WAGĘ" }, { "EN": "PANINO / RECOMMENDED SANDWICHES / BY WEIGHT" }, { "IT": "PANINO / PANINI CONSIGLIATI / AL PESO" }],
-      "titleDescription": [{ "PL": "dostępne poniedziałek - sobota do godziny 17:00" }, { "EN": "available Monday – Saturday until 5:00 PM" }, { "IT": "disponibile da lunedì a sabato fino alle 17:00" }],
+      "titleDescription": [{ "PL": "" }, { "EN": "" }, { "IT": "" }],
       "dishes": [
         {
           "name": "PANINO VESUVIO",
