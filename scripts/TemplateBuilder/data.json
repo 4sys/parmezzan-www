@@ -534,8 +534,8 @@
           "tags": [{ "PL": "" }, { "EN": "" }, { "IT": "" }]
         },
         {
-          "name": "SMAK PREMIUM",
-          "ingredients": [{ "PL": "" }, { "EN": "" }, { "IT": "" }],
+          "name": "",
+          "ingredients": [{ "PL": "SMAK PREMIUM" }, { "EN": "PREMIUM FLAVOR" }, { "IT": "GUSTO PREMIUM" }],
           "price": "+2,-",
           "icons": [""],
           "tags": [{ "PL": "" }, { "EN": "" }, { "IT": "" }]
