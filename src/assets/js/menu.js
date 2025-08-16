@@ -88,7 +88,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         scrub: true,
         onUpdate: (self) => {
           const header = document.querySelector('.header');
-          const y = Math.round((-1 * self.progress * 180));
+          if (!window.mobileCheck()) {
+            y = Math.round((-1 * self.progress * 180));
+          } else {
+            y = -1 * self.progress * 180;
+          }
           header.style.transform = `translateY(${y}px)`;
         }
       },

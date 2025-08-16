@@ -80,7 +80,6 @@ window.onload = function () {
     let isVisible = backToTop.classList.contains("show");
 
     if (isScrolled !== isVisible) {
-      console.log(isScrolled ? "triggered show" : "triggered hide");
       backToTop.classList.toggle("show", isScrolled);
       backToTop.classList.toggle("hide", !isScrolled);
       backToTop.style.display = isScrolled ? "block" : "none";
@@ -129,7 +128,11 @@ window.onload = function () {
         scrub: true,
         onUpdate: (self) => {
           const header = document.querySelector('.header');
-          const y = Math.round((-1 * self.progress * 180));
+          if (!window.mobileCheck()) {
+            y = Math.round((-1 * self.progress * 180));
+          } else {
+            y = -1 * self.progress * 180;
+          }
           header.style.transform = `translateY(${y}px)`;
         }
       },

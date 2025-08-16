@@ -1320,6 +1320,10 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-t-lg {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -1943,6 +1947,10 @@ video {
   border-bottom: 1px solid #fff;
 }
 
+.\[background-position-x\:28\%\] {
+  background-position-x: 28%;
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -2346,6 +2354,10 @@ video {
 
   .sm\:\[background-position-x\:center\] {
     background-position-x: center;
+  }
+
+  .sm\:\[background-position-x\:28\%\] {
+    background-position-x: 28%;
   }
 }
 
