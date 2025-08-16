@@ -124,7 +124,7 @@
           "ingredients": [{ "PL": "rukola - gorgonzola - karmelizowane orzechy włoskie - gruszka - miód - focaccia" }, { "EN": "arugula - gorgonzola - caramelized walnuts - pear - honey - focaccia" }, { "IT": "rucola - gorgonzola - noci caramellati - pera - miele - focaccia" }],
           "price": "42,-",
           "icons": ["vegetarian"],
-          "tags": [{ "PL": "-NOWOŚĆ-" }, { "EN": "-NEW-" }, { "IT": "-NUOVO-" }]
+          "tags": [{ "PL": "" }, { "EN": "" }, { "IT": "" }]
         },
         {
           "name": "INSALATA GRECA",
@@ -158,7 +158,7 @@
           "ingredients": [{ "PL": "chrupiąca focaccia - straciatella/burrata - zielone szparagi - pomidorki - oliwa cytrynowa" }, { "EN": "crispy focaccia – stracciatella/burrata – green asparagus – cherry tomatoes – lemon oil" }, { "IT": "focaccia croccante – stracciatella/burrata – asparagi verdi – pomodorini – olio al limone" }],
           "price": "45,-",
           "icons": [""],
-          "tags": [{ "PL": "-NOWOŚĆ-" }, { "EN": "-NEW-" }, { "IT": "-NUOVO-" }]
+          "tags": [{ "PL": "" }, { "EN": "" }, { "IT": "" }]
         },
         {
           "name": "TATAR WOŁOWY",
@@ -178,7 +178,7 @@
           "name": "CAMEMBERT CON TARTUFO",
           "ingredients": [{ "PL": "camembert zapieczony w piecu - miód - peperoncino - trufla - focaccia" }, { "EN": "oven-baked camembert – honey – peperoncino – truffle – focaccia" }, { "IT": "camembert al forno – miele – peperoncino – tartufo – focaccia" }],
           "price": "37,-",
-          "icons": [""],
+          "icons": ["vegetarian"],
           "tags": [{ "PL": "" }, { "EN": "" }, { "IT": "" }]
         }
       ]
