@@ -45,9 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const iconSound = document.getElementById('icon-sound');
   const showMenu = document.getElementById('show-menu');
 
-  const videoSrcH = '/src/assets/videos/parmezzan.m3u8';
-  const videoSrcV = '/src/assets/videos/parmezzan-v.m3u8';
-
   const setupHLS = (videoEl, src) => {
     if (Hls.isSupported()) {
       const hls = new Hls({ maxBufferLength: 5, startLevel: -1 });
@@ -59,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  setupHLS(videoH, videoSrcH);
-  setupHLS(videoV, videoSrcV);
+  setupHLS(videoH, videoH.getAttribute('attr-path'));
+  setupHLS(videoV, videoV.getAttribute('attr-path'));
 
   initVideos();
   window.addEventListener('orientationchange', updateVideoForOrientation);
