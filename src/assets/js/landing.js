@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const video = getCurrentVideo();
     video.currentTime = 0;
     video.play();
-    video.muted = false;
 
     if (showMenu.style.display !== 'flex') {
       showMenu.style.display = 'flex';
