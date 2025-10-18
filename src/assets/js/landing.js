@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const hls = new Hls({ maxBufferLength: 5, startLevel: -1 });
       hls.loadSource(src);
       hls.attachMedia(videoEl);
-      // hls.on(Hls.Events.MANIFEST_PARSED, () => videoEl.play());
+      hls.on(Hls.Events.MANIFEST_PARSED, () => videoEl.play());
     } else if (videoEl.canPlayType('application/vnd.apple.mpegurl')) {
       videoEl.src = src;
     }
@@ -248,11 +248,7 @@ window.onload = function () {
     opacity: "0",
     transform: "translateX(10px)",
     ease: "power4.inOut",
-    duration: 1,
-    onComplete: () => {
-      let video = getCurrentVideo();
-      video.play();
-    }
+    duration: 1
   });
   gsap.to(".preloader", {
     delay: 1.8,
