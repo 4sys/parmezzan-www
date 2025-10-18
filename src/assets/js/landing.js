@@ -89,6 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const replayVideo = () => {
+    const video = getCurrentVideo();
+    video.currentTime = 0;
+    video.play();
+    video.muted = false;
+
     if (showMenu.style.display !== 'flex') {
       showMenu.style.display = 'flex';
       gsap.fromTo(showMenu,
@@ -96,9 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
         { opacity: 1, y: 0, duration: 0.5, pointerEvents: 'auto', ease: "power2.out" }
       );
     }
-    const video = getCurrentVideo();
-    video.currentTime = 0;
-    video.play();
   };
 
   const handleVideoEnded = () => replayVideo();
