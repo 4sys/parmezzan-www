@@ -1,43 +1,82 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-  const video = document.getElementById('bg-video');
+document.addEventListener("DOMContentLoaded", function () {
+  const videoH = document.getElementById('videoH');
+  const videoV = document.getElementById('videoV');
   const toggle = document.getElementById('soundToggle');
   const iconMute = document.getElementById('icon-mute');
   const iconSound = document.getElementById('icon-sound');
-  const videoSrc = 'assets/videos/parmezzan.m3u8';
-  const replay = document.getElementById('replayButton');
+  const showMenu = document.getElementById('show-menu');
 
-  gsap.to(".preloader-logo", {
-    delay: 0.3,
-    opacity: "1",
-    transform: "translateX(0px)",
-    ease: "power4.inOut",
-    duration: 1,
-    onComplete: () => {
-      video.addEventListener('loadedmetadata', () => video.play());
+  const videoSrcH = 'assets/videos/parmezzan.m3u8';
+  const videoSrcV = 'assets/videos/parmezzan-v.m3u8';
+
+  const getViewportHeight = () => window.visualViewport?.height || window.innerHeight;
+  const getCurrentVideo = () => videoH.classList.contains('block') ? videoH : videoV;
+
+  const setupHLS = (videoEl, src) => {
+    if (Hls.isSupported()) {
+      const hls = new Hls({ maxBufferLength: 5, startLevel: -1 });
+      hls.loadSource(src);
+      hls.attachMedia(videoEl);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => videoEl.play());
+    } else if (videoEl.canPlayType('application/vnd.apple.mpegurl')) {
+      videoEl.src = src;
     }
-  });
+  };
 
-  if (Hls.isSupported()) {
-    const hls = new Hls({
-      maxBufferLength: 5,
-      startLevel: -1,
-    });
-    hls.loadSource(videoSrc);
-    hls.attachMedia(video);
-    hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
-  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = videoSrc;
-  }
+  setupHLS(videoH, videoSrcH);
+  setupHLS(videoV, videoSrcV);
+
+  const updateVideoForOrientation = () => {
+    const isPortrait = getViewportHeight() > window.innerWidth;
+    const current = getCurrentVideo();
+    const newVideo = isPortrait ? videoV : videoH;
+
+    if (current === newVideo) return;
+
+    const time = current.currentTime;
+    const wasPlaying = !current.paused;
+
+    current.classList.add('hidden');
+    current.classList.remove('block');
+    newVideo.classList.remove('hidden');
+    newVideo.classList.add('block');
+
+    newVideo.currentTime = time;
+    if (wasPlaying) newVideo.play();
+  };
+
+  const initVideos = () => {
+    const isPortrait = window.innerHeight > window.innerWidth;
+
+    if (isPortrait) {
+      videoV.classList.remove('hidden');
+      videoV.classList.add('block');
+      videoH.classList.add('hidden');
+      videoH.classList.remove('block');
+    } else {
+      videoH.classList.remove('hidden');
+      videoH.classList.add('block');
+      videoV.classList.add('hidden');
+      videoV.classList.remove('block');
+    }
+  };
+
+  initVideos();
+  window.addEventListener('resize', updateVideoForOrientation);
+  window.addEventListener('orientationchange', updateVideoForOrientation);
+  updateVideoForOrientation();
 
   toggle.addEventListener('click', () => {
+    const video = getCurrentVideo();
     video.muted = false;
     video.play();
+
     iconMute.style.display = 'none';
     iconSound.style.display = 'block';
 
     gsap.to(toggle, {
       opacity: 0,
-      y: 20,
+      y: 50,
       duration: 0.5,
       ease: "power2.out",
       pointerEvents: 'none',
@@ -49,25 +88,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   });
 
-  video.addEventListener('ended', () => {
-    replay.style.display = 'flex';
-    gsap.to(replay, { opacity: 1, y: 0, duration: 0.5, pointerEvents: 'auto', ease: "power2.out" });
-  });
-  replay.addEventListener('click', () => {
+  const replayVideo = () => {
+    if (showMenu.style.display !== 'flex') {
+      showMenu.style.display = 'flex';
+      gsap.fromTo(showMenu,
+        { opacity: 0, y: 20, pointerEvents: 'none' },
+        { opacity: 1, y: 0, duration: 0.5, pointerEvents: 'auto', ease: "power2.out" }
+      );
+    }
+    const video = getCurrentVideo();
     video.currentTime = 0;
     video.play();
+  };
 
-    gsap.to(replay, { opacity: 0, y: 20, duration: 0.5, pointerEvents: 'none', ease: "power2.out" });
+  const handleVideoEnded = () => replayVideo();
 
-    iconMute.style.display = 'block';
-    iconSound.style.display = 'none';
-    gsap.to(toggle, { opacity: 1, y: 0, duration: 0.5, pointerEvents: 'auto', ease: "power2.out" });
-  });
+  [videoH, videoV].forEach(v => v.addEventListener('ended', handleVideoEnded));
 });
 
 window.onload = function () {
   const lazyBackgrounds = document.querySelectorAll(".lazy-bg");
-
   const lazyLoad = () => {
     lazyBackgrounds.forEach((element) => {
       let bgUrl;
@@ -164,10 +204,10 @@ window.onload = function () {
     tl.fromTo(
       bg,
       {
-        y: () => (i ? -getViewportHeight() * getRatio(slide) * dampingFactor : 0),
+        y: () => (i ? -window.innerHeight * getRatio(slide) * dampingFactor : 0),
       },
       {
-        y: () => getViewportHeight() * (1 - getRatio(slide)) * dampingFactor,
+        y: () => window.innerHeight * (1 - getRatio(slide)) * dampingFactor,
         ease: "none",
       }
     );
@@ -181,7 +221,7 @@ window.onload = function () {
     },
     {
       scrollTrigger: {
-        trigger: "#bg-video",
+        trigger: "body",
         start: "top top",
         end: "+=350",
         scrub: true,
@@ -226,7 +266,7 @@ window.onload = function () {
     },
     {
       scrollTrigger: {
-        trigger: "#bg-video",
+        trigger: "body",
         start: "center center",
         end: "+=500",
         scrub: true,
