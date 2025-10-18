@@ -682,6 +682,14 @@ video {
   top: 100%;
 }
 
+.bottom-\[200px\] {
+  bottom: 200px;
+}
+
+.bottom-\[20px\] {
+  bottom: 20px;
+}
+
 .isolation-auto {
   isolation: auto;
 }
