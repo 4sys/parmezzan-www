@@ -983,6 +983,10 @@ video {
   width: 100lvw;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .max-w-\[100rem\] {
   max-width: 100rem;
 }
