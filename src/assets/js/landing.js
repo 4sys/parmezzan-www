@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   video.addEventListener('ended', () => {
+    replay.style.display = 'flex';
     gsap.to(replay, { opacity: 1, y: 0, duration: 0.5, pointerEvents: 'auto', ease: "power2.out" });
   });
   replay.addEventListener('click', () => {
@@ -97,6 +98,7 @@ window.onload = function () {
 
   let resizeTimer;
   let lastWidth = window.innerWidth;
+  const getViewportHeight = () => window.visualViewport?.height || window.innerHeight;
 
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
@@ -143,7 +145,7 @@ window.onload = function () {
   }
 
   slides = gsap.utils.toArray(".slide");
-  getRatio = (el) => window.innerHeight / (window.innerHeight + el.offsetHeight);
+  getRatio = (el) => getViewportHeight() / (getViewportHeight() + el.offsetHeight);
 
   slides.forEach((slide, i) => {
     let bg = slide.querySelector(".background"),
@@ -162,10 +164,10 @@ window.onload = function () {
     tl.fromTo(
       bg,
       {
-        y: () => (i ? -window.innerHeight * getRatio(slide) * dampingFactor : 0),
+        y: () => (i ? -getViewportHeight() * getRatio(slide) * dampingFactor : 0),
       },
       {
-        y: () => window.innerHeight * (1 - getRatio(slide)) * dampingFactor,
+        y: () => getViewportHeight() * (1 - getRatio(slide)) * dampingFactor,
         ease: "none",
       }
     );
