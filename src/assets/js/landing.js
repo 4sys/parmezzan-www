@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   initVideos();
-  window.addEventListener('resize', updateVideoForOrientation);
   window.addEventListener('orientationchange', updateVideoForOrientation);
   updateVideoForOrientation();
 
@@ -143,6 +142,8 @@ window.onload = function () {
   const getViewportHeight = () => window.visualViewport?.height || window.innerHeight;
 
   window.addEventListener("resize", () => {
+    updateVideoForOrientation();
+    gsap.
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       if (window.innerWidth !== lastWidth) {
