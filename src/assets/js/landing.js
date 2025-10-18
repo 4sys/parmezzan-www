@@ -1,3 +1,42 @@
+
+const updateVideoForOrientation = () => {
+  const isPortrait = getViewportHeight() > window.innerWidth;
+  const current = getCurrentVideo();
+  const newVideo = isPortrait ? videoV : videoH;
+
+  if (current === newVideo) return;
+
+  const time = current.currentTime;
+  const wasPlaying = !current.paused;
+
+  current.classList.add('hidden');
+  current.classList.remove('block');
+  newVideo.classList.remove('hidden');
+  newVideo.classList.add('block');
+
+  newVideo.currentTime = time;
+  if (wasPlaying) newVideo.play();
+};
+
+const initVideos = () => {
+  const isPortrait = window.innerHeight > window.innerWidth;
+  if (isPortrait) {
+    videoV.classList.remove('hidden');
+    videoV.classList.add('block');
+    videoH.classList.add('hidden');
+    videoH.classList.remove('block');
+  } else {
+    videoH.classList.remove('hidden');
+    videoH.classList.add('block');
+    videoV.classList.add('hidden');
+    videoV.classList.remove('block');
+  }
+};
+
+const getViewportHeight = () => window.visualViewport?.height || window.innerHeight;
+const getCurrentVideo = () => videoH.classList.contains('block') ? videoH : videoV;
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const videoH = document.getElementById('videoH');
   const videoV = document.getElementById('videoV');
@@ -6,18 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const iconSound = document.getElementById('icon-sound');
   const showMenu = document.getElementById('show-menu');
 
-  const videoSrcH = 'assets/videos/parmezzan.m3u8';
-  const videoSrcV = 'assets/videos/parmezzan-v.m3u8';
-
-  const getViewportHeight = () => window.visualViewport?.height || window.innerHeight;
-  const getCurrentVideo = () => videoH.classList.contains('block') ? videoH : videoV;
+  const videoSrcH = '/src/assets/videos/parmezzan.m3u8';
+  const videoSrcV = '/src/assets/videos/parmezzan-v.m3u8';
 
   const setupHLS = (videoEl, src) => {
     if (Hls.isSupported()) {
       const hls = new Hls({ maxBufferLength: 5, startLevel: -1 });
       hls.loadSource(src);
       hls.attachMedia(videoEl);
-      hls.on(Hls.Events.MANIFEST_PARSED, () => videoEl.play());
+      // hls.on(Hls.Events.MANIFEST_PARSED, () => videoEl.play());
     } else if (videoEl.canPlayType('application/vnd.apple.mpegurl')) {
       videoEl.src = src;
     }
@@ -25,41 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setupHLS(videoH, videoSrcH);
   setupHLS(videoV, videoSrcV);
-
-  const updateVideoForOrientation = () => {
-    const isPortrait = getViewportHeight() > window.innerWidth;
-    const current = getCurrentVideo();
-    const newVideo = isPortrait ? videoV : videoH;
-
-    if (current === newVideo) return;
-
-    const time = current.currentTime;
-    const wasPlaying = !current.paused;
-
-    current.classList.add('hidden');
-    current.classList.remove('block');
-    newVideo.classList.remove('hidden');
-    newVideo.classList.add('block');
-
-    newVideo.currentTime = time;
-    if (wasPlaying) newVideo.play();
-  };
-
-  const initVideos = () => {
-    const isPortrait = window.innerHeight > window.innerWidth;
-
-    if (isPortrait) {
-      videoV.classList.remove('hidden');
-      videoV.classList.add('block');
-      videoH.classList.add('hidden');
-      videoH.classList.remove('block');
-    } else {
-      videoH.classList.remove('hidden');
-      videoH.classList.add('block');
-      videoV.classList.add('hidden');
-      videoV.classList.remove('block');
-    }
-  };
 
   initVideos();
   window.addEventListener('orientationchange', updateVideoForOrientation);
@@ -139,11 +140,9 @@ window.onload = function () {
 
   let resizeTimer;
   let lastWidth = window.innerWidth;
-  const getViewportHeight = () => window.visualViewport?.height || window.innerHeight;
 
   window.addEventListener("resize", () => {
     updateVideoForOrientation();
-    gsap.
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       if (window.innerWidth !== lastWidth) {
@@ -214,9 +213,8 @@ window.onload = function () {
         ease: "none",
       }
     );
-  });
 
-  gsap.fromTo(
+      gsap.fromTo(
     ".header",
     {
       opacity: 1,
@@ -243,40 +241,7 @@ window.onload = function () {
       ease: "none",
     }
   );
-
-  // gsap.fromTo(
-  //   ".show-menu",
-  //   {
-  //     opacity: 1,
-  //     transform: "translateY(0))",
-  //   },
-  //   {
-  //     scrollTrigger: {
-  //       trigger: ".first-slide",
-  //       start: "center center-=200",
-  //       end: "+=500",
-  //       scrub: true,
-  //     },
-  //     opacity: 0,
-  //     transform: "translateY(-30px)",
-  //   });
-
-  gsap.fromTo(
-    ".main-logo",
-    {
-      opacity: 1,
-      transform: "translateY(0))",
-    },
-    {
-      scrollTrigger: {
-        trigger: "body",
-        start: "center center",
-        end: "+=500",
-        scrub: true,
-      },
-      opacity: 0,
-      transform: "translateY(-30px)",
-    });
+  });
 
   gsap.to(".preloader-logo", {
     delay: 1.3,
@@ -284,6 +249,10 @@ window.onload = function () {
     transform: "translateX(10px)",
     ease: "power4.inOut",
     duration: 1,
+    onComplete: () => {
+      let video = getCurrentVideo();
+      video.play();
+    }
   });
   gsap.to(".preloader", {
     delay: 1.8,
@@ -295,45 +264,8 @@ window.onload = function () {
     delay: 1.8,
     transform: "translateX(100%)",
     ease: "power4.inOut",
-    duration: 1,
+    duration: 1
   });
-  // gsap.fromTo(".first-slide",
-  //   {
-  //     transform: "scale(2)",
-  //   },
-  //   {
-  //     delay: 1.5,
-  //     transform: "scale(1)",
-  //     ease: "power4.inOut",
-  //     duration: 1.5,
-  //   }
-  // );
-  gsap.fromTo(".main-logo",
-    {
-      opacity: 0,
-      transform: "scale(1.3) translateY(-50px)",
-    },
-    {
-      delay: 1.7,
-      transform: "scale(1) translateY(0px)",
-      opacity: 1,
-      ease: "power4.inOut",
-      duration: 1.35,
-    }
-  );
-  gsap.fromTo(".show-menu",
-    {
-      opacity: 0,
-      transform: "translateY(-20px)",
-    },
-    {
-      delay: 1.8,
-      transform: "translateY(0px)",
-      opacity: 1,
-      ease: "power4.inOut",
-      duration: 1.35,
-    }
-  );
 
   setTimeout(() => {
     document.getElementsByClassName("preloader")[0]?.remove();
