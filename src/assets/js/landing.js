@@ -1,10 +1,66 @@
 document.addEventListener("DOMContentLoaded", function (event) {
+  const video = document.getElementById('bg-video');
+  const toggle = document.getElementById('soundToggle');
+  const iconMute = document.getElementById('icon-mute');
+  const iconSound = document.getElementById('icon-sound');
+  const videoSrc = 'assets/videos/parmezzan.m3u8';
+  const replay = document.getElementById('replayButton');
+
   gsap.to(".preloader-logo", {
     delay: 0.3,
     opacity: "1",
     transform: "translateX(0px)",
     ease: "power4.inOut",
     duration: 1,
+    onComplete: () => {
+      video.addEventListener('loadedmetadata', () => video.play());
+    }
+  });
+
+  if (Hls.isSupported()) {
+    const hls = new Hls({
+      maxBufferLength: 5,
+      startLevel: -1,
+    });
+    hls.loadSource(videoSrc);
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = videoSrc;
+  }
+
+  toggle.addEventListener('click', () => {
+    video.muted = false;
+    video.play();
+    iconMute.style.display = 'none';
+    iconSound.style.display = 'block';
+
+    gsap.to(toggle, {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      ease: "power2.out",
+      pointerEvents: 'none',
+      onComplete: () => {
+        setTimeout(() => {
+          toggle.style.display = 'none';
+        }, 500);
+      }
+    });
+  });
+
+  video.addEventListener('ended', () => {
+    gsap.to(replay, { opacity: 1, y: 0, duration: 0.5, pointerEvents: 'auto', ease: "power2.out" });
+  });
+  replay.addEventListener('click', () => {
+    video.currentTime = 0;
+    video.play();
+
+    gsap.to(replay, { opacity: 0, y: 20, duration: 0.5, pointerEvents: 'none', ease: "power2.out" });
+
+    iconMute.style.display = 'block';
+    iconSound.style.display = 'none';
+    gsap.to(toggle, { opacity: 1, y: 0, duration: 0.5, pointerEvents: 'auto', ease: "power2.out" });
   });
 });
 
@@ -115,49 +171,52 @@ window.onload = function () {
     );
   });
 
-   gsap.fromTo(
+  gsap.fromTo(
     ".header",
     {
       opacity: 1,
+      y: -180,
     },
     {
       scrollTrigger: {
-        trigger: ".header",
+        trigger: "#bg-video",
         start: "top top",
         end: "+=350",
         scrub: true,
         onUpdate: (self) => {
           const header = document.querySelector('.header');
+          let y;
           if (!window.mobileCheck()) {
-            y = Math.round((-1 * self.progress * 180));
+            y = Math.round((-180) + self.progress * 180);
           } else {
-            y = -1 * self.progress * 180;
+            y = (-180) + self.progress * 180;
           }
           header.style.transform = `translateY(${y}px)`;
-        }
+        },
       },
       opacity: 1,
-      ease: "none"
-    });
+      ease: "none",
+    }
+  );
 
-    gsap.fromTo(
-    ".show-menu",
-    {
-      opacity: 1,
-      transform: "translateY(0))",
-    },
-    {
-      scrollTrigger: {
-        trigger: ".first-slide",
-        start: "center center-=200",
-        end: "+=500",
-        scrub: true,
-      },
-      opacity: 0,
-      transform: "translateY(-30px)",
-    });
+  // gsap.fromTo(
+  //   ".show-menu",
+  //   {
+  //     opacity: 1,
+  //     transform: "translateY(0))",
+  //   },
+  //   {
+  //     scrollTrigger: {
+  //       trigger: ".first-slide",
+  //       start: "center center-=200",
+  //       end: "+=500",
+  //       scrub: true,
+  //     },
+  //     opacity: 0,
+  //     transform: "translateY(-30px)",
+  //   });
 
-    gsap.fromTo(
+  gsap.fromTo(
     ".main-logo",
     {
       opacity: 1,
@@ -165,7 +224,7 @@ window.onload = function () {
     },
     {
       scrollTrigger: {
-        trigger: ".first-slide",
+        trigger: "#bg-video",
         start: "center center",
         end: "+=500",
         scrub: true,
@@ -193,20 +252,20 @@ window.onload = function () {
     ease: "power4.inOut",
     duration: 1,
   });
-  gsap.fromTo(".first-slide",
-    {
-      transform: "scale(2)",
-    },
-    {
-      delay: 1.5,
-      transform: "scale(1)",
-      ease: "power4.inOut",
-      duration: 1.5,
-    }
-  );
+  // gsap.fromTo(".first-slide",
+  //   {
+  //     transform: "scale(2)",
+  //   },
+  //   {
+  //     delay: 1.5,
+  //     transform: "scale(1)",
+  //     ease: "power4.inOut",
+  //     duration: 1.5,
+  //   }
+  // );
   gsap.fromTo(".main-logo",
     {
-      opacity: 0, 
+      opacity: 0,
       transform: "scale(1.3) translateY(-50px)",
     },
     {

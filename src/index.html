@@ -25,11 +25,12 @@
   <script type="text/javascript" src="assets/js/preline.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 
 <body class="overflow-x-hidden text-[17px] font-lato bg-black">
-  <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-black sm:h-16 fixed top-0 left-0 header">
+  <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-black sm:h-16 fixed top-0 left-0 header"
+    style="transform: translateY(-200px);">
     <nav
       class="relative max-w-[100rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 pt-6 px-6 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center gap-x-1">
@@ -279,17 +280,19 @@
       </div>
     </nav>
     <div
-      class="absolute top-full left-0 bg-wave bg-repeat-x h-[105px] w-full [background-size:1440px_105px] [background-position-y:top] [background-position-x:28%] z-[1] sm:[background-position-x:center] pointer-events-none">
+      class="flex absolute top-full left-0 bg-wave bg-repeat-x h-[105px] w-full [background-size:1440px_105px] [background-position-y:top] [background-position-x:28%] z-[1] sm:[background-position-x:center] pointer-events-none">
     </div>
   </header>
 
-  <div class="flex w-dvw h-svh relative overflow-hidden slide first-slide">
+  <video id="bg-video" class="w-dvw h-svh object-cover" autoplay muted playsinline poster="assets/videos/first-frame.jpg"></video>
+
+  <!-- <div class="flex w-dvw h-svh relative overflow-hidden slide first-slide">
     <div class="background bg-no-repeat lazy-bg absolute left-0 top-0 w-full h-full bg-center !bg-cover"
       data-bg-sm="assets/images/sm/landing-1.webp" data-bg-md="assets/images/lg/landing-1.webp"
       data-bg-xl="assets/images/xl/landing-1.webp" data-style="dimmed"></div>
+  </div> -->
   </div>
-  </div>
-  <div class="flex items-center justify-center absolute top-0 left-0 h-svh w-dvw main-logo">
+  <div class=" items-center justify-center absolute top-0 left-0 h-svh w-dvw main-logo hidden">
     <svg class="h-[120px] max-w-[80vw]" viewBox="0 0 2991 596" version="1.1" xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
       style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
@@ -355,18 +358,40 @@
       </g>
     </svg>
   </div>
-  <div class="absolute bottom-[100px] flex-col w-full flex items-center justify-center transform show-menu">
-    <a href="menu.html"
-      class="flex text-lg justify-center gap-2 items-center mx-auto shadow-xl bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-black hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group">
+  <div class="absolute bottom-[100px] w-full flex items-center justify-center transform show-menu">
+    <!-- <a href="menu.html"
+      class="flex text-lg text-white justify-center gap-2 items-center shadow-xl bg-transparent backdrop-blur-md lg:font-semibold isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-black hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden rounded-full group">
       Zobacz menu
       <svg
-        class="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
+        class="w-8 h-8 justify-end group-hover:rotate-90 fill-white group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-white group-hover:border-none p-2 rotate-45"
         viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-          class="fill-gray-800 group-hover:fill-gray-800"></path>
+          class="fill-white group-hover:fill-gray-800"></path>
       </svg>
-    </a>
+    </a> -->
+
+    <div id="soundToggle"
+      class="size-[48px] cursor-pointer bg-black backdrop-blur-md rounded-full flex items-center justify-center hover:bg-black hover:fill-white transition-all duration-300">
+      <svg id="icon-mute" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+        fill="#e3e3e3">
+        <path
+          d="M778.92-74.46 658.31-195.08q-20.77 13.31-43.77 23.08-23 9.77-47.62 16.38v-62q12.85-4.61 25-9.42 12.16-4.81 23-11.42L471.54-381.85v173.38L300-380H151.54v-200h121.85L79.85-773.54 122-815.69l699.07 699.07-42.15 42.16Zm-19.54-216.23-43-43q20.85-32.54 31.85-69.81t11-77.5q0-90.92-52.88-163.38-52.89-72.47-139.43-100v-62Q679-776.46 749.11-686.46q70.12 90 70.12 205.46 0 52.62-15.65 101.04-15.66 48.42-44.2 89.27ZM636.92-413.15l-70-70v-145q40.46 22 62.54 61.96T651.54-480q0 17.69-3.66 34.5-3.65 16.81-10.96 32.35ZM471.54-578.54l-86.31-86.69 86.31-86.3v172.99Zm-60 224.54v-87.85L333.39-520H211.54v80h114l86 86Zm-39.08-126.92Z" />
+      </svg>
+      <svg id="icon-sound" style="display:none;" xmlns="http://www.w3.org/2000/svg" height="24px"
+        viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+        <path
+          d="M561.54-155.62v-62q86.54-27.53 139.42-100 52.89-72.46 52.89-163.38t-52.89-163.38q-52.88-72.47-139.42-100v-62q111.69 29.92 182 119.92 70.3 90 70.3 205.46 0 115.46-70.3 205.46-70.31 90-182 119.92ZM146.16-380v-200h148.46l171.53-171.53v543.06L294.62-380H146.16Zm415.38 46.15v-294.3q40.46 22 62.54 61.96 22.07 39.96 22.07 86.19 0 45.61-22.27 84.88-22.27 39.27-62.34 61.27ZM406.15-606l-86 86h-114v80h114l86 86v-252Zm-100 126Z" />
+      </svg>
+    </div>
+
+    <div id="replayButton"
+      class="size-[48px] cursor-pointer bg-black backdrop-blur-md rounded-full flex items-center justify-center hover:bg-black hover:fill-white transition-all duration-300 opacity-0 pointer-events-none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+        <path
+          d="M480-100q-70.77 0-132.61-26.77-61.85-26.77-107.85-72.77-46-46-72.77-107.85Q140-369.23 140-440h60q0 117 81.5 198.5T480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720h-10.62l63.54 63.54-42.15 43.38-136.92-137.3 137.69-137.31 42.15 43.38L469.38-780H480q70.77 0 132.61 26.77 61.85 26.77 107.85 72.77 46 46 72.77 107.85Q820-510.77 820-440q0 70.77-26.77 132.61-26.77 61.85-72.77 107.85-46 46-107.85 72.77Q550.77-100 480-100Z" />
+      </svg>
+    </div>
 
   </div>
   <div class="flex w-dvw h-svh relative overflow-hidden slide">
@@ -597,5 +622,23 @@
     </div>
   </button>
 </body>
+
+<script>
+  const video = document.getElementById('bg-video');
+  const videoSrc = 'assets/videos/parmezzan.m3u8';
+
+  if (Hls.isSupported()) {
+    const hls = new Hls({
+      maxBufferLength: 10, // seconds
+      startLevel: -1, // auto quality
+    });
+    hls.loadSource(videoSrc);
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = videoSrc; // Safari has native HLS support
+    video.addEventListener('loadedmetadata', () => video.play());
+  }
+</script>
 
 </html>
