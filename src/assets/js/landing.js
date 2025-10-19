@@ -38,7 +38,7 @@ const initVideos = () => {
 const getViewportHeight = () => window.visualViewport?.height || window.innerHeight;
 const getCurrentVideo = () => videoH.classList.contains('block') ? videoH : videoV;
 let isVideoMuted = true;
-
+let slideTriggers = [];
 
 document.addEventListener("DOMContentLoaded", function () {
   const videoH = document.getElementById('videoH');
@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById('soundToggle');
   const iconMute = document.getElementById('icon-mute');
   const iconSound = document.getElementById('icon-sound');
-  const showMenu = document.getElementById('show-menu');
   const playPauseToggle = document.getElementById('playPauseToggle');
   const iconPlay = document.getElementById('icon-play');
   const iconPause = document.getElementById('icon-pause');
@@ -67,7 +66,13 @@ document.addEventListener("DOMContentLoaded", function () {
   setupHLS(videoV, videoV.getAttribute('attr-path'));
 
   initVideos();
-  window.addEventListener('orientationchange', updateVideoForOrientation);
+  window.addEventListener('orientationchange', () =>
+  {
+    ScrollTrigger.refresh();
+    initSlideAnimations();
+    updateVideoForOrientation();
+  }
+  );
   updateVideoForOrientation();
 
   toggle.addEventListener('click', () => {
@@ -141,6 +146,8 @@ window.onload = function () {
   let lastWidth = window.innerWidth;
 
   window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+    initSlideAnimations();
     updateVideoForOrientation();
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
@@ -200,8 +207,8 @@ window.onload = function () {
       onUpdate: self => {
         if (self.progress >= 0.5 && !video.paused) {
           video.pause();
-            iconPlay.style.display = 'block';
-            iconPause.style.display = 'none';
+          iconPlay.style.display = 'block';
+          iconPause.style.display = 'none';
         } else if (self.progress < 0.5 && video.paused) {
           video.play();
           iconPlay.style.display = 'none';
@@ -223,12 +230,19 @@ window.onload = function () {
   window.addEventListener('resize', resetVideoScrollTriggers);
   window.addEventListener('orientationchange', resetVideoScrollTriggers);
 
-  slides = gsap.utils.toArray(".slide");
-  getRatio = (el) => getViewportHeight() / (getViewportHeight() + el.offsetHeight);
+  function initSlideAnimations() {
+    // Kill existing animations if they exist
+    slideTriggers.forEach(st => st.kill());
+    slideTriggers = [];
 
-  slides.forEach((slide, i) => {
-    let bg = slide.querySelector(".background"),
-      tl = gsap.timeline({
+    const slides = gsap.utils.toArray(".slide");
+    const getRatio = (el) => getViewportHeight() / (getViewportHeight() + el.offsetHeight);
+    const dampingFactor = 0.2;
+
+    slides.forEach((slide, i) => {
+      const bg = slide.querySelector(".background");
+
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: slide,
           start: () => (i ? "top bottom" : "top top"),
@@ -238,47 +252,36 @@ window.onload = function () {
         },
       });
 
-    const dampingFactor = 0.2;
-
-    tl.fromTo(
-      bg,
-      {
-        y: () => (i ? -window.innerHeight * getRatio(slide) * dampingFactor : 0),
-      },
-      {
-        y: () => window.innerHeight * (1 - getRatio(slide)) * dampingFactor,
-        ease: "none",
-      }
-    );
-
-    gsap.fromTo(
-      ".header",
-      {
-        opacity: 1,
-        y: -180,
-      },
-      {
-        scrollTrigger: {
-          trigger: "body",
-          start: "top top",
-          end: "+=350",
-          scrub: true,
-          onUpdate: (self) => {
-            const header = document.querySelector('.header');
-            let y;
-            if (!window.mobileCheck()) {
-              y = Math.round((-180) + self.progress * 180);
-            } else {
-              y = (-180) + self.progress * 180;
-            }
-            header.style.transform = `translateY(${y}px)`;
-          },
+      tl.fromTo(
+        bg,
+        {
+          y: () => (i ? -window.innerHeight * getRatio(slide) * dampingFactor : 0),
         },
-        opacity: 1,
-        ease: "none",
-      }
-    );
-  });
+        {
+          y: () => window.innerHeight * (1 - getRatio(slide)) * dampingFactor,
+          ease: "none",
+        }
+      );
+
+      slideTriggers.push(tl.scrollTrigger);
+    });
+
+    const headerTrigger = ScrollTrigger.create({
+      trigger: "body",
+      start: "top top",
+      end: "+=350",
+      scrub: true,
+      onUpdate: (self) => {
+        const header = document.querySelector(".header");
+        const y = (!window.mobileCheck() ? Math.round(-180 + self.progress * 180) : -180 + self.progress * 180);
+        header.style.transform = `translateY(${y}px)`;
+      },
+    });
+
+    slideTriggers.push(headerTrigger);
+  }
+
+  initSlideAnimations();
 
   gsap.to(".preloader-logo", {
     delay: 1.3,
