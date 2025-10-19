@@ -286,33 +286,46 @@
   <video id="videoH" class="w-dvw h-svh object-cover hidden bg-video" attr-path="../assets/videos/parmezzan.m3u8" muted playsinline
     poster="../assets/videos/first-frame.jpg"></video>
 
-  <div class="absolute bottom-[20px] w-full flex items-center justify-center">
+  <div class="absolute bottom-[20px] w-full flex items-center justify-between sm:justify-center">
+    <div class="h-full w-[110px] hidden sm:flex"></div>
     <a href="menu.html" id="show-menu"
-      class="hidden opacity-0 text-lg justify-center gap-2 items-center mx-auto shadow-xl bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-black hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group">
-     Menu
+      class="flex text-lg whitespace-nowrap justify-center gap-2 items-center ml-[20px] sm:ml-auto sm:mx-auto shadow-xl bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-black hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group">
+      Menu
       <svg
-        class="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
+        class="w-8 h-8 flex-shrink-0 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
         viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
           class="fill-gray-800 group-hover:fill-gray-800"></path>
       </svg>
     </a>
-
-    <div id="soundToggle"
-      class="size-[48px] cursor-pointer group bg-white backdrop-blur-md rounded-full flex items-center justify-center transition-all duration-300">
-      <svg id="icon-mute" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-        class="fill-black">
-        <path
-          d="M778.92-74.46 658.31-195.08q-20.77 13.31-43.77 23.08-23 9.77-47.62 16.38v-62q12.85-4.61 25-9.42 12.16-4.81 23-11.42L471.54-381.85v173.38L300-380H151.54v-200h121.85L79.85-773.54 122-815.69l699.07 699.07-42.15 42.16Zm-19.54-216.23-43-43q20.85-32.54 31.85-69.81t11-77.5q0-90.92-52.88-163.38-52.89-72.47-139.43-100v-62Q679-776.46 749.11-686.46q70.12 90 70.12 205.46 0 52.62-15.65 101.04-15.66 48.42-44.2 89.27ZM636.92-413.15l-70-70v-145q40.46 22 62.54 61.96T651.54-480q0 17.69-3.66 34.5-3.65 16.81-10.96 32.35ZM471.54-578.54l-86.31-86.69 86.31-86.3v172.99Zm-60 224.54v-87.85L333.39-520H211.54v80h114l86 86Zm-39.08-126.92Z" />
-      </svg>
-      <svg id="icon-sound" style="display:none;" xmlns="http://www.w3.org/2000/svg" height="24px"
-        viewBox="0 -960 960 960" width="24px" fill="#000">
-        <path
-          d="M561.54-155.62v-62q86.54-27.53 139.42-100 52.89-72.46 52.89-163.38t-52.89-163.38q-52.88-72.47-139.42-100v-62q111.69 29.92 182 119.92 70.3 90 70.3 205.46 0 115.46-70.3 205.46-70.31 90-182 119.92ZM146.16-380v-200h148.46l171.53-171.53v543.06L294.62-380H146.16Zm415.38 46.15v-294.3q40.46 22 62.54 61.96 22.07 39.96 22.07 86.19 0 45.61-22.27 84.88-22.27 39.27-62.34 61.27ZM406.15-606l-86 86h-114v80h114l86 86v-252Zm-100 126Z" />
-      </svg>
+    <div class="flex mr-[20px] w-[110px] gap-2">
+      <div id="soundToggle"
+        class="size-[48px] flex-shrink-0 cursor-pointer group bg-white backdrop-blur-md rounded-full flex items-center justify-center transition-all duration-300">
+        <svg id="icon-mute" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+          class="fill-black">
+          <path
+            d="M778.92-74.46 658.31-195.08q-20.77 13.31-43.77 23.08-23 9.77-47.62 16.38v-62q12.85-4.61 25-9.42 12.16-4.81 23-11.42L471.54-381.85v173.38L300-380H151.54v-200h121.85L79.85-773.54 122-815.69l699.07 699.07-42.15 42.16Zm-19.54-216.23-43-43q20.85-32.54 31.85-69.81t11-77.5q0-90.92-52.88-163.38-52.89-72.47-139.43-100v-62Q679-776.46 749.11-686.46q70.12 90 70.12 205.46 0 52.62-15.65 101.04-15.66 48.42-44.2 89.27ZM636.92-413.15l-70-70v-145q40.46 22 62.54 61.96T651.54-480q0 17.69-3.66 34.5-3.65 16.81-10.96 32.35ZM471.54-578.54l-86.31-86.69 86.31-86.3v172.99Zm-60 224.54v-87.85L333.39-520H211.54v80h114l86 86Zm-39.08-126.92Z" />
+        </svg>
+        <svg id="icon-sound" style="display:none;" xmlns="http://www.w3.org/2000/svg" height="24px"
+          viewBox="0 -960 960 960" width="24px" fill="#000">
+          <path
+            d="M561.54-155.62v-62q86.54-27.53 139.42-100 52.89-72.46 52.89-163.38t-52.89-163.38q-52.88-72.47-139.42-100v-62q111.69 29.92 182 119.92 70.3 90 70.3 205.46 0 115.46-70.3 205.46-70.31 90-182 119.92ZM146.16-380v-200h148.46l171.53-171.53v543.06L294.62-380H146.16Zm415.38 46.15v-294.3q40.46 22 62.54 61.96 22.07 39.96 22.07 86.19 0 45.61-22.27 84.88-22.27 39.27-62.34 61.27ZM406.15-606l-86 86h-114v80h114l86 86v-252Zm-100 126Z" />
+        </svg>
+      </div>
+      <div id="playPauseToggle"
+        class="size-[48px] flex-shrink-0 min-size-[48px] cursor-pointer group bg-white backdrop-blur-md rounded-full flex items-center justify-center transition-all duration-300">
+        <svg id="icon-play" style="display:none;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+          class="fill-black">
+          <path d="M340-236.16v-487.68L723.07-480 340-236.16ZM400-480Zm0 134 210.77-134L400-614v268Z" />
+        </svg>
+        <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" height="24px"
+          viewBox="0 -960 960 960" width="24px" class="fill-black">
+          <path
+            d="M530-220v-520h210v520H530Zm-310 0v-520h210v520H220Zm370-60h90v-400h-90v400Zm-310 0h90v-400h-90v400Zm0-400v400-400Zm310 0v400-400Z" />
+        </svg>
+      </div>
     </div>
-
   </div>
 
   <div class="flex w-dvw h-svh relative overflow-hidden slide">

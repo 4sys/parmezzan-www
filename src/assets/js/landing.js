@@ -1,4 +1,3 @@
-
 const updateVideoForOrientation = () => {
   const isPortrait = getViewportHeight() > window.innerWidth;
   const current = getCurrentVideo();
@@ -9,11 +8,14 @@ const updateVideoForOrientation = () => {
   const time = current.currentTime;
   const wasPlaying = !current.paused;
 
+  current.pause();
+
   current.classList.add('hidden');
   current.classList.remove('block');
   newVideo.classList.remove('hidden');
   newVideo.classList.add('block');
 
+  newVideo.muted = isVideoMuted;
   newVideo.currentTime = time;
   if (wasPlaying) newVideo.play();
 };
@@ -35,6 +37,7 @@ const initVideos = () => {
 
 const getViewportHeight = () => window.visualViewport?.height || window.innerHeight;
 const getCurrentVideo = () => videoH.classList.contains('block') ? videoH : videoV;
+let isVideoMuted = true;
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -44,6 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const iconMute = document.getElementById('icon-mute');
   const iconSound = document.getElementById('icon-sound');
   const showMenu = document.getElementById('show-menu');
+  const playPauseToggle = document.getElementById('playPauseToggle');
+  const iconPlay = document.getElementById('icon-play');
+  const iconPause = document.getElementById('icon-pause');
+
 
   const setupHLS = (videoEl, src) => {
     if (Hls.isSupported()) {
@@ -65,38 +72,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   toggle.addEventListener('click', () => {
     const video = getCurrentVideo();
-    video.muted = false;
-    video.play();
+    video.muted = !video.muted;
+    isVideoMuted = video.muted;
+    if (video.muted) {
+      iconMute.style.display = 'block';
+      iconSound.style.display = 'none';
+    } else {
+      iconMute.style.display = 'none';
+      iconSound.style.display = 'block';
+    }
+  });
 
-    iconMute.style.display = 'none';
-    iconSound.style.display = 'block';
-
-    gsap.to(toggle, {
-      opacity: 0,
-      y: 50,
-      duration: 0.5,
-      ease: "power2.out",
-      pointerEvents: 'none',
-      onComplete: () => {
-        setTimeout(() => {
-          toggle.style.display = 'none';
-        }, 500);
-      }
-    });
+  playPauseToggle.addEventListener('click', () => {
+    const video = getCurrentVideo();
+    if (video.paused) {
+      video.play();
+      iconPlay.style.display = 'none';
+      iconPause.style.display = 'block';
+    } else {
+      video.pause();
+      iconPlay.style.display = 'block';
+      iconPause.style.display = 'none';
+    }
   });
 
   const replayVideo = () => {
     const video = getCurrentVideo();
     video.currentTime = 0;
     video.play();
-
-    if (showMenu.style.display !== 'flex') {
-      showMenu.style.display = 'flex';
-      gsap.fromTo(showMenu,
-        { opacity: 0, y: 20, pointerEvents: 'none' },
-        { opacity: 1, y: 0, duration: 0.5, pointerEvents: 'auto', ease: "power2.out" }
-      );
-    }
   };
 
   const handleVideoEnded = () => replayVideo();
@@ -182,6 +185,44 @@ window.onload = function () {
     }
   }
 
+  let videoScrollTriggers = [];
+
+  const handleScrollPause = () => {
+    const video = getCurrentVideo();
+    if (!video) return;
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+
+    const st = ScrollTrigger.create({
+      trigger: video,
+      start: "top top",
+      end: "bottom center-=200",
+      onUpdate: self => {
+        if (self.progress >= 0.5 && !video.paused) {
+          video.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        } else if (self.progress < 0.5 && video.paused) {
+          video.play();
+          iconPlay.style.display = 'none';
+          iconPause.style.display = 'block';
+        }
+      }
+    });
+
+    videoScrollTriggers.push(st);
+  };
+
+  const resetVideoScrollTriggers = () => {
+    videoScrollTriggers.forEach(st => st.kill());
+    videoScrollTriggers = [];
+    handleScrollPause();
+  };
+  handleScrollPause();
+
+  window.addEventListener('resize', resetVideoScrollTriggers);
+  window.addEventListener('orientationchange', resetVideoScrollTriggers);
+
   slides = gsap.utils.toArray(".slide");
   getRatio = (el) => getViewportHeight() / (getViewportHeight() + el.offsetHeight);
 
@@ -210,33 +251,33 @@ window.onload = function () {
       }
     );
 
-      gsap.fromTo(
-    ".header",
-    {
-      opacity: 1,
-      y: -180,
-    },
-    {
-      scrollTrigger: {
-        trigger: "body",
-        start: "top top",
-        end: "+=350",
-        scrub: true,
-        onUpdate: (self) => {
-          const header = document.querySelector('.header');
-          let y;
-          if (!window.mobileCheck()) {
-            y = Math.round((-180) + self.progress * 180);
-          } else {
-            y = (-180) + self.progress * 180;
-          }
-          header.style.transform = `translateY(${y}px)`;
-        },
+    gsap.fromTo(
+      ".header",
+      {
+        opacity: 1,
+        y: -180,
       },
-      opacity: 1,
-      ease: "none",
-    }
-  );
+      {
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "+=350",
+          scrub: true,
+          onUpdate: (self) => {
+            const header = document.querySelector('.header');
+            let y;
+            if (!window.mobileCheck()) {
+              y = Math.round((-180) + self.progress * 180);
+            } else {
+              y = (-180) + self.progress * 180;
+            }
+            header.style.transform = `translateY(${y}px)`;
+          },
+        },
+        opacity: 1,
+        ease: "none",
+      }
+    );
   });
 
   gsap.to(".preloader-logo", {
