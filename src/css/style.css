@@ -2476,6 +2476,25 @@ video {
   }
 }
 
+@media (min-width: 1280px) {
+  .xl\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .xl\:ml-auto {
+    margin-left: auto;
+  }
+
+  .xl\:flex {
+    display: flex;
+  }
+
+  .xl\:justify-center {
+    justify-content: center;
+  }
+}
+
 @media (min-width: 1536px) {
   .\32xl\:grid {
     display: grid;
