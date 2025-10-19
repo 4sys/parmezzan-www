@@ -40,18 +40,7 @@ const getCurrentVideo = () => videoH.classList.contains('block') ? videoH : vide
 let isVideoMuted = true;
 let slideTriggers = [];
 
-document.addEventListener("DOMContentLoaded", function () {
-  const videoH = document.getElementById('videoH');
-  const videoV = document.getElementById('videoV');
-  const toggle = document.getElementById('soundToggle');
-  const iconMute = document.getElementById('icon-mute');
-  const iconSound = document.getElementById('icon-sound');
-  const playPauseToggle = document.getElementById('playPauseToggle');
-  const iconPlay = document.getElementById('icon-play');
-  const iconPause = document.getElementById('icon-pause');
-
-
-  const setupHLS = (videoEl, src) => {
+const setupHLS = (videoEl, src) => {
     if (Hls.isSupported()) {
       const hls = new Hls({ maxBufferLength: 5, startLevel: -1 });
       hls.loadSource(src);
@@ -62,8 +51,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+window.addEventListener("load", () => {
   setupHLS(videoH, videoH.getAttribute('attr-path'));
   setupHLS(videoV, videoV.getAttribute('attr-path'));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const videoH = document.getElementById('videoH');
+  const videoV = document.getElementById('videoV');
+  const toggle = document.getElementById('soundToggle');
+  const iconMute = document.getElementById('icon-mute');
+  const iconSound = document.getElementById('icon-sound');
+  const playPauseToggle = document.getElementById('playPauseToggle');
+  const iconPlay = document.getElementById('icon-play');
+  const iconPause = document.getElementById('icon-pause');
 
   initVideos();
   window.addEventListener('orientationchange', () =>
