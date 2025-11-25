@@ -919,10 +919,6 @@ video {
   height: 100svh;
 }
 
-.h-20 {
-  height: 5rem;
-}
-
 .max-h-\[75vh\] {
   max-height: 75vh;
 }
@@ -1659,15 +1655,15 @@ video {
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(185 103 60 / var(--tw-text-opacity));
+  color: rgb(255 255 4 / var(--tw-text-opacity));
 }
 
 .text-primary\/70 {
-  color: rgb(185 103 60 / 0.7);
+  color: rgb(255 255 4 / 0.7);
 }
 
 .text-primary\/90 {
-  color: rgb(185 103 60 / 0.9);
+  color: rgb(255 255 4 / 0.9);
 }
 
 .text-red-600 {

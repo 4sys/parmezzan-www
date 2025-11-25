@@ -14,7 +14,8 @@ module.exports = {
       },
       fontFamily: {
         lato: ["Lato", "serif"],
-        sansita: ["Sansita", "sans-serif"],
+        sansita: ["Sansita", "sans-serif"]
+
       },
       backgroundImage: {
         "spicy": "url('../assets/images/icons/spicy.webp')",

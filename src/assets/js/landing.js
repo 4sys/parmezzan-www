@@ -116,30 +116,44 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onload = function () {
   const lazyBackgrounds = document.querySelectorAll(".lazy-bg");
   const lazyLoad = () => {
-    lazyBackgrounds.forEach((element) => {
-      let bgUrl;
-      if (window.innerWidth >= 1280) {
-        bgUrl = element.getAttribute("data-bg-xl");
-      } else if (window.innerWidth >= 768) {
-        bgUrl = element.getAttribute("data-bg-md");
-      } else {
-        bgUrl = element.getAttribute("data-bg-sm");
-      }
+  lazyBackgrounds.forEach((element) => {
+    let bgUrl;
+    if (window.innerWidth >= 1280) {
+      bgUrl = element.getAttribute("data-bg-xl");
+    } else if (window.innerWidth >= 768) {
+      bgUrl = element.getAttribute("data-bg-md");
+    } else {
+      bgUrl = element.getAttribute("data-bg-sm");
+    }
 
-      if (bgUrl) {
-        var img = new Image();
-        img.src = bgUrl;
-        img.onload = () => {
-          if (element.getAttribute("data-style") == "dimmed") {
-            element.style.backgroundImage = "linear-gradient(-90deg,rgba(0,0,0,0.4), rgba(0,0,0,0)), url(" + img.src + ")";
-          } else {
-            element.style.backgroundImage = "url(" + img.src + ")";
-          }
-          element.classList.remove("lazy-bg");
-        };
-      }
-    });
-  };
+    if (bgUrl) {
+      var img = new Image();
+      img.src = bgUrl;
+      img.decoding = "async"; 
+
+      img.decode().then(() => {
+        if (element.getAttribute("data-style") == "dimmed") {
+          element.style.backgroundImage =
+            "linear-gradient(-90deg,rgba(0,0,0,0.4), rgba(0,0,0,0)), url(" + img.src + ")";
+        } else {
+          element.style.backgroundImage = "url(" + img.src + ")";
+        }
+
+        element.style.transition = "background-image 0.4s ease-out, opacity 0.3s ease-in";
+        element.style.opacity = "1";
+        element.classList.remove("lazy-bg");
+      }).catch(() => {
+        if (element.getAttribute("data-style") == "dimmed") {
+          element.style.backgroundImage =
+            "linear-gradient(-90deg,rgba(0,0,0,0.4), rgba(0,0,0,0)), url(" + img.src + ")";
+        } else {
+          element.style.backgroundImage = "url(" + img.src + ")";
+        }
+        element.classList.remove("lazy-bg");
+      });
+    }
+  });
+};
 
   lazyLoad();
 
