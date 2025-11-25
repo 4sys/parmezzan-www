@@ -176,7 +176,7 @@
         },
         {
           "name": "CAMEMBERT CON TARTUFO",
-          "ingredients": [{ "PL": "camembert zapieczony w piecu - miód - peperoncino - trufla - focaccia" }, { "EN": "oven-baked camembert – honey – peperoncino – truffle – focaccia" }, { "IT": "camembert al forno – miele – peperoncino – tartufo – focaccia" }],
+          "ingredients": [{ "PL": "camembert zapiekany w piecu - miód - peperoncino - trufla - focaccia" }, { "EN": "oven-baked camembert – honey – peperoncino – truffle – focaccia" }, { "IT": "camembert al forno – miele – peperoncino – tartufo – focaccia" }],
           "price": "37,-",
           "icons": ["vegetarian"],
           "tags": [{ "PL": "" }, { "EN": "" }, { "IT": "" }]
